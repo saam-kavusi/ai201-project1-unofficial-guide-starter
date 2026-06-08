@@ -21,6 +21,23 @@ CHARS_PER_TOKEN = 4
 TARGET_CHARS = TARGET_TOKENS * CHARS_PER_TOKEN     # ~1000
 OVERLAP_CHARS = OVERLAP_TOKENS * CHARS_PER_TOKEN   # ~200
 
+# PDFs carry no embedded Source/URL/Course header (unlike the .txt files), so
+# supply course/url metadata by filename here.
+PDF_METADATA = {
+    "asu_cs_major_map.pdf": {
+        "course": "General ASU CS",
+        "url": "https://degrees.apps.asu.edu/major-map/ASU00/ESCSEBS/null/ONLINE/2024/fetchpdf",
+    },
+    "CSE340_Syllabus_SP25.pdf": {
+        "course": "CSE 340",
+        "url": "https://scai.engineering.asu.edu/wp-content/uploads/sites/31/2025/03/CSE-340-Syllabus-SP25.pdf",
+    },
+    "CSE355_Syllabus_SP25.pdf": {
+        "course": "CSE 355",
+        "url": "https://scai.engineering.asu.edu/wp-content/uploads/sites/31/2025/03/CSE-355-Syllabus-SP25.pdf",
+    },
+}
+
 
 # ---------------------------------------------------------------------------
 # Loaders
@@ -59,13 +76,14 @@ def load_pdf(filepath: str) -> dict:
     pages = []
     with pdfplumber.open(filepath) as pdf:
         for page in pdf.pages:
-            text = page.extract_text()
+            text = page.extract_text(x_tolerance=1)
             if text:
                 pages.append(text)
+    meta = PDF_METADATA.get(filename, {})
     return {
         "source": filename,
-        "url": "",
-        "course": "",
+        "url": meta.get("url", ""),
+        "course": meta.get("course", ""),
         "type": "Official PDF",
         "filename": filename,
         "text": "\n\n".join(pages),
@@ -87,13 +105,44 @@ def load_documents(directory: str) -> list[dict]:
 # Cleaning
 # ---------------------------------------------------------------------------
 
+def _is_junk_line(line: str) -> bool:
+    """
+    Detect garbled glyph-runs left by bad PDF extraction, e.g. the CSE 355
+    contact block:
+        0 -3
+        ( -- )-.3.
+        :-.3.%-:10
+        LLLLLLLLLL
+    Conservative on purpose: keeps grading tables (they contain grade letters)
+    and standalone numbers/page markers (pure digits/decimals like "3" or "2.").
+    """
+    s = line.strip()
+    if not s:
+        return False
+    # A single character repeated (e.g. "LLLLLLLLLL", "------")
+    if len(s) >= 4 and len(set(s)) == 1:
+        return True
+    # No letters at all, and not a plain number/decimal -> punctuation soup
+    if not re.search(r"[A-Za-z]", s) and not re.fullmatch(r"[\d.]+", s):
+        return True
+    return False
+
+
 def clean_text(text: str) -> str:
+    # Repair font/encoding artifacts before line processing:
+    text = text.replace("\x16", ".")                       # some PDFs map '.' -> U+0016
+    text = re.sub(r"\(cid:\d+\)", "", text)                # undecodable-glyph markers
+    text = re.sub(r"[\x00-\x08\x0b\x0c\x0e-\x1f]", "", text)  # other C0 control chars
+    # Targeted CSE 340 fix: missing space after a closing quote (not a broad rule).
+    text = text.replace("Services”and", "Services” and")
     # Collapse runs of whitespace within lines, drop truly empty strings
     lines = text.splitlines()
     cleaned = []
     blank_run = 0
     for line in lines:
         line = re.sub(r"[ \t]+", " ", line).strip()
+        if _is_junk_line(line):         # drop garbled PDF extraction glyph-runs
+            continue
         if not line:
             blank_run += 1
             if blank_run <= 1:          # allow a single blank line as paragraph break

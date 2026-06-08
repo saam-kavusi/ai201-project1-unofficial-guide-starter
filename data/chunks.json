@@ -1,98 +1,17 @@
 [
   {
-    "source": "CSE330_Sylllabus_SP25.pdf",
-    "url": "",
-    "course": "",
-    "type": "Official PDF",
-    "filename": "CSE330_Sylllabus_SP25.pdf",
-    "chunk_id": "CSE330_Sylllabus_SP25.pdf__chunk0",
-    "text": "CSE 330: Operating Systems\nContact Information\nInstructor: AdilAhmad\nEmailAddress: adil.ahmad@asu.edu\nO!ceAddress: BYENG372\nO!ceHours: TBD\nCourse Overview and Topics\n!eOperatingSystem(OS)isoneofthemostcriticalcomponentofmodernmachines—allthewayfromRaspberry\nPistosupercomputers—becauseitcontrolshardwareresourcesallocatedtoallotherso”ware.\n\nInthiscourse,wewilldiscussthefundamentalsofoperatingsystemsincludingCPU-memorymanagement,process\nscheduling, device drivers, and #le systems.\n\nAt the end of the course, students will be able to describe the inner\nworkings of an Operating System, as well as optimize the algorithms controlling the operations of the di$erent\ncomponentsofanOperatingSystem."
-  },
-  {
-    "source": "CSE330_Sylllabus_SP25.pdf",
-    "url": "",
-    "course": "",
-    "type": "Official PDF",
-    "filename": "CSE330_Sylllabus_SP25.pdf",
-    "chunk_id": "CSE330_Sylllabus_SP25.pdf__chunk1",
-    "text": "Providedbelowisatentative(moredetailed)listoftopicswewilldiscuss:\n• Kernelbootloaderexecution\n• Processscheduling(e.g.,timesharingwithcontextmanagement)\n• Simultaneousmulti-processing(e.g.,locks,semaphores)\n• Memorymanagement(e.g.,pagetables,demandpaging,pagefaults)\n• Kernel-processinteractions(e.g.,systemcalls,interrupts)\n• Filesystems(e.g.,di$erentkinds,transparentcompressionmechanisms)\n• Devicemanagement(e.g.,UART,storage,network)\n• Kernel-levelloggingforforensicanalysis(e.g.,atsystemcalls)\n• Kernela%acksandprotectionmechanisms(e.g.,ASLR,DataExecutionPrevention)\n• Virtualizationextensions(e.g.,IntelVMX,AMDSVM)\n• Processprotectionmechanisms(e.g.,enclaves)\nLearning Outcomes\nAttheendofthiscourse,studentswillhaveatheoreticalandpracticalunderstandingofhowanOSworks,allthe\nwayfromhowitstartstohowitcanspawnevennewoperatingsystemsthroughvirtualizationtechniques."
-  },
-  {
-    "source": "CSE330_Sylllabus_SP25.pdf",
-    "url": "",
-    "course": "",
-    "type": "Official PDF",
-    "filename": "CSE330_Sylllabus_SP25.pdf",
-    "chunk_id": "CSE330_Sylllabus_SP25.pdf__chunk2",
-    "text": "With\nthis understanding, they will be expected to become pro#cient in systems-level programming on any operating\nsystemcodebase(e.g.,Linux,Windows).\n\nPrerequisite Knowledge\n!estudentisexpectedtohavetakenCSE310:DataStructureandAlgorithms.Additionally,thestudentisexpected\ntobepro#cientinCprogrammingandhaveknowledgeofpointers.\n\nTextbook and Reading\n1\n\n• Primary: OperatingSystemConcepts,Silberschatz,Gagne,Galvin\nTenthEdition,ISBN978-1-119-80037-8\n• Secondary: OperatingSystems: !reeEasyPieces1.00Edition\nh%ps://pages.cs.wisc.edu/remzi/OSTEP/\nFeelfreetoasktheinstructorforotherrecommendations!\n\nAssessment (tentative)\n!iscoursewillhaveagrade(A+,A,A-,B+,B,B-,C+,C,C-,D,E),assignedthroughanabsolutegradingscheme.\n\nAtentativeversionofthatschemeisprovidedbelow.\n\nScore(%) Grade Score(%) Grade\n95% A+ 90-<95% A\n→\n85-<90% A- 80-<85% B+\n75-<80% B 70-<75% B-\n65-<70% C+ 60-<65% C\n55-<60% C- 50-<55% D\n<50% E\n!emaincomponentsforassessmentareprovidedbelow:\n1.\n\n4(Group)Projects(60%)."
-  },
-  {
-    "source": "CSE330_Sylllabus_SP25.pdf",
-    "url": "",
-    "course": "",
-    "type": "Official PDF",
-    "filename": "CSE330_Sylllabus_SP25.pdf",
-    "chunk_id": "CSE330_Sylllabus_SP25.pdf__chunk3",
-    "text": "4(Group)Projects(60%).\n\nProvidedbelowaresomeimportantdetails:\n• Each assignment will require implementing crucial OS functionality (e.g., scheduling, memory man-\nagement)ontopofabaseOSimplementationusingCcode.\n\n• If modi”ed code does not compile correctly, a student will get a zero.\n\n!e base code provided\ncompiledcorrectly,andthereisnoreasonformodi#edcodenottocompile.\n\n• Studentswillbeprovidedsomebasicteststorunontheircodebeforesubmission.\n\n2.\n\nMid-termExamination(15%).\n\n!iswillincludeallcoursematerialcoveredtillaweekbeforethemidterm.\n\n3.\n\nFinal Examination (15%).\n\n!is will include all the material learnt in the class and through assignments.\n\nBoththemidtermand#nalexamsmighthavesomeextraquestionsthatcanhelpboostyourgrade.\n\n4.\n\n5Online#izzes(10%).\n\n5.\n\nBonus(5–8%).\n\n!roughrandomin-personclassa%endanceandquestionsinassignments/exams.\n\nLate/AbsentWork.\n\nExceptasbypriorarrangementornoti#cationofanextensionbeforethedeadline,missing\norlateworkwillbecountedasazero/fail.\n\nSyllabusChanges."
-  },
-  {
-    "source": "CSE330_Sylllabus_SP25.pdf",
-    "url": "",
-    "course": "",
-    "type": "Official PDF",
-    "filename": "CSE330_Sylllabus_SP25.pdf",
-    "chunk_id": "CSE330_Sylllabus_SP25.pdf__chunk4",
-    "text": "Late/AbsentWork.\n\nExceptasbypriorarrangementornoti#cationofanextensionbeforethedeadline,missing\norlateworkwillbecountedasazero/fail.\n\nSyllabusChanges.\n\nAnyinformationinthissyllabusmaybesubjecttochangewithreasonableadvancenotice.\n\n2\n\nOther Important Course Policies\nDisabilityAccomodations.\n\nSuitableaccommodationswillbemadeforstudentshavingdisabilities.\n\nStudentsneedingac-\ncommodations must register with the ASU Disabilities Resource Center and provide documentation of that registration to\ntheinstructor.Studentsshouldcommunicatetheneedforanaccommodationinsu&cienttimeforittobeproperlyarranged.\n\nSeeACD304-08ClassroomandTestingAccommodationsforStudentswithDisabilities.\n\nAcademic Integrity.\n\nStudents in this class must adhere to ASU’s academic integrity policy, which can be found at ASU\nAcademic Integrity Policy Link."
-  },
-  {
-    "source": "CSE330_Sylllabus_SP25.pdf",
-    "url": "",
-    "course": "",
-    "type": "Official PDF",
-    "filename": "CSE330_Sylllabus_SP25.pdf",
-    "chunk_id": "CSE330_Sylllabus_SP25.pdf__chunk5",
-    "text": "Academic Integrity.\n\nStudents in this class must adhere to ASU’s academic integrity policy, which can be found at ASU\nAcademic Integrity Policy Link.\n\nStudents are responsible for reviewing this policy and understanding each of the areas in\nwhichacademicdishonestycanoccur.Inaddition,allengineeringstudentsareexpectedtoadheretoboththeASUAcademic\nIntegrityHonorCodeandtheFultonSchoolsofEngineeringHonorCode.Allacademicintegrityviolationswillbereported\nto the Fulton Schools of Engineering Academic Integrity O&ce (AIO).\n\n!e AIO maintains record of all violations and has\naccesstoacademicintegrityviolationscommi%edinallotherASUcollege/schools.\n\nExpectedClassroomBehavior.Everystudentisexpectedtobehaveinacourteousmanner.Youarefreetouseacellphone,\ntablet,oraudio/videorecordingdevice,toaidyourstudy.\n\nCopyright."
-  },
-  {
-    "source": "CSE330_Sylllabus_SP25.pdf",
-    "url": "",
-    "course": "",
-    "type": "Official PDF",
-    "filename": "CSE330_Sylllabus_SP25.pdf",
-    "chunk_id": "CSE330_Sylllabus_SP25.pdf__chunk6",
-    "text": "ExpectedClassroomBehavior.Everystudentisexpectedtobehaveinacourteousmanner.Youarefreetouseacellphone,\ntablet,oraudio/videorecordingdevice,toaidyourstudy.\n\nCopyright.\n\nCourse content, including lectures, are copyrighted materials and students may not share outside the class,\nuploadtoonlinewebsitesnotapprovedbytheinstructor,sell,ordistributecoursecontentornotestakenduringtheconduct\nofthecourse(seeACD304–06,“CommercialNoteTakingServices”andABORPolicy5-308F.14formoreinformation).\n\nYou\nmustrefrainfromuploadingtoanycourseshell,discussionboard,orwebsiteusedbythecourseinstructororothercourse\nforum, materialthatisnotthestudent’soriginalwork, unlessthestudents#rstcomplywithallapplicablecopyrightlaws;\nfacultymembersreservetherighttodeletematerialsonthegroundsofsuspectedcopyrightinfringement."
-  },
-  {
-    "source": "CSE330_Sylllabus_SP25.pdf",
-    "url": "",
-    "course": "",
-    "type": "Official PDF",
-    "filename": "CSE330_Sylllabus_SP25.pdf",
-    "chunk_id": "CSE330_Sylllabus_SP25.pdf__chunk7",
-    "text": "$reateningBehaviorReporting.Students,faculty,sta$,andotherindividualsdonothaveanunquali#edrightofaccess\ntouniversitygrounds,property,orservices.Interferingwiththepeacefulconductofuniversity-relatedbusinessoractivities\norremainingoncampusgroundsa”erarequesttoleavemaybeconsideredacrime.\n\nAllincidentsandallegationsofviolent\northreateningconductbyanASUstudent(whetheron-oro$-campus)mustbereportedtotheASUPoliceDepartment(ASU\nPD)andtheO&ceoftheDeanofStudents.\n\nHarrassment and Sexual Discrimination.\n\nArizona State University is commi%ed to providing an environment free of\ndiscrimination,harassment,orretaliationfortheentireuniversitycommunity,includingallstudents,facultymembers,sta$\nemployees,andguests.ASUexpresslyprohibitsdiscrimination,harassment,andretaliationbyemployees,students,contrac-\ntors,oragentsoftheuniversitybasedonanyprotectedstatus:race,color,religion,sex,nationalorigin,age,disability,veteran\nstatus,sexualorientation,genderidentity,andgeneticinformation."
-  },
-  {
-    "source": "CSE330_Sylllabus_SP25.pdf",
-    "url": "",
-    "course": "",
-    "type": "Official PDF",
-    "filename": "CSE330_Sylllabus_SP25.pdf",
-    "chunk_id": "CSE330_Sylllabus_SP25.pdf__chunk8",
-    "text": "TitleIXisafederallawthatprovidesthatnopersonbeexcludedonthebasisofsexfromparticipationin,bedeniedbene#ts\nof,orbesubjectedtodiscriminationunderanyeducationprogramoractivity.BothTitleIXanduniversitypolicymakeclear\nthatsexualviolenceandharassmentbasedonsexisprohibited.Anindividualwhobelievestheyhavebeensubjectedtosexual\nviolenceorharassedonthebasisofsexcanseeksupport,includingcounselingandacademicsupport,fromtheuniversity.If\nyouorsomeoneyouknowhasbeenharassedonthebasisofsexorsexuallyassaulted,youcan#ndinformationandresources\natSexualViolencePreventionFAQs.\n\nMandatedsexualharassmentreporter:Asamandatedreporter,I(theinstructor)amobligatedtoreportanyinformationIbe-\ncomeawareofregardingallegedactsofsexualdiscrimination,includingsexualviolenceanddatingviolence.ASUCounseling\nServicesisavailableifyouwishdiscussanyconcernscon#dentiallyandprivately.\n\n3"
-  },
-  {
     "source": "CSE340_Syllabus_SP25.pdf",
-    "url": "",
-    "course": "",
+    "url": "https://scai.engineering.asu.edu/wp-content/uploads/sites/31/2025/03/CSE-340-Syllabus-SP25.pdf",
+    "course": "CSE 340",
     "type": "Official PDF",
     "filename": "CSE340_Syllabus_SP25.pdf",
     "chunk_id": "CSE340_Syllabus_SP25.pdf__chunk0",
-    "text": "CSE 340 Programming Languages\nSpring 2025\n1 Staff and Logistics\n1.1 Teaching and Support Staff\nInstructor: James Gordon\nE-mail: james.gordon.2@asu.edu\nOffice: BYENG 596\nOffice Hours: Friday – 11:30 – 2:00 or by\nappointment.\nI encourage you to come to my office hours to ask any questions you have about\nthe class material or other general questions. To make the best use of my\ntime and your time, I expect you to come prepared. If your question is\nabout course material, I expect that you have read carefully the relevant parts from\nthe book/notes. If your question is about problems, I expect that you have\nmade a serious effort to solve the problem. I also encourage you to take advantage\nof the many graduate TAs office hours and the undergraduate TAs lab hours.\nTA – Bimsara Pathiraja: bpathir1@asu.edu\nGrader –TBD\n1"
+    "text": "CSE 340 Programming Languages\nSpring 2025\n1 Staff and Logistics\n1.1 Teaching and Support Staff\nInstructor: James Gordon\nE-mail: james.gordon.2@asu.edu\nOffice: BYENG 5 9 6\nOffice Hours: Friday – 11:30 – 2:00 or by\nappointment.\nI encourage you to come to my office hours to ask any questions you have about\nthe class material or other general questions. To make the best use of my\ntime and your time, I expect you to come prepared. If your question is\nabout course material, I expect that you have read carefully the relevant parts from\nthe book/notes. If your question is about problems, I expect that you have\nmade a serious effort to solve the problem. I also encourage you to take advantage\nof the many graduate TAs office hours and the undergraduate TAs lab hours.\nTA – Bimsara Pathiraja: bpathir1@asu.edu\nGrader –TBD\n1"
   },
   {
     "source": "CSE340_Syllabus_SP25.pdf",
-    "url": "",
-    "course": "",
+    "url": "https://scai.engineering.asu.edu/wp-content/uploads/sites/31/2025/03/CSE-340-Syllabus-SP25.pdf",
+    "course": "CSE 340",
     "type": "Official PDF",
     "filename": "CSE340_Syllabus_SP25.pdf",
     "chunk_id": "CSE340_Syllabus_SP25.pdf__chunk1",
@@ -100,8 +19,8 @@
   },
   {
     "source": "CSE340_Syllabus_SP25.pdf",
-    "url": "",
-    "course": "",
+    "url": "https://scai.engineering.asu.edu/wp-content/uploads/sites/31/2025/03/CSE-340-Syllabus-SP25.pdf",
+    "course": "CSE 340",
     "type": "Official PDF",
     "filename": "CSE340_Syllabus_SP25.pdf",
     "chunk_id": "CSE340_Syllabus_SP25.pdf__chunk2",
@@ -109,8 +28,8 @@
   },
   {
     "source": "CSE340_Syllabus_SP25.pdf",
-    "url": "",
-    "course": "",
+    "url": "https://scai.engineering.asu.edu/wp-content/uploads/sites/31/2025/03/CSE-340-Syllabus-SP25.pdf",
+    "course": "CSE 340",
     "type": "Official PDF",
     "filename": "CSE340_Syllabus_SP25.pdf",
     "chunk_id": "CSE340_Syllabus_SP25.pdf__chunk3",
@@ -118,8 +37,8 @@
   },
   {
     "source": "CSE340_Syllabus_SP25.pdf",
-    "url": "",
-    "course": "",
+    "url": "https://scai.engineering.asu.edu/wp-content/uploads/sites/31/2025/03/CSE-340-Syllabus-SP25.pdf",
+    "course": "CSE 340",
     "type": "Official PDF",
     "filename": "CSE340_Syllabus_SP25.pdf",
     "chunk_id": "CSE340_Syllabus_SP25.pdf__chunk4",
@@ -127,8 +46,8 @@
   },
   {
     "source": "CSE340_Syllabus_SP25.pdf",
-    "url": "",
-    "course": "",
+    "url": "https://scai.engineering.asu.edu/wp-content/uploads/sites/31/2025/03/CSE-340-Syllabus-SP25.pdf",
+    "course": "CSE 340",
     "type": "Official PDF",
     "filename": "CSE340_Syllabus_SP25.pdf",
     "chunk_id": "CSE340_Syllabus_SP25.pdf__chunk5",
@@ -136,26 +55,26 @@
   },
   {
     "source": "CSE340_Syllabus_SP25.pdf",
-    "url": "",
-    "course": "",
+    "url": "https://scai.engineering.asu.edu/wp-content/uploads/sites/31/2025/03/CSE-340-Syllabus-SP25.pdf",
+    "course": "CSE 340",
     "type": "Official PDF",
     "filename": "CSE340_Syllabus_SP25.pdf",
     "chunk_id": "CSE340_Syllabus_SP25.pdf__chunk6",
-    "text": "You will be reading and interpreting long specification documents for the\nprojects and you will be designing solutions to satisfy the specifications.\n\nThis\nis different from what most of you have been exposed to so far.\n\n2.\n\nYou will be writing thousands of lines of code in this class and you will have\nto read a lot of code that I or the TAs wrote.\n\nThis is different from what most\nof you have been exposed to so far.\n\n3.\n\nYou will have to handle non-trivial abstract concepts, new programming\nparadigms and complex implementation issues.\n\nThis requires consistent\neffort on your part.\n\nIf you put the effort, you will learn a lot and succeed in this class.\n\nIt is really\nworth it.\n\nIf you do not put the effort, you cannot succeed in this class.\n\n3.5 Grading\n• 2 Exams – Midterm and Final: 30% (15% each)\n• 2 homework assignments: 10% (5% each)\n4"
+    "text": "You will be reading and interpreting long specification documents for the\nprojects and you will be designing solutions to satisfy the specifications.\n\nThis\nis different from what most of you have been exposed to so far.\n\n2.\n\nYou will be writing thousands of lines of code in this class and you will have\nto read a lot of code that I or the TAs wrote.\n\nThis is different from what most\nof you have been exposed to so far.\n\n3.\n\nYou will have to handle non-trivial abstract concepts, new programming\nparadigms and complex implementation issues.\n\nThis requires consistent\neffort on your part.\n\nIf you put the effort, you will learn a lot and succeed in this class.\n\nIt is really\nworth it.\n\nIf you do not put the effort, you cannot succeed in this class.\n\n3.5 Grading\n• 2 Exams – Midterm and Final: 30% (15% each)\n• 2 homework assignments: 1 0% (5% each)\n4"
   },
   {
     "source": "CSE340_Syllabus_SP25.pdf",
-    "url": "",
-    "course": "",
+    "url": "https://scai.engineering.asu.edu/wp-content/uploads/sites/31/2025/03/CSE-340-Syllabus-SP25.pdf",
+    "course": "CSE 340",
     "type": "Official PDF",
     "filename": "CSE340_Syllabus_SP25.pdf",
     "chunk_id": "CSE340_Syllabus_SP25.pdf__chunk7",
-    "text": "It is really\nworth it.\n\nIf you do not put the effort, you cannot succeed in this class.\n\n3.5 Grading\n• 2 Exams – Midterm and Final: 30% (15% each)\n• 2 homework assignments: 10% (5% each)\n4\n\n• 3 Programming assignments: 60% total (20% each)\nThe thresholds for assigning letter grades are the following:\nA: 93, A-: 90 – 92, B+: 87 , B: 83-86, B-: 80-82, C+: 79, C: 70.\n\nFor A+ , I will not use a simple threshold.\n\nI will look at the totality of your work\nnot including bonus points for attendance.\n\nIf circumstances warrant it, I will\nadjust these thresholds slightly, but you should not rely on that.\n\nRegrade Requests: All regrade requests should be done no later than one\nweek from the date the grade is released.\n\nIf you have any homework grading issue,\nyou should submit a regrade request on GradeScope.\n\nYou can follow up by\nemail if the issue is not addressed within one week of the request.\n\nIf you have\nexam grading issue, you should come to office hours to discuss it."
+    "text": "It is really\nworth it.\n\nIf you do not put the effort, you cannot succeed in this class.\n\n3.5 Grading\n• 2 Exams – Midterm and Final: 30% (15% each)\n• 2 homework assignments: 1 0% (5% each)\n4\n\n• 3 Programming assignments: 60% total (20% each)\nThe thresholds for assigning letter grades are the following:\nA: 93, A-: 90 – 92, B+: 87 , B: 83-86, B-: 80-82, C+: 79, C: 70.\n\nFor A+ , I will not use a simple threshold.\n\nI will look at the totality of your work\nnot including bonus points for attendance.\n\nIf circumstances warrant it, I will\nadjust these thresholds slightly, but you should not rely on that.\n\nRegrade Requests: All regrade requests should be done no later than one\nweek from the date the grade is released.\n\nIf you have any homework grading issue,\nyou should submit a regrade request on GradeScope.\n\nYou can follow up by\nemail if the issue is not addressed within one week of the request.\n\nIf you have\nexam grading issue, you should come to office hours to discuss it."
   },
   {
     "source": "CSE340_Syllabus_SP25.pdf",
-    "url": "",
-    "course": "",
+    "url": "https://scai.engineering.asu.edu/wp-content/uploads/sites/31/2025/03/CSE-340-Syllabus-SP25.pdf",
+    "course": "CSE 340",
     "type": "Official PDF",
     "filename": "CSE340_Syllabus_SP25.pdf",
     "chunk_id": "CSE340_Syllabus_SP25.pdf__chunk8",
@@ -163,8 +82,8 @@
   },
   {
     "source": "CSE340_Syllabus_SP25.pdf",
-    "url": "",
-    "course": "",
+    "url": "https://scai.engineering.asu.edu/wp-content/uploads/sites/31/2025/03/CSE-340-Syllabus-SP25.pdf",
+    "course": "CSE 340",
     "type": "Official PDF",
     "filename": "CSE340_Syllabus_SP25.pdf",
     "chunk_id": "CSE340_Syllabus_SP25.pdf__chunk9",
@@ -172,8 +91,8 @@
   },
   {
     "source": "CSE340_Syllabus_SP25.pdf",
-    "url": "",
-    "course": "",
+    "url": "https://scai.engineering.asu.edu/wp-content/uploads/sites/31/2025/03/CSE-340-Syllabus-SP25.pdf",
+    "course": "CSE 340",
     "type": "Official PDF",
     "filename": "CSE340_Syllabus_SP25.pdf",
     "chunk_id": "CSE340_Syllabus_SP25.pdf__chunk10",
@@ -181,8 +100,8 @@
   },
   {
     "source": "CSE340_Syllabus_SP25.pdf",
-    "url": "",
-    "course": "",
+    "url": "https://scai.engineering.asu.edu/wp-content/uploads/sites/31/2025/03/CSE-340-Syllabus-SP25.pdf",
+    "course": "CSE 340",
     "type": "Official PDF",
     "filename": "CSE340_Syllabus_SP25.pdf",
     "chunk_id": "CSE340_Syllabus_SP25.pdf__chunk11",
@@ -190,8 +109,8 @@
   },
   {
     "source": "CSE340_Syllabus_SP25.pdf",
-    "url": "",
-    "course": "",
+    "url": "https://scai.engineering.asu.edu/wp-content/uploads/sites/31/2025/03/CSE-340-Syllabus-SP25.pdf",
+    "course": "CSE 340",
     "type": "Official PDF",
     "filename": "CSE340_Syllabus_SP25.pdf",
     "chunk_id": "CSE340_Syllabus_SP25.pdf__chunk12",
@@ -199,17 +118,17 @@
   },
   {
     "source": "CSE340_Syllabus_SP25.pdf",
-    "url": "",
-    "course": "",
+    "url": "https://scai.engineering.asu.edu/wp-content/uploads/sites/31/2025/03/CSE-340-Syllabus-SP25.pdf",
+    "course": "CSE 340",
     "type": "Official PDF",
     "filename": "CSE340_Syllabus_SP25.pdf",
     "chunk_id": "CSE340_Syllabus_SP25.pdf__chunk13",
-    "text": "ASU Counseling Services, https://eoss.asu.edu/counseling, is available if you\nwish discuss any concerns confidentially and privately.\n\n8 Copyright\nCourse content, including lectures, are copyrighted materials and students may\nnot share outside the class, upload to online websites not approved by the\ninstructor, sell, or distribute course content or notes taken during the con-\nduct of the course (see ACD 304-06, “Commercial Note Taking Services”and\nABOR Policy 5-308 F.14 for more information).\n\nYou must refrain from uploading to any course shell, discussion board, or\nwebsite used by the course instructor or other course forum, material that is not\nthe student’s original work, unless the students first comply with all applicable\ncopyright laws; faculty members reserve the right to delete materials on the\ngrounds of suspected copyright infringement.\n\n7"
+    "text": "ASU Counseling Services, https://eoss.asu.edu/counseling, is available if you\nwish discuss any concerns confidentially and privately.\n\n8 Copyright\nCourse content, including lectures, are copyrighted materials and students may\nnot share outside the class, upload to online websites not approved by the\ninstructor, sell, or distribute course content or notes taken during the con-\nduct of the course (see ACD 304-06, “Commercial Note Taking Services” and\nABOR Policy 5-308 F.14 for more information).\n\nYou must refrain from uploading to any course shell, discussion board, or\nwebsite used by the course instructor or other course forum, material that is not\nthe student’s original work, unless the students first comply with all applicable\ncopyright laws; faculty members reserve the right to delete materials on the\ngrounds of suspected copyright infringement.\n\n7"
   },
   {
     "source": "CSE340_Syllabus_SP25.pdf",
-    "url": "",
-    "course": "",
+    "url": "https://scai.engineering.asu.edu/wp-content/uploads/sites/31/2025/03/CSE-340-Syllabus-SP25.pdf",
+    "course": "CSE 340",
     "type": "Official PDF",
     "filename": "CSE340_Syllabus_SP25.pdf",
     "chunk_id": "CSE340_Syllabus_SP25.pdf__chunk14",
@@ -217,8 +136,8 @@
   },
   {
     "source": "CSE340_Syllabus_SP25.pdf",
-    "url": "",
-    "course": "",
+    "url": "https://scai.engineering.asu.edu/wp-content/uploads/sites/31/2025/03/CSE-340-Syllabus-SP25.pdf",
+    "course": "CSE 340",
     "type": "Official PDF",
     "filename": "CSE340_Syllabus_SP25.pdf",
     "chunk_id": "CSE340_Syllabus_SP25.pdf__chunk15",
@@ -226,8 +145,8 @@
   },
   {
     "source": "CSE340_Syllabus_SP25.pdf",
-    "url": "",
-    "course": "",
+    "url": "https://scai.engineering.asu.edu/wp-content/uploads/sites/31/2025/03/CSE-340-Syllabus-SP25.pdf",
+    "course": "CSE 340",
     "type": "Official PDF",
     "filename": "CSE340_Syllabus_SP25.pdf",
     "chunk_id": "CSE340_Syllabus_SP25.pdf__chunk16",
@@ -235,8 +154,8 @@
   },
   {
     "source": "CSE340_Syllabus_SP25.pdf",
-    "url": "",
-    "course": "",
+    "url": "https://scai.engineering.asu.edu/wp-content/uploads/sites/31/2025/03/CSE-340-Syllabus-SP25.pdf",
+    "course": "CSE 340",
     "type": "Official PDF",
     "filename": "CSE340_Syllabus_SP25.pdf",
     "chunk_id": "CSE340_Syllabus_SP25.pdf__chunk17",
@@ -244,98 +163,89 @@
   },
   {
     "source": "CSE355_Syllabus_SP25.pdf",
-    "url": "",
-    "course": "",
+    "url": "https://scai.engineering.asu.edu/wp-content/uploads/sites/31/2025/03/CSE-355-Syllabus-SP25.pdf",
+    "course": "CSE 355",
     "type": "Official PDF",
     "filename": "CSE355_Syllabus_SP25.pdf",
     "chunk_id": "CSE355_Syllabus_SP25.pdf__chunk0",
-    "text": "Syllabus\nCSE 355: “Introduction to Theoretical Computer Science”\n(cid:1)(cid:6)(cid:10)((cid:8)(cid:9)(cid:7) (cid:4)(cid:3)(cid:4)(cid:5)(cid:2)\n1."
+    "text": "Syllabus\nCSE 355: “Introduction to Theoretical Computer Science”\n1.\n\nCourse Description and Objectives:\nThis course provides a first introduction to the theoretical concepts of Computer Science.\n\nThe focus of\nthe course is the study of abstract computing devices without targeting a specific programming\nlanguage and/or computing platform.\n\nIn particular, we will study:\n• Regular Language, which model computing machines with finite fixed memory,\nand the class of regular languages, which is used for pattern matching languages\n• Context-free Language, which facilitate declarative specifications of language syntax\n• Computability Theory, which addresses the inherent limits of what can be solved\nby a computer (decidability)\n• Complexity Theory, which helps us measure the time and space used to solve a problem.\n\nNotice: Any information in this syllabus (other than grading and absence policies) may be subject to\nchange with reasonable advance notice.\n\n2."
   },
   {
     "source": "CSE355_Syllabus_SP25.pdf",
-    "url": "",
-    "course": "",
+    "url": "https://scai.engineering.asu.edu/wp-content/uploads/sites/31/2025/03/CSE-355-Syllabus-SP25.pdf",
+    "course": "CSE 355",
     "type": "Official PDF",
     "filename": "CSE355_Syllabus_SP25.pdf",
     "chunk_id": "CSE355_Syllabus_SP25.pdf__chunk1",
-    "text": "Syllabus\nCSE 355: “Introduction to Theoretical Computer Science”\n(cid:1)(cid:6)(cid:10)((cid:8)(cid:9)(cid:7) (cid:4)(cid:3)(cid:4)(cid:5)(cid:2)\n1.\n\nCourse Description and Objectives:\nThis course provides a first introduction to the theoretical concepts of Computer Science\u0016 The focus of\nthe course is the study of abstract computing devices without targeting a specific programming\nlanguage and/or computing platform\u0016 In particular, we will study:\n• Regular Language, which model computing machines with finite fixed memory,\nand the class of regular languages, which is used for pattern matching languages\n• Context-free Language, which facilitate declarative specifications of language syntax\n• Computability Theory, which addresses the inherent limits of what can be solved\nby a computer (decidability)\n• Complexity Theory, which helps us measure the time and space used to solve a problem\u0016\nNotice: Any information in this syllabus (other than grading and absence policies) may be subject to\nchange with reasonable advance notice\u0016\n2."
+    "text": "Notice: Any information in this syllabus (other than grading and absence policies) may be subject to\nchange with reasonable advance notice.\n\n2.\n\nContact Information:\nLecturer: Heni Ben Amor, Ph.D.\n\nCenterpoint 203-07\nTel: 404-234-8507\nEmail: hbenamor@asu.edu\n3.\n\nRemarks on Electronic Communication: For questions regarding personal issues, email first the\nTA(s) if you have any technical questions.\n\nAny questions that are regarding your personal situation in\nthe course should be sent to the lecturer.\n\nBefore sending an email please follow the excellent advice\nhttp://www.wikihow.com/Email-a-Professor.\n\nFor questions about class materials (e.g., homework,\nquizzes and etc.), see the respective sections below.\n\n4.\n\nReadings and Textbook:\nRequired: Introduction to the theory of computation, Michael Sipser, Thomson Course Technology, 3rd\nEdition, 2013.\n\nNote: The publisher also provides an electronic version of the book through\nCourseSmart (http://www.coursesmart.com/).\n\nThey also provide Apps for all platforms."
   },
   {
     "source": "CSE355_Syllabus_SP25.pdf",
-    "url": "",
-    "course": "",
+    "url": "https://scai.engineering.asu.edu/wp-content/uploads/sites/31/2025/03/CSE-355-Syllabus-SP25.pdf",
+    "course": "CSE 355",
     "type": "Official PDF",
     "filename": "CSE355_Syllabus_SP25.pdf",
     "chunk_id": "CSE355_Syllabus_SP25.pdf__chunk2",
-    "text": "Contact Information:\nLecturer: Heni Ben Amor, Ph\u0016D\u0016\nCenterpoint 203-07\nTel: 404-234-8507\nEmail: hbenamor@asu\u0016edu\n(cid:8)(cid:13)(cid:13)(cid:14)(cid:10)(cid:12) (cid:6)(cid:17)(cid:21)0(cid:20)(cid:5) (cid:7)(cid:17)-(cid:11)(cid:9)3 (cid:3)(cid:5)(cid:2)(cid:2)(cid:1)(cid:4)(cid:5)(cid:2)(cid:2)(cid:18)(cid:15)\n(cid:15)((cid:9) (cid:14)-(cid:25)- )-.3.\n\n(cid:2):(cid:21)-.3.%(cid:10)-:(cid:31)(cid:5)10(cid:31)(cid:3)\nLLLLLLLLLL (cid:0)\n3.\n\nRemarks on Electronic Communication: For questions regarding personal issues, email first the\nTA(s) if you have any technical questions\u0016 Any questions that are regarding your personal situation in\nthe course should be sent to the lecturer\u0016 Before sending an email please follow the excellent advice\nhttp://www\u0016wikihow\u0016com/Email-a-Professor\u0016 For questions about class materials (e\u0016g\u0016, homework,\nquizzes and etc\u0016), see the respective sections below\u0016\n4."
+    "text": "Note: The publisher also provides an electronic version of the book through\nCourseSmart (http://www.coursesmart.com/).\n\nThey also provide Apps for all platforms.\n\nNote 1: The 2nd Edition can still be used.\n\nHowever, you might have to consult with\nyour classmates regarding the mapping of homework problems and pages\nbetween the two editions.\n\nNote 2: The 1st Edition is still acceptable.\n\nHowever, the 1st edition does not include\n1 of 3\n\nany problem answers and it does not have as many examples and explanations as\nthe 2nd and above editions.\n\nAlso, you will have to consult with your classmates\nregarding the mapping of homework problems and pages between the 2 editions.\n\n5.\n\nParticipation:\n• Answering questions in class!\n\n• Contributing to both on-line and in-class discussions.\n\nThis should be an activity throughout the semester.\n\n• Helping others figure out fallacies in their line of thought when attempting to solve a problem.\n\n• Giving hints to your classmates, but not the complete answer.\n\n6."
   },
   {
     "source": "CSE355_Syllabus_SP25.pdf",
-    "url": "",
-    "course": "",
+    "url": "https://scai.engineering.asu.edu/wp-content/uploads/sites/31/2025/03/CSE-355-Syllabus-SP25.pdf",
+    "course": "CSE 355",
     "type": "Official PDF",
     "filename": "CSE355_Syllabus_SP25.pdf",
     "chunk_id": "CSE355_Syllabus_SP25.pdf__chunk3",
-    "text": "Readings and Textbook:\nRequired: Introduction to the theory of computation, Michael Sipser, Thomson Course Technology, 3rd\nEdition, 2013\u0016 Note: The publisher also provides an electronic version of the book through\nCourseSmart (http://www\u0016coursesmart\u0016com/)\u0016 They also provide Apps for all platforms\u0016\nNote 1: The 2nd Edition can still be used\u0016 However, you might have to consult with\nyour classmates regarding the mapping of homework problems and pages\nbetween the two editions\u0016\nNote 2: The 1st Edition is still acceptable\u0016 However, the 1st edition does not include\n1 of 3\n\nany problem answers and it does not have as many examples and explanations as\nthe 2nd and above editions\u0016 Also, you will have to consult with your classmates\nregarding the mapping of homework problems and pages between the 2 editions\u0016\n5.\n\nParticipation:\n• Answering questions in class!"
+    "text": "• Helping others figure out fallacies in their line of thought when attempting to solve a problem.\n\n• Giving hints to your classmates, but not the complete answer.\n\n6.\n\nSchedule:\nWeek 1 – Introduction and Finite Automata\nWeek 2 – Deterministic Finite Automata\nWeek 3 – Non-determerministic Finite Automata\nWeek 4 – Regular Expressions\nWeek 5 – Non-regular Languages and Context Free Grammars\nWeek 6 – Pushdown Automata\nWeek 7 – Midterm and CFL\nWeek 8 – Pumping Lemma\nWeek 9 – Turing Machines 1\nWeek 10 – Turing Machines 2\nWeek 11 – Decidability\nWeek 12 – Reducibility\nWeek 13 – Midterm and Refresher\nWeek 14 – Complexity Theory\nWeek 15 – P and NP\nWeek 16 – Non-traditional Computing Paradigms\n7.\n\nGrading Policies:\nClassroom attendance is mandatory in this course."
   },
   {
     "source": "CSE355_Syllabus_SP25.pdf",
-    "url": "",
-    "course": "",
+    "url": "https://scai.engineering.asu.edu/wp-content/uploads/sites/31/2025/03/CSE-355-Syllabus-SP25.pdf",
+    "course": "CSE 355",
     "type": "Official PDF",
     "filename": "CSE355_Syllabus_SP25.pdf",
     "chunk_id": "CSE355_Syllabus_SP25.pdf__chunk4",
-    "text": "Participation:\n• Answering questions in class!\n\n• Contributing to both on-line and in-class discussions\u0016\nThis should be an activity throughout the semester\u0016\n• Helping others figure out fallacies in their line of thought when attempting to solve a problem\u0016\n• Giving hints to your classmates, but not the complete answer\u0016\n6.\n\nSchedule:\nWeek 1 – Introduction and Finite Automata\nWeek 2 – Deterministic Finite Automata\nWeek 3 – Non-determerministic Finite Automata\nWeek 4 – Regular Expressions\nWeek 5 – Non-regular Languages and Context Free Grammars\nWeek 6 – Pushdown Automata\nWeek 7 – Midterm and CFL\nWeek 8 – Pumping Lemma\nWeek 9 – Turing Machines 1\nWeek 10 – Turing Machines 2\nWeek 11 – Decidability\nWeek 12 – Reducibility\nWeek 13 – Midterm and Refresher\nWeek 14 – Complexity Theory\nWeek 15 – P and NP\nWeek 16 – Non-traditional Computing Paradigms\n7."
+    "text": "Grading Policies:\nClassroom attendance is mandatory in this course.\n\nOverall, the grade will be calculated according to the\nfollowing schema:\n● Homeworks and assignments - 20%\n● Two Midterms: 40%\n● Final Exam: 30%\n● Additional points via an optional project\nGrading table:\nA+ >99% B- [75-80)%\nA [95-100]% C+ [70-75)%\nA- [90-95)% C [65-70)%\nB+ [85-90)% D [55-65)%\nB [80-85)% F < 55%\n2 of 3\n\n8.\n\nAbsence & Make-Up Policies\nClassroom attendance is mandatory in both the class, as well as the recitations.\n\nAccommodations will\nbe made for religious observances provided that students notify the instructor at the beginning of the\nsemester concerning those dates.\n\nStudents who expect to miss class due to officially university-\nsanctioned activities should inform the instructor early in the semester.\n\nAlternative arrangements will\ngenerally be made for any examinations and other graded in-class work affected by such absences."
   },
   {
     "source": "CSE355_Syllabus_SP25.pdf",
-    "url": "",
-    "course": "",
+    "url": "https://scai.engineering.asu.edu/wp-content/uploads/sites/31/2025/03/CSE-355-Syllabus-SP25.pdf",
+    "course": "CSE 355",
     "type": "Official PDF",
     "filename": "CSE355_Syllabus_SP25.pdf",
     "chunk_id": "CSE355_Syllabus_SP25.pdf__chunk5",
-    "text": "Grading Policies:\nClassroom attendance is mandatory in this course\u0016 Overall, the grade will be calculated according to the\nfollowing schema:\n(cid:32) (cid:13)-(cid:28)(cid:30)3(cid:18)3(cid:27)-(cid:30)3(cid:26)(cid:25) 3(cid:25) (cid:18)(cid:23)-::(cid:28)(cid:26)(cid:26)(cid:24) (cid:4) (cid:7)(cid:6)(cid:1)\n● Homeworks and assignments - 20%\n● Two Midterms: 40%\n● Final Exam: 30%\n● Additional points via an optional project\nGrading table:\nA+ >99% B- [75-80)%\nA [95-100]% C+ [70-75)%\nA- [90-95)% C [65-70)%\nB+ [85-90)% D [55-65)%\nB [80-85)% F < 55%\n2 of 3\n\n8."
+    "text": "Alternative arrangements will\ngenerally be made for any examinations and other graded in-class work affected by such absences.\n\nThe\npreceding policies are based on ACD 304–04, “Accommodation for Religious Practices” and ACD\n304–02, “Missed Classes Due to University-Sanctioned Activities.”\n9.\n\nClassroom Behavior\nCell phones and pagers (must be/or state alternative rule) turned off during class to avoid causing\ndistractions.\n\nThe use of recording devices is not permitted during class.\n\nAny violent or threatening\nconduct by an ASU student in this class will be reported to the ASU Police Department and the Office\nof the Dean of Students.\n\nDisability Accommodations\nSuitable accommodations will be made for students having disabilities and students should notify the\ninstructor as early as possible if they will require same.\n\nSuch students must be registered with the\nDisability Resource Center and provide documentation to that effect.\n\n10."
   },
   {
     "source": "CSE355_Syllabus_SP25.pdf",
-    "url": "",
-    "course": "",
+    "url": "https://scai.engineering.asu.edu/wp-content/uploads/sites/31/2025/03/CSE-355-Syllabus-SP25.pdf",
+    "course": "CSE 355",
     "type": "Official PDF",
     "filename": "CSE355_Syllabus_SP25.pdf",
     "chunk_id": "CSE355_Syllabus_SP25.pdf__chunk6",
-    "text": "8.\n\nAbsence & Make-Up Policies\nClassroom attendance is mandatory in both the class, as well as the recitations\u0016 Accommodations will\nbe made for religious observances provided that students notify the instructor at the beginning of the\nsemester concerning those dates\u0016 Students who expect to miss class due to officially university-\nsanctioned activities should inform the instructor early in the semester\u0016 Alternative arrangements will\ngenerally be made for any examinations and other graded in-class work affected by such absences\u0016 The\npreceding policies are based on ACD 304–04, “Accommodation for Religious Practices” and ACD\n304–02, “Missed Classes Due to University-Sanctioned Activities\u0016”\n9."
+    "text": "Such students must be registered with the\nDisability Resource Center and provide documentation to that effect.\n\n10.\n\nAcademic Integrity:\nAny kind of plagiarism or cheating attempt will be severely dealt with.\n\nThis includes attempts\nat reusing text from uncited sources, as well as rephrasing existing text.\n\nPlease try to make\nsure that you express your ideas and thoughts using your own words!\n\nCode from third parties\n(including fellow students) can only be used if it is properly labelled.\n\nWhen using third party\nsoft-ware, please also make sure to specify how exactly it is used in your project and by how\nmuch in contributes to the overall size of the project.\n\nMore details on the Academic Integrity\nPolicy can be found under the following link: https://provost.asu.edu/sites/default/files/\nAcademicIntegrityPolicyPDF.pdf.\n\n11."
   },
   {
     "source": "CSE355_Syllabus_SP25.pdf",
-    "url": "",
-    "course": "",
+    "url": "https://scai.engineering.asu.edu/wp-content/uploads/sites/31/2025/03/CSE-355-Syllabus-SP25.pdf",
+    "course": "CSE 355",
     "type": "Official PDF",
     "filename": "CSE355_Syllabus_SP25.pdf",
     "chunk_id": "CSE355_Syllabus_SP25.pdf__chunk7",
-    "text": "Classroom Behavior\nCell phones and pagers (must be/or state alternative rule) turned off during class to avoid causing\ndistractions\u0016 The use of recording devices is not permitted during class\u0016 Any violent or threatening\nconduct by an ASU student in this class will be reported to the ASU Police Department and the Office\nof the Dean of Students\u0016\nDisability Accommodations\nSuitable accommodations will be made for students having disabilities and students should notify the\ninstructor as early as possible if they will require same\u0016 Such students must be registered with the\nDisability Resource Center and provide documentation to that effect\u0016\n10.\n\nAcademic Integrity:\nAny kind of plagiarism or cheating attempt will be severely dealt with\u0016 This includes attempts\nat reusing text from uncited sources, as well as rephrasing existing text\u0016 Please try to make\nsure that you express your ideas and thoughts using your own words!"
+    "text": "More details on the Academic Integrity\nPolicy can be found under the following link: https://provost.asu.edu/sites/default/files/\nAcademicIntegrityPolicyPDF.pdf.\n\n11.\n\nSexual Discrimination\nTitle IX is a federal law that provides that no person be excluded on the basis of sex from participation\nin, be denied benefits of, or be subjected to discrimination under any education program or activity.\n\nBoth Title IX and university policy make clear that sexual violence and harassment based on sex is\nprohibited.\n\nAn individual who believes they have been subjected to sexual violence or harassed on the\nbasis of sex can seek support, including counseling and academic support, from the university.\n\nIf you or\nsomeone you know has been harassed on the basis of sex or sexually assaulted, you can find\ninformation and resources at https://sexualviolenceprevention.asu.edu/faqs."
   },
   {
     "source": "CSE355_Syllabus_SP25.pdf",
-    "url": "",
-    "course": "",
+    "url": "https://scai.engineering.asu.edu/wp-content/uploads/sites/31/2025/03/CSE-355-Syllabus-SP25.pdf",
+    "course": "CSE 355",
     "type": "Official PDF",
     "filename": "CSE355_Syllabus_SP25.pdf",
     "chunk_id": "CSE355_Syllabus_SP25.pdf__chunk8",
-    "text": "Code from third parties\n(including fellow students) can only be used if it is properly labelled\u0016 When using third party\nsoft-ware, please also make sure to specify how exactly it is used in your project and by how\nmuch in contributes to the overall size of the project\u0016 More details on the Academic Integrity\nPolicy can be found under the following link: https://provost\u0016asu\u0016edu/sites/default/files/\nAcademicIntegrityPolicyPDF\u0016pdf\u0016\n11."
-  },
-  {
-    "source": "CSE355_Syllabus_SP25.pdf",
-    "url": "",
-    "course": "",
-    "type": "Official PDF",
-    "filename": "CSE355_Syllabus_SP25.pdf",
-    "chunk_id": "CSE355_Syllabus_SP25.pdf__chunk9",
-    "text": "Sexual Discrimination\nTitle IX is a federal law that provides that no person be excluded on the basis of sex from participation\nin, be denied benefits of, or be subjected to discrimination under any education program or activity\u0016\nBoth Title IX and university policy make clear that sexual violence and harassment based on sex is\nprohibited\u0016 An individual who believes they have been subjected to sexual violence or harassed on the\nbasis of sex can seek support, including counseling and academic support, from the university\u0016 If you or\nsomeone you know has been harassed on the basis of sex or sexually assaulted, you can find\ninformation and resources at https://sexualviolenceprevention\u0016asu\u0016edu/faqs\u0016\nAs a mandated reporter, I am obligated to report any information I become aware of regarding alleged\nacts of sexual discrimination, including sexual violence and dating violence\u0016 ASU Counseling Services,\nhttps://eoss\u0016asu\u0016edu/counseling, is available if you wish discuss any concerns confidentially and\nprivately\u0016\n3 of 3"
+    "text": "If you or\nsomeone you know has been harassed on the basis of sex or sexually assaulted, you can find\ninformation and resources at https://sexualviolenceprevention.asu.edu/faqs.\n\nAs a mandated reporter, I am obligated to report any information I become aware of regarding alleged\nacts of sexual discrimination, including sexual violence and dating violence.\n\nASU Counseling Services,\nhttps://eoss.asu.edu/counseling, is available if you wish discuss any concerns confidentially and\nprivately.\n\n3 of 3"
   },
   {
     "source": "asu_cs_major_map.pdf",
-    "url": "",
-    "course": "",
+    "url": "https://degrees.apps.asu.edu/major-map/ASU00/ESCSEBS/null/ONLINE/2024/fetchpdf",
+    "course": "General ASU CS",
     "type": "Official PDF",
     "filename": "asu_cs_major_map.pdf",
     "chunk_id": "asu_cs_major_map.pdf__chunk0",
@@ -343,8 +253,8 @@
   },
   {
     "source": "asu_cs_major_map.pdf",
-    "url": "",
-    "course": "",
+    "url": "https://degrees.apps.asu.edu/major-map/ASU00/ESCSEBS/null/ONLINE/2024/fetchpdf",
+    "course": "General ASU CS",
     "type": "Official PDF",
     "filename": "asu_cs_major_map.pdf",
     "chunk_id": "asu_cs_major_map.pdf__chunk1",
@@ -352,8 +262,8 @@
   },
   {
     "source": "asu_cs_major_map.pdf",
-    "url": "",
-    "course": "",
+    "url": "https://degrees.apps.asu.edu/major-map/ASU00/ESCSEBS/null/ONLINE/2024/fetchpdf",
+    "course": "General ASU CS",
     "type": "Official PDF",
     "filename": "asu_cs_major_map.pdf",
     "chunk_id": "asu_cs_major_map.pdf__chunk2",
@@ -361,8 +271,8 @@
   },
   {
     "source": "asu_cs_major_map.pdf",
-    "url": "",
-    "course": "",
+    "url": "https://degrees.apps.asu.edu/major-map/ASU00/ESCSEBS/null/ONLINE/2024/fetchpdf",
+    "course": "General ASU CS",
     "type": "Official PDF",
     "filename": "asu_cs_major_map.pdf",
     "chunk_id": "asu_cs_major_map.pdf__chunk3",
@@ -370,8 +280,8 @@
   },
   {
     "source": "asu_cs_major_map.pdf",
-    "url": "",
-    "course": "",
+    "url": "https://degrees.apps.asu.edu/major-map/ASU00/ESCSEBS/null/ONLINE/2024/fetchpdf",
+    "course": "General ASU CS",
     "type": "Official PDF",
     "filename": "asu_cs_major_map.pdf",
     "chunk_id": "asu_cs_major_map.pdf__chunk4",
@@ -379,8 +289,8 @@
   },
   {
     "source": "asu_cs_major_map.pdf",
-    "url": "",
-    "course": "",
+    "url": "https://degrees.apps.asu.edu/major-map/ASU00/ESCSEBS/null/ONLINE/2024/fetchpdf",
+    "course": "General ASU CS",
     "type": "Official PDF",
     "filename": "asu_cs_major_map.pdf",
     "chunk_id": "asu_cs_major_map.pdf__chunk5",
@@ -388,8 +298,8 @@
   },
   {
     "source": "asu_cs_major_map.pdf",
-    "url": "",
-    "course": "",
+    "url": "https://degrees.apps.asu.edu/major-map/ASU00/ESCSEBS/null/ONLINE/2024/fetchpdf",
+    "course": "General ASU CS",
     "type": "Official PDF",
     "filename": "asu_cs_major_map.pdf",
     "chunk_id": "asu_cs_major_map.pdf__chunk6",
@@ -397,8 +307,8 @@
   },
   {
     "source": "asu_cs_major_map.pdf",
-    "url": "",
-    "course": "",
+    "url": "https://degrees.apps.asu.edu/major-map/ASU00/ESCSEBS/null/ONLINE/2024/fetchpdf",
+    "course": "General ASU CS",
     "type": "Official PDF",
     "filename": "asu_cs_major_map.pdf",
     "chunk_id": "asu_cs_major_map.pdf__chunk7",
@@ -406,8 +316,8 @@
   },
   {
     "source": "asu_cs_major_map.pdf",
-    "url": "",
-    "course": "",
+    "url": "https://degrees.apps.asu.edu/major-map/ASU00/ESCSEBS/null/ONLINE/2024/fetchpdf",
+    "course": "General ASU CS",
     "type": "Official PDF",
     "filename": "asu_cs_major_map.pdf",
     "chunk_id": "asu_cs_major_map.pdf__chunk8",
@@ -415,8 +325,8 @@
   },
   {
     "source": "asu_cs_major_map.pdf",
-    "url": "",
-    "course": "",
+    "url": "https://degrees.apps.asu.edu/major-map/ASU00/ESCSEBS/null/ONLINE/2024/fetchpdf",
+    "course": "General ASU CS",
     "type": "Official PDF",
     "filename": "asu_cs_major_map.pdf",
     "chunk_id": "asu_cs_major_map.pdf__chunk9",
@@ -583,6 +493,96 @@
     "filename": "cse330_cse355_teachers.txt",
     "chunk_id": "cse330_cse355_teachers.txt__chunk1",
     "text": "Comment:\nIf you want an easy A, take Gordon. But you won't be learning much from him.\n\nComment:\nfor 355 I would 100% take feng. she goes pretty fast, but she goes over everything. (unless you have issues with auditory processing/accents, in which case choose a different prof). her tests are straightforward and pretty much from a combination of the homework/recitations/in class examples. if you take notes and put the pumping lemma formula on your note sheets you'll be golden. Gordon's 330 has easy tests but the lectures will make you feel like you're actively losing braincells and the projects are rough. if you get stuck, go to the TA's office hours because Gordon will not be able to help you.\n\nComment:\nI think Lee is a great choice for 355"
+  },
+  {
+    "source": "ASU SCAI — CSE 330 Syllabus SP25",
+    "url": "https://scai.engineering.asu.edu/wp-content/uploads/sites/31/2025/03/CSE-330-Sylllabus-SP25.pdf",
+    "course": "CSE 330",
+    "type": "Official syllabus",
+    "filename": "cse330_syllabus .txt",
+    "chunk_id": "cse330_syllabus .txt__chunk0",
+    "text": "Instructor: Adil Ahmad\nEmail Address: adil.ahmad@asu.edu\n\nOffice Address: BYENG 372\nOffice Hours: TBD\nCourse Overview and Topics\nThe Operating System (OS) is one of the most critical component of modern machines—all the way from Raspberry\nPis to supercomputers—because it controls hardware resources allocated to all other software.\n\nIn this course we will discuss the fundamentals of operating systems including CPU-memory management, process\nscheduling, device drivers, and file systems.\n\nAt the end of the course, students will be able to describe the inner\nworkings of an Operating System, as well as optimize the algorithms controlling the operations of the different\ncomponents of an Operating System."
+  },
+  {
+    "source": "ASU SCAI — CSE 330 Syllabus SP25",
+    "url": "https://scai.engineering.asu.edu/wp-content/uploads/sites/31/2025/03/CSE-330-Sylllabus-SP25.pdf",
+    "course": "CSE 330",
+    "type": "Official syllabus",
+    "filename": "cse330_syllabus .txt",
+    "chunk_id": "cse330_syllabus .txt__chunk1",
+    "text": "Provided below is a tentative (more detailed) list of topics we will discuss:\n• Kernel bootloader execution\n• Process scheduling (e.g., time sharing with context management)\n• Simultaneous multi-processing (e.g., locks, semaphores)\n• Memory management (e.g., page tables, demand paging, page faults)\n• Kernel-process interactions (e.g., system calls, interrupts)\n• File systems (e.g., different kinds, transparent compression mechanisms)\n• Device management (e.g., UART, storage, network)\n• Kernel-level logging for forensic analysis (e.g., at system calls)\n• Kernel attacks and protection mechanisms (e.g., ASLR, Data Execution Prevention)\n• Virtualization extensions (e.g., Intel VMX, AMD SVM)\n• Process protection mechanisms (e.g., enclaves)\nLearning Outcomes\nAt the end of this course, students will have a theoretical and practical understanding of how an OS works, all the\nway from how it starts to how it can spawn even new operating systems through virtualization techniques."
+  },
+  {
+    "source": "ASU SCAI — CSE 330 Syllabus SP25",
+    "url": "https://scai.engineering.asu.edu/wp-content/uploads/sites/31/2025/03/CSE-330-Sylllabus-SP25.pdf",
+    "course": "CSE 330",
+    "type": "Official syllabus",
+    "filename": "cse330_syllabus .txt",
+    "chunk_id": "cse330_syllabus .txt__chunk2",
+    "text": "With\nthis understanding, they will be expected to become proficient in systems-level programming on any operating\nsystem codebase (e.g., Linux, Windows).\n\nPrerequisite Knowledge\nThe student is expected to have taken CSE 310: Data Structure and Algorithms.\n\nAdditionally, the student is expected\nto be proficient in C programming and have knowledge of pointers.\n\nTextbook and Reading\n1\n• Primary: Operating System Concepts, Silberschatz, Gagne, Galvin\nTenth Edition, ISBN 978-1-119-80037-8\n• Secondary: Operating Systems: free Easy Pieces 1.00 Edition\nhttps://pages.cs.wisc.edu/ remzi/OSTEP/\nFeel free to ask the instructor for other recommendations!\n\nAssessment (tentative)\nThis course will have a grade (A+, A, A-, B+, B, B-, C+, C, C-, D, E), assigned through an absolute grading scheme.\n\nA tentative version of that scheme is provided below."
+  },
+  {
+    "source": "ASU SCAI — CSE 330 Syllabus SP25",
+    "url": "https://scai.engineering.asu.edu/wp-content/uploads/sites/31/2025/03/CSE-330-Sylllabus-SP25.pdf",
+    "course": "CSE 330",
+    "type": "Official syllabus",
+    "filename": "cse330_syllabus .txt",
+    "chunk_id": "cse330_syllabus .txt__chunk3",
+    "text": "Assessment (tentative)\nThis course will have a grade (A+, A, A-, B+, B, B-, C+, C, C-, D, E), assigned through an absolute grading scheme.\n\nA tentative version of that scheme is provided below.\n\nScore (%) Grade Score (%) Grade\n→95% A+ 90 - <95% A\n85 - <90% A- 80 - <85% B+\n75 - <80% B 70 - <75% B-\n65 - <70% C+ 60 - <65% C\n55 - <60% C- 50 - <55% D\n<50% E\nThe main components for assessment are provided below:\n1.\n\n4 (Group) Projects (60%).\n\nProvided below are some important details:\n• Each assignment will require implementing crucial OS functionality (e.g., scheduling, memory management)\non top of a base OS implementation using C code.\n\n• If modified code does not compile correctly, a student will get a zero.\n\nThe base code provided\ncompiled correctly, and there is no reason for modified code not to compile.\n\n• Students will be provided some basic tests to run on their code before submission.\n\n2.\n\nMid-term Examination (15%).\n\nThis will include all course material covered till a week before the midterm.\n\n3."
+  },
+  {
+    "source": "ASU SCAI — CSE 330 Syllabus SP25",
+    "url": "https://scai.engineering.asu.edu/wp-content/uploads/sites/31/2025/03/CSE-330-Sylllabus-SP25.pdf",
+    "course": "CSE 330",
+    "type": "Official syllabus",
+    "filename": "cse330_syllabus .txt",
+    "chunk_id": "cse330_syllabus .txt__chunk4",
+    "text": "• Students will be provided some basic tests to run on their code before submission.\n\n2.\n\nMid-term Examination (15%).\n\nThis will include all course material covered till a week before the midterm.\n\n3.\n\nFinal Examination (15%).\n\nThis will include all the material learnt in the class and through assignments.\n\nBoth the midterm and final exams might have some extra questions that can help boost your grade.\n\n4.\n\n5 Online Quizzes (10%).\n\n5.\n\nBonus (5–8%).\n\nThrough random in-person class attendance and questions in assignments/exams.\n\nLate/Absent Work.\n\nExcept as by prior arrangement or notification of an extension before the deadline, missing\nor late work will be counted as a zero/fail.\n\nSyllabus Changes.\n\nAny information in this syllabus may be subject to change with reasonable advance notice.\n\n2\nOther Important Course Policies\nDisability Accommodations.\n\nSuitable accommodations will be made for students having disabilities."
+  },
+  {
+    "source": "ASU SCAI — CSE 330 Syllabus SP25",
+    "url": "https://scai.engineering.asu.edu/wp-content/uploads/sites/31/2025/03/CSE-330-Sylllabus-SP25.pdf",
+    "course": "CSE 330",
+    "type": "Official syllabus",
+    "filename": "cse330_syllabus .txt",
+    "chunk_id": "cse330_syllabus .txt__chunk5",
+    "text": "2\nOther Important Course Policies\nDisability Accommodations.\n\nSuitable accommodations will be made for students having disabilities.\n\nStudents needing accommodations\nmust register with the ASU Disabilities Resource Center and provide documentation of that registration to\nthe instructor.\n\nStudents should communicate the need for an accommodation in sufficient time for it to be properly arranged.\n\nSee ACD 304-08 Classroom and Testing Accommodations for Students with Disabilities.\n\nAcademic Integrity.\n\nStudents in this class must adhere to ASU’s academic integrity policy, which can be found at ASU\nAcademic Integrity Policy Link.\n\nStudents are responsible for reviewing this policy and understanding each of the areas in\nwhich academic dishonesty can occur.\n\nIn addition, all engineering students are expected to adhere to both the ASU Academic\nIntegrity Honor Code and the Fulton Schools of Engineering Honor Code."
+  },
+  {
+    "source": "ASU SCAI — CSE 330 Syllabus SP25",
+    "url": "https://scai.engineering.asu.edu/wp-content/uploads/sites/31/2025/03/CSE-330-Sylllabus-SP25.pdf",
+    "course": "CSE 330",
+    "type": "Official syllabus",
+    "filename": "cse330_syllabus .txt",
+    "chunk_id": "cse330_syllabus .txt__chunk6",
+    "text": "In addition, all engineering students are expected to adhere to both the ASU Academic\nIntegrity Honor Code and the Fulton Schools of Engineering Honor Code.\n\nAll academic integrity violations will be reported\nto the Fulton Schools of Engineering Academic Integrity Office (AIO).\n\nThe AIO maintains record of all violations and has\naccess to academic integrity violations committed in all other ASU college/schools.\n\nExpected Classroom Behavior.\n\nEvery student is expected to behave in a courteous manner.\n\nYou are free to use a cellphone,\ntablet, or audio/video recording device, to aid your study.\n\nCopyright.\n\nCourse content, including lectures, are copyrighted materials and students may not share outside the class,\nupload to online websites not approved by the instructor, sell, or distribute course content or notes taken during the conduct\nof the course (see ACD 304–06, “Commercial Note Taking Services” and ABOR Policy 5-308 F.14 for more information)."
+  },
+  {
+    "source": "ASU SCAI — CSE 330 Syllabus SP25",
+    "url": "https://scai.engineering.asu.edu/wp-content/uploads/sites/31/2025/03/CSE-330-Sylllabus-SP25.pdf",
+    "course": "CSE 330",
+    "type": "Official syllabus",
+    "filename": "cse330_syllabus .txt",
+    "chunk_id": "cse330_syllabus .txt__chunk7",
+    "text": "You\nmust refrain from uploading to any course shell, discussion board, or website used by the course instructor or other course\nforum, material that is not the student’s original work, unless the students comply with all applicable copyright laws;\nfaculty members reserve the right to delete materials on the grounds of suspected copyright infringement.\n\nthreatening Behavior Reporting.\n\nStudents, faculty, staff, and other individuals do not have an unqualified right of access\nto university grounds, property, or services.\n\nInterfering with the peaceful conduct of university-related business or activities\nor remaining on campus grounds after a request to leave may be considered a crime.\n\nAll incidents and allegations of violent\nor threatening conduct by an ASU student (whether on- or off-campus) must be reported to the ASU Police Department (ASU\nPD) and the office of the Dean of Students.\n\nHarassment and Sexual Discrimination."
+  },
+  {
+    "source": "ASU SCAI — CSE 330 Syllabus SP25",
+    "url": "https://scai.engineering.asu.edu/wp-content/uploads/sites/31/2025/03/CSE-330-Sylllabus-SP25.pdf",
+    "course": "CSE 330",
+    "type": "Official syllabus",
+    "filename": "cse330_syllabus .txt",
+    "chunk_id": "cse330_syllabus .txt__chunk8",
+    "text": "Harassment and Sexual Discrimination.\n\nArizona State University is committed to providing an environment free of\ndiscrimination, harassment, or retaliation for the entire university community, including all students, faculty members, staff\nemployees, and guests.\n\nASU expressly prohibits discrimination, harassment, and retaliation by employees, students, contractors,\nor agents of the university based on any protected status: race, color, religion, sex, national origin, age, disability, veteran\nstatus, sexual orientation, gender identity, and genetic information.\n\nTitle IX is a federal law that provides that no person be excluded on the basis of sex from participation in, be denied benefits\nof, or be subjected to discrimination under any education program or activity.\n\nBoth Title IX and university policy make clear\nthat sexual violence and harassment based on sex is prohibited."
+  },
+  {
+    "source": "ASU SCAI — CSE 330 Syllabus SP25",
+    "url": "https://scai.engineering.asu.edu/wp-content/uploads/sites/31/2025/03/CSE-330-Sylllabus-SP25.pdf",
+    "course": "CSE 330",
+    "type": "Official syllabus",
+    "filename": "cse330_syllabus .txt",
+    "chunk_id": "cse330_syllabus .txt__chunk9",
+    "text": "Both Title IX and university policy make clear\nthat sexual violence and harassment based on sex is prohibited.\n\nAn individual who believes they have been subjected to sexual\nviolence or harassed on the basis of sex can seek support, including counseling and academic support, from the university.\n\nIf\nyou or someone you know has been harassed on the basis of sex or sexually assaulted, you can send information and resources\nat Sexual Violence Prevention FAQs.\n\nMandated sexual harassment reporter: As a mandated reporter, I (the instructor) am obligated to report any information I become\naware of regarding alleged acts of sexual discrimination, including sexual violence and dating violence.\n\nASU Counseling\nServices is available if you wish discuss any concerns confidentially and privately."
   },
   {
     "source": "Reddit r/ASU — CSE 340",

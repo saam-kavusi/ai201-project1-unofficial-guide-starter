@@ -1,0 +1,108 @@
+Source: ASU SCAI — CSE 330 Syllabus SP25
+URL: https://scai.engineering.asu.edu/wp-content/uploads/sites/31/2025/03/CSE-330-Sylllabus-SP25.pdf
+Course: CSE 330
+Type: Official syllabus
+
+Instructor: Adil Ahmad
+Email Address: adil.ahmad@asu.edu
+
+Office Address: BYENG 372
+Office Hours: TBD
+Course Overview and Topics
+The Operating System (OS) is one of the most critical component of modern machines—all the way from Raspberry
+Pis to supercomputers—because it controls hardware resources allocated to all other software.
+In this course we will discuss the fundamentals of operating systems including CPU-memory management, process
+scheduling, device drivers, and file systems. At the end of the course, students will be able to describe the inner
+workings of an Operating System, as well as optimize the algorithms controlling the operations of the different
+components of an Operating System.
+Provided below is a tentative (more detailed) list of topics we will discuss:
+• Kernel bootloader execution
+• Process scheduling (e.g., time sharing with context management)
+• Simultaneous multi-processing (e.g., locks, semaphores)
+• Memory management (e.g., page tables, demand paging, page faults)
+• Kernel-process interactions (e.g., system calls, interrupts)
+• File systems (e.g., different kinds, transparent compression mechanisms)
+• Device management (e.g., UART, storage, network)
+• Kernel-level logging for forensic analysis (e.g., at system calls)
+• Kernel attacks and protection mechanisms (e.g., ASLR, Data Execution Prevention)
+• Virtualization extensions (e.g., Intel VMX, AMD SVM)
+• Process protection mechanisms (e.g., enclaves)
+Learning Outcomes
+At the end of this course, students will have a theoretical and practical understanding of how an OS works, all the
+way from how it starts to how it can spawn even new operating systems through virtualization techniques. With
+this understanding, they will be expected to become proficient in systems-level programming on any operating
+system codebase (e.g., Linux, Windows).
+Prerequisite Knowledge
+The student is expected to have taken CSE 310: Data Structure and Algorithms. Additionally, the student is expected
+to be proficient in C programming and have knowledge of pointers.
+Textbook and Reading
+1
+• Primary: Operating System Concepts, Silberschatz, Gagne, Galvin
+Tenth Edition, ISBN 978-1-119-80037-8
+• Secondary: Operating Systems: free Easy Pieces 1.00 Edition
+https://pages.cs.wisc.edu/ remzi/OSTEP/
+Feel free to ask the instructor for other recommendations!
+Assessment (tentative)
+This course will have a grade (A+, A, A-, B+, B, B-, C+, C, C-, D, E), assigned through an absolute grading scheme.
+A tentative version of that scheme is provided below.
+Score (%) Grade Score (%) Grade
+→95% A+ 90 - <95% A
+85 - <90% A- 80 - <85% B+
+75 - <80% B 70 - <75% B-
+65 - <70% C+ 60 - <65% C
+55 - <60% C- 50 - <55% D
+<50% E
+The main components for assessment are provided below:
+1. 4 (Group) Projects (60%). Provided below are some important details:
+• Each assignment will require implementing crucial OS functionality (e.g., scheduling, memory management)
+on top of a base OS implementation using C code.
+• If modified code does not compile correctly, a student will get a zero. The base code provided
+compiled correctly, and there is no reason for modified code not to compile.
+• Students will be provided some basic tests to run on their code before submission.
+2. Mid-term Examination (15%). This will include all course material covered till a week before the midterm.
+3. Final Examination (15%). This will include all the material learnt in the class and through assignments.
+Both the midterm and final exams might have some extra questions that can help boost your grade.
+4. 5 Online Quizzes (10%).
+5. Bonus (5–8%). Through random in-person class attendance and questions in assignments/exams.
+Late/Absent Work. Except as by prior arrangement or notification of an extension before the deadline, missing
+or late work will be counted as a zero/fail.
+Syllabus Changes. Any information in this syllabus may be subject to change with reasonable advance notice.
+2
+Other Important Course Policies
+Disability Accommodations. Suitable accommodations will be made for students having disabilities. Students needing accommodations
+must register with the ASU Disabilities Resource Center and provide documentation of that registration to
+the instructor. Students should communicate the need for an accommodation in sufficient time for it to be properly arranged.
+See ACD 304-08 Classroom and Testing Accommodations for Students with Disabilities.
+Academic Integrity. Students in this class must adhere to ASU’s academic integrity policy, which can be found at ASU
+Academic Integrity Policy Link. Students are responsible for reviewing this policy and understanding each of the areas in
+which academic dishonesty can occur. In addition, all engineering students are expected to adhere to both the ASU Academic
+Integrity Honor Code and the Fulton Schools of Engineering Honor Code. All academic integrity violations will be reported
+to the Fulton Schools of Engineering Academic Integrity Office (AIO). The AIO maintains record of all violations and has
+access to academic integrity violations committed in all other ASU college/schools.
+Expected Classroom Behavior. Every student is expected to behave in a courteous manner. You are free to use a cellphone,
+tablet, or audio/video recording device, to aid your study.
+Copyright. Course content, including lectures, are copyrighted materials and students may not share outside the class,
+upload to online websites not approved by the instructor, sell, or distribute course content or notes taken during the conduct
+of the course (see ACD 304–06, “Commercial Note Taking Services” and ABOR Policy 5-308 F.14 for more information). You
+must refrain from uploading to any course shell, discussion board, or website used by the course instructor or other course
+forum, material that is not the student’s original work, unless the students comply with all applicable copyright laws;
+faculty members reserve the right to delete materials on the grounds of suspected copyright infringement.
+threatening Behavior Reporting. Students, faculty, staff, and other individuals do not have an unqualified right of access
+to university grounds, property, or services. Interfering with the peaceful conduct of university-related business or activities
+or remaining on campus grounds after a request to leave may be considered a crime. All incidents and allegations of violent
+or threatening conduct by an ASU student (whether on- or off-campus) must be reported to the ASU Police Department (ASU
+PD) and the office of the Dean of Students.
+Harassment and Sexual Discrimination. Arizona State University is committed to providing an environment free of
+discrimination, harassment, or retaliation for the entire university community, including all students, faculty members, staff
+employees, and guests. ASU expressly prohibits discrimination, harassment, and retaliation by employees, students, contractors,
+or agents of the university based on any protected status: race, color, religion, sex, national origin, age, disability, veteran
+status, sexual orientation, gender identity, and genetic information.
+Title IX is a federal law that provides that no person be excluded on the basis of sex from participation in, be denied benefits
+of, or be subjected to discrimination under any education program or activity. Both Title IX and university policy make clear
+that sexual violence and harassment based on sex is prohibited. An individual who believes they have been subjected to sexual
+violence or harassed on the basis of sex can seek support, including counseling and academic support, from the university. If
+you or someone you know has been harassed on the basis of sex or sexually assaulted, you can send information and resources
+at Sexual Violence Prevention FAQs.
+Mandated sexual harassment reporter: As a mandated reporter, I (the instructor) am obligated to report any information I become
+aware of regarding alleged acts of sexual discrimination, including sexual violence and dating violence. ASU Counseling
+Services is available if you wish discuss any concerns confidentially and privately.
