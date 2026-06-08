@@ -1,0 +1,24 @@
+Source: Reddit r/ASU — How difficult is CSE 340?
+URL: https://www.reddit.com/r/ASU/comments/1knq3au/how_difficult_is_cse_340/
+Course: CSE 340
+Type: Student discussion
+
+Post:
+Hi guys I’m taking CSE 340 next semester and I have heard many rumors that this course is actually the most difficult course for CS students as it is one of the trifecta courses and some people even fail this course. Plus I have seen many people spend hours and hours on working the assignment in tutoring center. Can anyone please advise me how do I prepare myself for CSE 340?
+
+Comment:
+I've taken it 3 times and passed this semester, when they say start early on projects they really mean it, that's the only real challenging part is the projects, everything else is relatively easy, which is why they make up 60% of your grade. just do those and get all the extra credit possible and you should be ok
+
+Comment:
+YO START EARLY ON THOSE PROJECTS
+Look at them the day you get them
+I’m serious
+
+Comment:
+I had Gordon and while he didn’t teach his class was extremely easy to get an A+. He gave a ton of extra credit. But he just doesn’t teach. So projects are a lot tougher. But he does give the exact same resources that Bazzi gives on projects. And if you start early and get help from the tutors you should be able to finish and also even get like full points. I had a friend who got like a 35% on project 1 and managed to end with a B-B+ I believe. But that’s bc she ended up getting hundreds on the last two projects and did well on the midterm and did the extra credits.
+If you have Bazzi, I believe his exams are a bit tougher and he moved ahead more. But he actually teaches so you’d prob be able to understand the projects a bit more.
+I know that Bazzi is trying to sync all 340 classes so same projects and etc. I’m not sure if this will apply to hw and exams next semester as Gordon had his own homework and exams compared to Bazzi.
+This is just my experience from Gordon this last spring semester. This could change for example the amount of ec he gave and etc depending on how much Bazzi is trying to sync together with the other professors. My biggest advice is just start early. The first project got a lot of people, tbh it was the hardest out of all three for a lot of people. The remaining two did not take as long and were a lot easier. A lot of the material is from cse 355 but just understanding how to code it. If you understand the algorithm itself then it shouldn’t be too bad.
+
+Comment:
+All I’m saying is if you love yourself and don’t want to feel miserable don’t take baazi. I know people who had to retake the class because he figured out that they gave class attendance once when they weren’t present in the class. GAVE THEM AN ENTIRE AIV BECAUSE OF A CLASS ATTENDANCE. His exams are extremely hard and even tho he teaches well it’s not worth it taking it with him. Take the class with Gordon and you can ask ur friends in Baazis class to send the excel sheet where baazi stores all class notes and class recordings if u really want to learn from baazi. This was u also get a good grade and learn but don’t u dare think that taking baazi is a good idea. He will make you suffer

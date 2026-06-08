@@ -1,0 +1,24 @@
+Source: Reddit r/ASU — Opinions on hardest CS major classes and future
+URL: https://www.reddit.com/r/ASU/comments/14b4dsh/opinions_on_hardest_cs_major_classes_and_future/
+Course: General ASU CS / CSE 330, CSE 340, CSE 355
+Type: Student discussion
+
+Post:
+I am in my "junior" year, although I have struggled on and failed some classes, so my major map is not on the same track as it should be. I am currently taking CSE 340 over the summer, and not doing great on the coding aspects. In fact, I have been struggling a lot on the coding aspects of a lot of the classes in exchange for knowing the theory and book learning portions. I fell like I become a worse and worse programmer the further I go. That being said, I still would really like to finish what I have started and get a career in the field. I am hoping that once I am actually in a job, I can relearn the actually real world use of all of my learning.
+I would like to know, what everyone is struggling with the most, and hopefully feel not so alone and downtrodden. I am not looking to land a job at the highest level or anything, I am fine with being a grunt, I am just getting very worried that I will not be able to finish school with the down trend in performance that I am currently experiencing. I knew it was going to be a hard major, but I feel I am at the point where I cannot both learn, and get assignments done within the time frames. It is one or the other.
+Any help/tips/advice for school and career with brutal honesty would be very much appreciated. I am at a sad breaking point. Thank you.
+
+Comment:
+The hardest classes in the CS major are widely agreed upon by the ASU CS community as: CSE 330, CSE 340, CSE 355. Also lovingly called the trifecta or devil’s threesome
+
+Comment:
+I also struggled with that block of classes. It gets easier, I failed 3 classes in one semester and came back stronger, graduated with a 3.0ish. It's normal to feel shitty at programming. I got a business analyst job because it was easier lol. But companies love a CS degree no matter what you do, so it's worth it even if you feel incompetent
+
+Comment:
+My friend, my hardest CS class was 110. No joke, I couldn't remember how to initialize an array, got in trouble because I had similar code to another's since I didn't know what to do and asked a classmate and I was just completely lost on how to code. I was 22 and have only seen code from some weird python project in my applied math REU and seen simple designs in MATLAB (I was a physics major then switched to CSE). I was absolutely not cut out for coding, i thought i was gonna fail. Don't stop, don't quit my friend. You will succeed. You will do great, you are doing awesome don't beat yourself up. I graduated last year after 3 years of catching up to my CSE major, got a sweet job, got a glowing performance review, trained an intern and couple new hires, been able to hold my own talking to stakeholders and yes, I can initialize an array. Don't doubt yourself any more than you need to, push yourself but remember that your pace doesn't have to be like everyone else. No comparisons to others, just drive yourself to the finish line and remember how hard you worked for it. I believe in you.
+
+Comment:
+I had to take stats 3 times, got mostly Cs in my classes I got a job right out of college (doing stats lol). Just pass your classes and do ur best.
+
+Comment:
+Same here and struggling on the coding aspect. Taking CSE 240 right now and thought it would be okay until C++ and Linux were introduced all at once. I never had a CS background either (did undergrad in biochem) but wanted to study up some CS to get a Master's. Studying for CS is no joke though, I will admit that. Right now, it sounds like you have the motivation but lack the focus. Keep pushing through though because you're almost there. Better to finish the race than stop half way and ponder for the rest of your life if you could've finished.

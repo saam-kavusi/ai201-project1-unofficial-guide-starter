@@ -1,0 +1,24 @@
+Source: Reddit r/ASU — CSE 340 with Bazzi during the summer
+URL: https://www.reddit.com/r/ASU/comments/1rr8aya/cse340_with_bazzi_during_the_summer/
+Course: CSE 340
+Type: Student professor/course discussion
+
+Post:
+Can someone tell me more about Bazzi. I am taking him over the summer and is not like I have much of a choice, his Fall classes does not fit my schedule at all. How is he as professor? I hear he is very strict when it comes to cheating is that because people shared codes or because of AI? How should I prepare mainly for summer (what outside resources)? I don't want to screw myself over and regret taking him but CSE 330 and 340 and 355 are the last classes I need to start my Capstone. I know Parupudi is also an option but everyone tells me Bazzi is a priority for CSE340.
+
+Comment:
+Bazzi's cool, he's definitely strict but he knows what he's talking about
+100% do not cheat in his class, he's strict on that too but the material in his courses should be enough. Big on AIVs. He gives a good bit of practises for every exam (old homeworks, exams, and the like) so if you study well and do well on the projects, you should be solid.
+If you're a C's get degrees type, one of my mates got 40s on both of his exams, did everything else well enough and still ended out with a low 70 something
+
+Comment:
+Bazzi is hands down one of the best CS professors. I took him last semester on top of the other trifecta classes. His notes are extremely thorough with examples. The tutoring and office hours are useful as well. The only thing are the projects. Absolutely start early on them and ask questions early as well. That’s what got me was the projects, I would start late and just turn in what I had to avoid late penalties. The topics overall are a little confusing but definitely focus on studying and repetition.
+As far as cheating goes, don’t even think about it. If you take CS seriously he’s one of the better professors you’re gonna get and tbh using AI on his projects and whatnot doesn’t get you very far regardless. On testing days he’ll take away people’s tests and tell them to leave if you’re talking/cheating or if you flip over your test early which makes for a little bit of a nerve wracking environment but if you do what you’re told then you’re fine. He’s overall chill and a lil funny even tho the content is a little rough.
+Outside materials there’s an old CSE340 professor who uploaded some things to YouTube: Adam Doupé. The course has changed quite a bit since then but if you need a topic explained another way then I found him to be useful on some things. Otherwise Bazzi’s notes and TA recitations/office hours are gonna be the best resource.
+Homework’s aren’t horrible imo and the tests are rough but he curves pretty well as he doesn’t do “half” points or anything like that.
+
+Comment:
+Bazzi 100%. One of the very few good CS professors. Don’t cheat, show up and take notes, start homework EARLY, and you’ll be fine.
+
+Comment: 
+Just take Parupudi.

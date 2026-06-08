@@ -1,0 +1,812 @@
+[
+  {
+    "source": "CSE330_Sylllabus_SP25.pdf",
+    "url": "",
+    "course": "",
+    "type": "Official PDF",
+    "filename": "CSE330_Sylllabus_SP25.pdf",
+    "chunk_id": "CSE330_Sylllabus_SP25.pdf__chunk0",
+    "text": "CSE 330: Operating Systems\nContact Information\nInstructor: AdilAhmad\nEmailAddress: adil.ahmad@asu.edu\nO!ceAddress: BYENG372\nO!ceHours: TBD\nCourse Overview and Topics\n!eOperatingSystem(OS)isoneofthemostcriticalcomponentofmodernmachines—allthewayfromRaspberry\nPistosupercomputers—becauseitcontrolshardwareresourcesallocatedtoallotherso”ware.\n\nInthiscourse,wewilldiscussthefundamentalsofoperatingsystemsincludingCPU-memorymanagement,process\nscheduling, device drivers, and #le systems.\n\nAt the end of the course, students will be able to describe the inner\nworkings of an Operating System, as well as optimize the algorithms controlling the operations of the di$erent\ncomponentsofanOperatingSystem."
+  },
+  {
+    "source": "CSE330_Sylllabus_SP25.pdf",
+    "url": "",
+    "course": "",
+    "type": "Official PDF",
+    "filename": "CSE330_Sylllabus_SP25.pdf",
+    "chunk_id": "CSE330_Sylllabus_SP25.pdf__chunk1",
+    "text": "Providedbelowisatentative(moredetailed)listoftopicswewilldiscuss:\n• Kernelbootloaderexecution\n• Processscheduling(e.g.,timesharingwithcontextmanagement)\n• Simultaneousmulti-processing(e.g.,locks,semaphores)\n• Memorymanagement(e.g.,pagetables,demandpaging,pagefaults)\n• Kernel-processinteractions(e.g.,systemcalls,interrupts)\n• Filesystems(e.g.,di$erentkinds,transparentcompressionmechanisms)\n• Devicemanagement(e.g.,UART,storage,network)\n• Kernel-levelloggingforforensicanalysis(e.g.,atsystemcalls)\n• Kernela%acksandprotectionmechanisms(e.g.,ASLR,DataExecutionPrevention)\n• Virtualizationextensions(e.g.,IntelVMX,AMDSVM)\n• Processprotectionmechanisms(e.g.,enclaves)\nLearning Outcomes\nAttheendofthiscourse,studentswillhaveatheoreticalandpracticalunderstandingofhowanOSworks,allthe\nwayfromhowitstartstohowitcanspawnevennewoperatingsystemsthroughvirtualizationtechniques."
+  },
+  {
+    "source": "CSE330_Sylllabus_SP25.pdf",
+    "url": "",
+    "course": "",
+    "type": "Official PDF",
+    "filename": "CSE330_Sylllabus_SP25.pdf",
+    "chunk_id": "CSE330_Sylllabus_SP25.pdf__chunk2",
+    "text": "With\nthis understanding, they will be expected to become pro#cient in systems-level programming on any operating\nsystemcodebase(e.g.,Linux,Windows).\n\nPrerequisite Knowledge\n!estudentisexpectedtohavetakenCSE310:DataStructureandAlgorithms.Additionally,thestudentisexpected\ntobepro#cientinCprogrammingandhaveknowledgeofpointers.\n\nTextbook and Reading\n1\n\n• Primary: OperatingSystemConcepts,Silberschatz,Gagne,Galvin\nTenthEdition,ISBN978-1-119-80037-8\n• Secondary: OperatingSystems: !reeEasyPieces1.00Edition\nh%ps://pages.cs.wisc.edu/remzi/OSTEP/\nFeelfreetoasktheinstructorforotherrecommendations!\n\nAssessment (tentative)\n!iscoursewillhaveagrade(A+,A,A-,B+,B,B-,C+,C,C-,D,E),assignedthroughanabsolutegradingscheme.\n\nAtentativeversionofthatschemeisprovidedbelow.\n\nScore(%) Grade Score(%) Grade\n95% A+ 90-<95% A\n→\n85-<90% A- 80-<85% B+\n75-<80% B 70-<75% B-\n65-<70% C+ 60-<65% C\n55-<60% C- 50-<55% D\n<50% E\n!emaincomponentsforassessmentareprovidedbelow:\n1.\n\n4(Group)Projects(60%)."
+  },
+  {
+    "source": "CSE330_Sylllabus_SP25.pdf",
+    "url": "",
+    "course": "",
+    "type": "Official PDF",
+    "filename": "CSE330_Sylllabus_SP25.pdf",
+    "chunk_id": "CSE330_Sylllabus_SP25.pdf__chunk3",
+    "text": "4(Group)Projects(60%).\n\nProvidedbelowaresomeimportantdetails:\n• Each assignment will require implementing crucial OS functionality (e.g., scheduling, memory man-\nagement)ontopofabaseOSimplementationusingCcode.\n\n• If modi”ed code does not compile correctly, a student will get a zero.\n\n!e base code provided\ncompiledcorrectly,andthereisnoreasonformodi#edcodenottocompile.\n\n• Studentswillbeprovidedsomebasicteststorunontheircodebeforesubmission.\n\n2.\n\nMid-termExamination(15%).\n\n!iswillincludeallcoursematerialcoveredtillaweekbeforethemidterm.\n\n3.\n\nFinal Examination (15%).\n\n!is will include all the material learnt in the class and through assignments.\n\nBoththemidtermand#nalexamsmighthavesomeextraquestionsthatcanhelpboostyourgrade.\n\n4.\n\n5Online#izzes(10%).\n\n5.\n\nBonus(5–8%).\n\n!roughrandomin-personclassa%endanceandquestionsinassignments/exams.\n\nLate/AbsentWork.\n\nExceptasbypriorarrangementornoti#cationofanextensionbeforethedeadline,missing\norlateworkwillbecountedasazero/fail.\n\nSyllabusChanges."
+  },
+  {
+    "source": "CSE330_Sylllabus_SP25.pdf",
+    "url": "",
+    "course": "",
+    "type": "Official PDF",
+    "filename": "CSE330_Sylllabus_SP25.pdf",
+    "chunk_id": "CSE330_Sylllabus_SP25.pdf__chunk4",
+    "text": "Late/AbsentWork.\n\nExceptasbypriorarrangementornoti#cationofanextensionbeforethedeadline,missing\norlateworkwillbecountedasazero/fail.\n\nSyllabusChanges.\n\nAnyinformationinthissyllabusmaybesubjecttochangewithreasonableadvancenotice.\n\n2\n\nOther Important Course Policies\nDisabilityAccomodations.\n\nSuitableaccommodationswillbemadeforstudentshavingdisabilities.\n\nStudentsneedingac-\ncommodations must register with the ASU Disabilities Resource Center and provide documentation of that registration to\ntheinstructor.Studentsshouldcommunicatetheneedforanaccommodationinsu&cienttimeforittobeproperlyarranged.\n\nSeeACD304-08ClassroomandTestingAccommodationsforStudentswithDisabilities.\n\nAcademic Integrity.\n\nStudents in this class must adhere to ASU’s academic integrity policy, which can be found at ASU\nAcademic Integrity Policy Link."
+  },
+  {
+    "source": "CSE330_Sylllabus_SP25.pdf",
+    "url": "",
+    "course": "",
+    "type": "Official PDF",
+    "filename": "CSE330_Sylllabus_SP25.pdf",
+    "chunk_id": "CSE330_Sylllabus_SP25.pdf__chunk5",
+    "text": "Academic Integrity.\n\nStudents in this class must adhere to ASU’s academic integrity policy, which can be found at ASU\nAcademic Integrity Policy Link.\n\nStudents are responsible for reviewing this policy and understanding each of the areas in\nwhichacademicdishonestycanoccur.Inaddition,allengineeringstudentsareexpectedtoadheretoboththeASUAcademic\nIntegrityHonorCodeandtheFultonSchoolsofEngineeringHonorCode.Allacademicintegrityviolationswillbereported\nto the Fulton Schools of Engineering Academic Integrity O&ce (AIO).\n\n!e AIO maintains record of all violations and has\naccesstoacademicintegrityviolationscommi%edinallotherASUcollege/schools.\n\nExpectedClassroomBehavior.Everystudentisexpectedtobehaveinacourteousmanner.Youarefreetouseacellphone,\ntablet,oraudio/videorecordingdevice,toaidyourstudy.\n\nCopyright."
+  },
+  {
+    "source": "CSE330_Sylllabus_SP25.pdf",
+    "url": "",
+    "course": "",
+    "type": "Official PDF",
+    "filename": "CSE330_Sylllabus_SP25.pdf",
+    "chunk_id": "CSE330_Sylllabus_SP25.pdf__chunk6",
+    "text": "ExpectedClassroomBehavior.Everystudentisexpectedtobehaveinacourteousmanner.Youarefreetouseacellphone,\ntablet,oraudio/videorecordingdevice,toaidyourstudy.\n\nCopyright.\n\nCourse content, including lectures, are copyrighted materials and students may not share outside the class,\nuploadtoonlinewebsitesnotapprovedbytheinstructor,sell,ordistributecoursecontentornotestakenduringtheconduct\nofthecourse(seeACD304–06,“CommercialNoteTakingServices”andABORPolicy5-308F.14formoreinformation).\n\nYou\nmustrefrainfromuploadingtoanycourseshell,discussionboard,orwebsiteusedbythecourseinstructororothercourse\nforum, materialthatisnotthestudent’soriginalwork, unlessthestudents#rstcomplywithallapplicablecopyrightlaws;\nfacultymembersreservetherighttodeletematerialsonthegroundsofsuspectedcopyrightinfringement."
+  },
+  {
+    "source": "CSE330_Sylllabus_SP25.pdf",
+    "url": "",
+    "course": "",
+    "type": "Official PDF",
+    "filename": "CSE330_Sylllabus_SP25.pdf",
+    "chunk_id": "CSE330_Sylllabus_SP25.pdf__chunk7",
+    "text": "$reateningBehaviorReporting.Students,faculty,sta$,andotherindividualsdonothaveanunquali#edrightofaccess\ntouniversitygrounds,property,orservices.Interferingwiththepeacefulconductofuniversity-relatedbusinessoractivities\norremainingoncampusgroundsa”erarequesttoleavemaybeconsideredacrime.\n\nAllincidentsandallegationsofviolent\northreateningconductbyanASUstudent(whetheron-oro$-campus)mustbereportedtotheASUPoliceDepartment(ASU\nPD)andtheO&ceoftheDeanofStudents.\n\nHarrassment and Sexual Discrimination.\n\nArizona State University is commi%ed to providing an environment free of\ndiscrimination,harassment,orretaliationfortheentireuniversitycommunity,includingallstudents,facultymembers,sta$\nemployees,andguests.ASUexpresslyprohibitsdiscrimination,harassment,andretaliationbyemployees,students,contrac-\ntors,oragentsoftheuniversitybasedonanyprotectedstatus:race,color,religion,sex,nationalorigin,age,disability,veteran\nstatus,sexualorientation,genderidentity,andgeneticinformation."
+  },
+  {
+    "source": "CSE330_Sylllabus_SP25.pdf",
+    "url": "",
+    "course": "",
+    "type": "Official PDF",
+    "filename": "CSE330_Sylllabus_SP25.pdf",
+    "chunk_id": "CSE330_Sylllabus_SP25.pdf__chunk8",
+    "text": "TitleIXisafederallawthatprovidesthatnopersonbeexcludedonthebasisofsexfromparticipationin,bedeniedbene#ts\nof,orbesubjectedtodiscriminationunderanyeducationprogramoractivity.BothTitleIXanduniversitypolicymakeclear\nthatsexualviolenceandharassmentbasedonsexisprohibited.Anindividualwhobelievestheyhavebeensubjectedtosexual\nviolenceorharassedonthebasisofsexcanseeksupport,includingcounselingandacademicsupport,fromtheuniversity.If\nyouorsomeoneyouknowhasbeenharassedonthebasisofsexorsexuallyassaulted,youcan#ndinformationandresources\natSexualViolencePreventionFAQs.\n\nMandatedsexualharassmentreporter:Asamandatedreporter,I(theinstructor)amobligatedtoreportanyinformationIbe-\ncomeawareofregardingallegedactsofsexualdiscrimination,includingsexualviolenceanddatingviolence.ASUCounseling\nServicesisavailableifyouwishdiscussanyconcernscon#dentiallyandprivately.\n\n3"
+  },
+  {
+    "source": "CSE340_Syllabus_SP25.pdf",
+    "url": "",
+    "course": "",
+    "type": "Official PDF",
+    "filename": "CSE340_Syllabus_SP25.pdf",
+    "chunk_id": "CSE340_Syllabus_SP25.pdf__chunk0",
+    "text": "CSE 340 Programming Languages\nSpring 2025\n1 Staff and Logistics\n1.1 Teaching and Support Staff\nInstructor: James Gordon\nE-mail: james.gordon.2@asu.edu\nOffice: BYENG 596\nOffice Hours: Friday – 11:30 – 2:00 or by\nappointment.\nI encourage you to come to my office hours to ask any questions you have about\nthe class material or other general questions. To make the best use of my\ntime and your time, I expect you to come prepared. If your question is\nabout course material, I expect that you have read carefully the relevant parts from\nthe book/notes. If your question is about problems, I expect that you have\nmade a serious effort to solve the problem. I also encourage you to take advantage\nof the many graduate TAs office hours and the undergraduate TAs lab hours.\nTA – Bimsara Pathiraja: bpathir1@asu.edu\nGrader –TBD\n1"
+  },
+  {
+    "source": "CSE340_Syllabus_SP25.pdf",
+    "url": "",
+    "course": "",
+    "type": "Official PDF",
+    "filename": "CSE340_Syllabus_SP25.pdf",
+    "chunk_id": "CSE340_Syllabus_SP25.pdf__chunk1",
+    "text": "1.2 Communication\nAll email communication with me or the TAs must have a subject field in the\nfollowing format:\nCSE340F24 actual subject of the message\nFor example, if you have a question about attendance, your email subject can\nbe\nCSE340F24 Question about attendance\nYou should always write your name on all material you submit including\nemail (some of you have non-ASU email accounts that do not include your\nname).\n\nAlso, writing proper emails with greetings and signature is something\nyou should practice.\n\n2 Course Information\n2.1 Catalogue Description\nFormal syntactic and semantic descriptions, compilation and implementation\nissues, and theoretical foundations for several programming paradigms.\n\nPre-\nrequisites: Computer Systems Engineer BSE or Computer Science BS major;\nCSE 310 with C or better; CSE 230 or EEE 230 with C or better OR CSE\ngraduate student\n2.2 Textbook\nAuthor: Kenneth C.\n\nLouden and Kenneth A.\n\nLambert\nTitle: Programming Languages: Principles and Practice, 3rd edition."
+  },
+  {
+    "source": "CSE340_Syllabus_SP25.pdf",
+    "url": "",
+    "course": "",
+    "type": "Official PDF",
+    "filename": "CSE340_Syllabus_SP25.pdf",
+    "chunk_id": "CSE340_Syllabus_SP25.pdf__chunk2",
+    "text": "Louden and Kenneth A.\n\nLambert\nTitle: Programming Languages: Principles and Practice, 3rd edition.\n\nSecond edition can also be used and is much cheaper.\n\nISBN: 9781111529413\nList of Topics\n1.\n\nSyntax Analysis\n2.\n\nLambda Calculus\n3.\n\nBasic Semantics\n4.\n\nType Systems\n2\n\n5.\n\nAbstract Data Types and Modules\n6.\n\nExpressions and Statements\n7.\n\nProcedures and the Runtime Environment\n2.3 Objectives and Learning Outcomes (ABET Syllabus)\nTo provide students with an understanding of the principles underlying the\ndesign and implementation of programming languages\n• Students can understand the basics of recursive descent parsing.\n\n• Students can describe program execution using box and circle diagrams.\n\n• Students can understand static scoping\n• Students can understand parameter-passing mechanisms and their imple-\nmentation.\n\n• Students can understand the advantage of object-oriented design and\nbehavior.\n\n• Students can think functionally when creating functional programs."
+  },
+  {
+    "source": "CSE340_Syllabus_SP25.pdf",
+    "url": "",
+    "course": "",
+    "type": "Official PDF",
+    "filename": "CSE340_Syllabus_SP25.pdf",
+    "chunk_id": "CSE340_Syllabus_SP25.pdf__chunk3",
+    "text": "• Students can understand the advantage of object-oriented design and\nbehavior.\n\n• Students can think functionally when creating functional programs.\n\n• Students can think declaratively when creating declarative programs\n3 Assignments, Workload and Grading\n3.1 Homework\nThere will be 2 graded homework assignments during the semester worth 15% of\nthe total course grade.\n\nEach homework assignment is worth 7.5% of the total grade.\n\nNo late submissions are accepted for homework.\n\n3.2 Problem Sets\nIn addition to the homework, I will be distributing old homework and problems\nwith solutions (problem sets) as well as old exams, some solved and some without\nsolutions.\n\nI expect that you will be working on these problems to solve them\nand that you will ask for help if you have any difficulty, but these old homework\nassignments, exams and problem sets are not graded.\n\nWorking on the problems\nis important as a preparation for the exams."
+  },
+  {
+    "source": "CSE340_Syllabus_SP25.pdf",
+    "url": "",
+    "course": "",
+    "type": "Official PDF",
+    "filename": "CSE340_Syllabus_SP25.pdf",
+    "chunk_id": "CSE340_Syllabus_SP25.pdf__chunk4",
+    "text": "Working on the problems\nis important as a preparation for the exams.\n\nEven though I will be providing\nsolutions for old homework and problem sets, you should look at the solution\nonly after you have solved the problems or made a serious effort to solve the\nproblems.\n\nYour performance on the exams will be negatively affected if you do\n3\n\nnot have sufficient practice with the material.\n\nThe homework assignments by\nthemselves will only give you minimum practice.\n\nRemember that one cannot\nlearn the material by simply reading solutions; one should actively work on\nsolving problems.\n\nI and the TAs will be more than happy to answer questions about problem sets.\n\n3.3 Programming Assignments\nThere are 4 programming assignments.\n\nAll of the assignments are demanding\nand require a lot of time.\n\nUnlike previous classes, in this class, reading and\nunderstanding the requirements requires significant effort.\n\nIn the past, students\nspent anywhere from 25 to 40 hours or more per programming assignment."
+  },
+  {
+    "source": "CSE340_Syllabus_SP25.pdf",
+    "url": "",
+    "course": "",
+    "type": "Official PDF",
+    "filename": "CSE340_Syllabus_SP25.pdf",
+    "chunk_id": "CSE340_Syllabus_SP25.pdf__chunk5",
+    "text": "In the past, students\nspent anywhere from 25 to 40 hours or more per programming assignment.\n\nYou\ncannot afford starting late on any programming assignment.\n\nLate Submission for Programming Assignments There is a 10% penalty\nper day for late submission for programming assignments, up to a maximum\nof three days.\n\nThe number of days is rounded up to the nearest integer.\n\nNo\nsubmissions are accepted after 3 days from the due date.\n\nIf you have a documented medical or family emergency of a duration that can\naffect your ability to finish an assignment, I will consider giving an extension or\na makeup assignment.\n\nIf you are not able to finish a project on time because of\nunexpected emergency a day or two before the due date, you should not expect\nan extension.\n\n3.4 Workload\nThis is a demanding class and requires consistent effort on your part:\n1.\n\nYou will be reading and interpreting long specification documents for the\nprojects and you will be designing solutions to satisfy the specifications."
+  },
+  {
+    "source": "CSE340_Syllabus_SP25.pdf",
+    "url": "",
+    "course": "",
+    "type": "Official PDF",
+    "filename": "CSE340_Syllabus_SP25.pdf",
+    "chunk_id": "CSE340_Syllabus_SP25.pdf__chunk6",
+    "text": "You will be reading and interpreting long specification documents for the\nprojects and you will be designing solutions to satisfy the specifications.\n\nThis\nis different from what most of you have been exposed to so far.\n\n2.\n\nYou will be writing thousands of lines of code in this class and you will have\nto read a lot of code that I or the TAs wrote.\n\nThis is different from what most\nof you have been exposed to so far.\n\n3.\n\nYou will have to handle non-trivial abstract concepts, new programming\nparadigms and complex implementation issues.\n\nThis requires consistent\neffort on your part.\n\nIf you put the effort, you will learn a lot and succeed in this class.\n\nIt is really\nworth it.\n\nIf you do not put the effort, you cannot succeed in this class.\n\n3.5 Grading\n• 2 Exams – Midterm and Final: 30% (15% each)\n• 2 homework assignments: 10% (5% each)\n4"
+  },
+  {
+    "source": "CSE340_Syllabus_SP25.pdf",
+    "url": "",
+    "course": "",
+    "type": "Official PDF",
+    "filename": "CSE340_Syllabus_SP25.pdf",
+    "chunk_id": "CSE340_Syllabus_SP25.pdf__chunk7",
+    "text": "It is really\nworth it.\n\nIf you do not put the effort, you cannot succeed in this class.\n\n3.5 Grading\n• 2 Exams – Midterm and Final: 30% (15% each)\n• 2 homework assignments: 10% (5% each)\n4\n\n• 3 Programming assignments: 60% total (20% each)\nThe thresholds for assigning letter grades are the following:\nA: 93, A-: 90 – 92, B+: 87 , B: 83-86, B-: 80-82, C+: 79, C: 70.\n\nFor A+ , I will not use a simple threshold.\n\nI will look at the totality of your work\nnot including bonus points for attendance.\n\nIf circumstances warrant it, I will\nadjust these thresholds slightly, but you should not rely on that.\n\nRegrade Requests: All regrade requests should be done no later than one\nweek from the date the grade is released.\n\nIf you have any homework grading issue,\nyou should submit a regrade request on GradeScope.\n\nYou can follow up by\nemail if the issue is not addressed within one week of the request.\n\nIf you have\nexam grading issue, you should come to office hours to discuss it."
+  },
+  {
+    "source": "CSE340_Syllabus_SP25.pdf",
+    "url": "",
+    "course": "",
+    "type": "Official PDF",
+    "filename": "CSE340_Syllabus_SP25.pdf",
+    "chunk_id": "CSE340_Syllabus_SP25.pdf__chunk8",
+    "text": "You can follow up by\nemail if the issue is not addressed within one week of the request.\n\nIf you have\nexam grading issue, you should come to office hours to discuss it.\n\n4 Important Dates\nThe following are the fixed dates for exams and tentative dates for homework\nassignments and projects.\n\nThe exam dates are fixed and will not change and\nyou should plan your schedule accordingly.\n\nIf an exam date conflicts with a reli-\ngious holiday (in accordance with ACD - 304-04) or other university sanctioned\nactivities (in accordance with ACD - 304-02) you should let me know at least one\nweek before the exam in order to schedule a makeup exam.\n\nAbsence for an exam\ndue to medical reasons should be properly documented by a physician.\n\nFinal exam – Finals week, 2024, Refer to ASU fall 2024 finals week\nschedule and our class time.\n\nWe have to take our final exam at that\ntime.\n\nhttps://registrar.asu.edu/final-exam-schedule#Fall%202024\n5"
+  },
+  {
+    "source": "CSE340_Syllabus_SP25.pdf",
+    "url": "",
+    "course": "",
+    "type": "Official PDF",
+    "filename": "CSE340_Syllabus_SP25.pdf",
+    "chunk_id": "CSE340_Syllabus_SP25.pdf__chunk9",
+    "text": "Final exam – Finals week, 2024, Refer to ASU fall 2024 finals week\nschedule and our class time.\n\nWe have to take our final exam at that\ntime.\n\nhttps://registrar.asu.edu/final-exam-schedule#Fall%202024\n5\n\n5 Attendance and Classroom Behavior\n5.1 Lecture Attendance\nAttendance and class participation is optional but those who do not attend regularly\ntypically do not do well in the course.\n\nYou are responsible for\neverything covered in class.\n\n5.2 Recitation Sessions Attendance\nRecitation session attendance is optional but there is a 0.25% bonus for every\nrecitation session you attend up to a total of 2.75%.\n\nThis can make the difference\nbetween two letter grades.\n\n5.3 Cell phone and recording devices usage\nI expect you to set your cell phone to silent/vibrate mode while in class.\n\nYou\ncan audio record the lecture only for your personal use, but you should let me\nknow first if you plan on doing that.\n\n5.4 Classroom Behavior\nYou should be familiar with ASU’s Student Service manual, especially (SSM 104-02)."
+  },
+  {
+    "source": "CSE340_Syllabus_SP25.pdf",
+    "url": "",
+    "course": "",
+    "type": "Official PDF",
+    "filename": "CSE340_Syllabus_SP25.pdf",
+    "chunk_id": "CSE340_Syllabus_SP25.pdf__chunk10",
+    "text": "5.4 Classroom Behavior\nYou should be familiar with ASU’s Student Service manual, especially (SSM 104-02).\n\nFaculty, staff, and other individuals do not have an unqualified right of\naccess to university grounds, property, or services.\n\nInterfering with the peace-\nful conduct of university-related business or activities or remaining on campus\ngrounds after a request to leave may be considered a crime.\n\nAll incidents and\nallegations of violent or threatening conduct by an ASU student (whether on-\nor off-campus) must be reported to the ASU Police Department (ASU PD) and\nthe Office of the Dean of Students.\n\n6 Special Accommodations\nSuitable accommodations will be made for students having disabilities.\n\nStudents\nneeding accommodations must register with the ASU Student Accessibility and\nInclusive Learning Services and provide documentation of that registration to\nthe instructor.\n\nStudents should communicate the need for an accommodation in\nsufficient time for it to be properly arranged."
+  },
+  {
+    "source": "CSE340_Syllabus_SP25.pdf",
+    "url": "",
+    "course": "",
+    "type": "Official PDF",
+    "filename": "CSE340_Syllabus_SP25.pdf",
+    "chunk_id": "CSE340_Syllabus_SP25.pdf__chunk11",
+    "text": "Students should communicate the need for an accommodation in\nsufficient time for it to be properly arranged.\n\n7 Sexual Discrimination\nArizona State University is committed to providing an environment free of dis-\ncrimination, harassment, or retaliation for the entire university community, in-\ncluding all students, faculty members, staff employees, and guests.\n\n6\n\nASU expressly prohibits discrimination, harassment, and retaliation by em-\nployees, students, contractors, or agents of the university based on any protected\nstatus: race, color, religion, sex, national origin, age, disability, veteran status,\nsexual orientation, gender identity, and genetic information.\n\nTitle IX is a federal law that provides that no person be excluded on the\nbasis of sex from participation in, be denied benefits of, or be subjected to\ndiscrimination under any education program or activity.\n\nBoth Title IX and\nuniversity policy make clear that sexual violence and harassment based on sex\nis prohibited."
+  },
+  {
+    "source": "CSE340_Syllabus_SP25.pdf",
+    "url": "",
+    "course": "",
+    "type": "Official PDF",
+    "filename": "CSE340_Syllabus_SP25.pdf",
+    "chunk_id": "CSE340_Syllabus_SP25.pdf__chunk12",
+    "text": "Both Title IX and\nuniversity policy make clear that sexual violence and harassment based on sex\nis prohibited.\n\nAn individual who believes they have been subjected to sexual\nviolence or harassed on the basis of sex can seek support, including counseling\nand academic support, from the university.\n\nIf you or someone you know has\nbeen harassed on the basis of sex or sexually assaulted, you can find information\nand resources at https://sexualviolenceprevention.asu.edu/faqs.\n\nAs an employee of the University I am considered a mandated reporter and\ntherefore obligated to report any information regarding alleged acts of sexual\ndiscrimination that I am informed of or have a reasonable basis to believe oc-\ncurred.\n\nASU Counseling Services, https://eoss.asu.edu/counseling, is available if you\nwish discuss any concerns confidentially and privately."
+  },
+  {
+    "source": "CSE340_Syllabus_SP25.pdf",
+    "url": "",
+    "course": "",
+    "type": "Official PDF",
+    "filename": "CSE340_Syllabus_SP25.pdf",
+    "chunk_id": "CSE340_Syllabus_SP25.pdf__chunk13",
+    "text": "ASU Counseling Services, https://eoss.asu.edu/counseling, is available if you\nwish discuss any concerns confidentially and privately.\n\n8 Copyright\nCourse content, including lectures, are copyrighted materials and students may\nnot share outside the class, upload to online websites not approved by the\ninstructor, sell, or distribute course content or notes taken during the con-\nduct of the course (see ACD 304-06, “Commercial Note Taking Services”and\nABOR Policy 5-308 F.14 for more information).\n\nYou must refrain from uploading to any course shell, discussion board, or\nwebsite used by the course instructor or other course forum, material that is not\nthe student’s original work, unless the students first comply with all applicable\ncopyright laws; faculty members reserve the right to delete materials on the\ngrounds of suspected copyright infringement.\n\n7"
+  },
+  {
+    "source": "CSE340_Syllabus_SP25.pdf",
+    "url": "",
+    "course": "",
+    "type": "Official PDF",
+    "filename": "CSE340_Syllabus_SP25.pdf",
+    "chunk_id": "CSE340_Syllabus_SP25.pdf__chunk14",
+    "text": "7\n\n9 Academic Integrity\nStudents in this class must adhere to ASU’s academic integrity policy, which can be\nfound at https://provost.asu.edu/academic-integrity/policy).\n\nStudents are responsi-\nble for reviewing this policy and understanding each of the areas in which academic\ndishonesty can occur.\n\nIn addition, all engineering students are expected to adhere to\nboth the ASU Academic IntegrityHonor Code and the Fulton Schools of Engi-\nneeringHonor Code.\n\nAll academic integrity violations will be reported to the Fulton\nSchools of Engineering Academic Integrity Office (AIO).\n\nThe AIO maintains record\nof all violations and has access to academic integrity violations committed in all other\nASU college/schools.\n\n• The highest standards of academic integrity are expected of all students."
+  },
+  {
+    "source": "CSE340_Syllabus_SP25.pdf",
+    "url": "",
+    "course": "",
+    "type": "Official PDF",
+    "filename": "CSE340_Syllabus_SP25.pdf",
+    "chunk_id": "CSE340_Syllabus_SP25.pdf__chunk15",
+    "text": "• The highest standards of academic integrity are expected of all students.\n\n• ZERO TOLERANCE: ANY VIOLATION of academic integrity pol-\nicy on an assessment (homework, exam, programming assignment)\nWILL RESULT IN A GRADE of zero on the assessment and a full letter\ngrade reduction in the class and reporting the violation to the Dean’s\noffice\n• Violations of academic integrity include, but are no limited to, copying, cheating,\nfabrication, tampering, plagiarism, or facilitating such activities.\n\n• Under no circumstances you should share solutions or partial solutions to the\nprogramming assignments, whether you do so directly or indirectly.\n\nProviding\ncode and receiving code are violations of the academic integrity policy.\n\nYou are\nresponsible for protecting your code and making sure that no one gets a copy of\nyour code.\n\nYou should protect accounts and computers that contain your code and\nmake sure no one access them whether with your knowledge or not."
+  },
+  {
+    "source": "CSE340_Syllabus_SP25.pdf",
+    "url": "",
+    "course": "",
+    "type": "Official PDF",
+    "filename": "CSE340_Syllabus_SP25.pdf",
+    "chunk_id": "CSE340_Syllabus_SP25.pdf__chunk16",
+    "text": "You should protect accounts and computers that contain your code and\nmake sure no one access them whether with your knowledge or not.\n\n• If you have difficulty with your code, you should not show your code to anyone\nother than the instructor or TAs for help with your code.\n\n• Under no circumstances you should post any code you develop for this\nclass in a publicly available online repository (including but no limited\nto GitHub for example).\n\nPosting solutions on public repositories will\nresult in a grade of E in the course, not just a zero on the assignment\nand a letter grade reduction in the course.\n\n• Tools for detecting plagiarism will be used in the enforcement of the academic\nintegrity policy.\n\n• If you are not sure if something is allowed or not allowed, you should ask me.\n\nYou should sign the following and submit the signed form on GradeScope.\n\nNo\nassignment or exam will be graded if you do not submit the form.\n\nI acknowledge that I have read the academic integrity policy and I will abide by it."
+  },
+  {
+    "source": "CSE340_Syllabus_SP25.pdf",
+    "url": "",
+    "course": "",
+    "type": "Official PDF",
+    "filename": "CSE340_Syllabus_SP25.pdf",
+    "chunk_id": "CSE340_Syllabus_SP25.pdf__chunk17",
+    "text": "No\nassignment or exam will be graded if you do not submit the form.\n\nI acknowledge that I have read the academic integrity policy and I will abide by it.\n\nName Date\nSignature\n8\n\n10 Subject to Change Notice\nReasonable effort will be made to follow the syllabus, but the syllabus can be modified\nif circumstances warrant it. If there are changes, you will be notified of the changes\nahead of time. Changes will not be made to the grading scheme in a way that can reduce\nanyone’s grade.\n9"
+  },
+  {
+    "source": "CSE355_Syllabus_SP25.pdf",
+    "url": "",
+    "course": "",
+    "type": "Official PDF",
+    "filename": "CSE355_Syllabus_SP25.pdf",
+    "chunk_id": "CSE355_Syllabus_SP25.pdf__chunk0",
+    "text": "Syllabus\nCSE 355: “Introduction to Theoretical Computer Science”\n(cid:1)(cid:6)(cid:10)((cid:8)(cid:9)(cid:7) (cid:4)(cid:3)(cid:4)(cid:5)(cid:2)\n1."
+  },
+  {
+    "source": "CSE355_Syllabus_SP25.pdf",
+    "url": "",
+    "course": "",
+    "type": "Official PDF",
+    "filename": "CSE355_Syllabus_SP25.pdf",
+    "chunk_id": "CSE355_Syllabus_SP25.pdf__chunk1",
+    "text": "Syllabus\nCSE 355: “Introduction to Theoretical Computer Science”\n(cid:1)(cid:6)(cid:10)((cid:8)(cid:9)(cid:7) (cid:4)(cid:3)(cid:4)(cid:5)(cid:2)\n1.\n\nCourse Description and Objectives:\nThis course provides a first introduction to the theoretical concepts of Computer Science\u0016 The focus of\nthe course is the study of abstract computing devices without targeting a specific programming\nlanguage and/or computing platform\u0016 In particular, we will study:\n• Regular Language, which model computing machines with finite fixed memory,\nand the class of regular languages, which is used for pattern matching languages\n• Context-free Language, which facilitate declarative specifications of language syntax\n• Computability Theory, which addresses the inherent limits of what can be solved\nby a computer (decidability)\n• Complexity Theory, which helps us measure the time and space used to solve a problem\u0016\nNotice: Any information in this syllabus (other than grading and absence policies) may be subject to\nchange with reasonable advance notice\u0016\n2."
+  },
+  {
+    "source": "CSE355_Syllabus_SP25.pdf",
+    "url": "",
+    "course": "",
+    "type": "Official PDF",
+    "filename": "CSE355_Syllabus_SP25.pdf",
+    "chunk_id": "CSE355_Syllabus_SP25.pdf__chunk2",
+    "text": "Contact Information:\nLecturer: Heni Ben Amor, Ph\u0016D\u0016\nCenterpoint 203-07\nTel: 404-234-8507\nEmail: hbenamor@asu\u0016edu\n(cid:8)(cid:13)(cid:13)(cid:14)(cid:10)(cid:12) (cid:6)(cid:17)(cid:21)0(cid:20)(cid:5) (cid:7)(cid:17)-(cid:11)(cid:9)3 (cid:3)(cid:5)(cid:2)(cid:2)(cid:1)(cid:4)(cid:5)(cid:2)(cid:2)(cid:18)(cid:15)\n(cid:15)((cid:9) (cid:14)-(cid:25)- )-.3.\n\n(cid:2):(cid:21)-.3.%(cid:10)-:(cid:31)(cid:5)10(cid:31)(cid:3)\nLLLLLLLLLL (cid:0)\n3.\n\nRemarks on Electronic Communication: For questions regarding personal issues, email first the\nTA(s) if you have any technical questions\u0016 Any questions that are regarding your personal situation in\nthe course should be sent to the lecturer\u0016 Before sending an email please follow the excellent advice\nhttp://www\u0016wikihow\u0016com/Email-a-Professor\u0016 For questions about class materials (e\u0016g\u0016, homework,\nquizzes and etc\u0016), see the respective sections below\u0016\n4."
+  },
+  {
+    "source": "CSE355_Syllabus_SP25.pdf",
+    "url": "",
+    "course": "",
+    "type": "Official PDF",
+    "filename": "CSE355_Syllabus_SP25.pdf",
+    "chunk_id": "CSE355_Syllabus_SP25.pdf__chunk3",
+    "text": "Readings and Textbook:\nRequired: Introduction to the theory of computation, Michael Sipser, Thomson Course Technology, 3rd\nEdition, 2013\u0016 Note: The publisher also provides an electronic version of the book through\nCourseSmart (http://www\u0016coursesmart\u0016com/)\u0016 They also provide Apps for all platforms\u0016\nNote 1: The 2nd Edition can still be used\u0016 However, you might have to consult with\nyour classmates regarding the mapping of homework problems and pages\nbetween the two editions\u0016\nNote 2: The 1st Edition is still acceptable\u0016 However, the 1st edition does not include\n1 of 3\n\nany problem answers and it does not have as many examples and explanations as\nthe 2nd and above editions\u0016 Also, you will have to consult with your classmates\nregarding the mapping of homework problems and pages between the 2 editions\u0016\n5.\n\nParticipation:\n• Answering questions in class!"
+  },
+  {
+    "source": "CSE355_Syllabus_SP25.pdf",
+    "url": "",
+    "course": "",
+    "type": "Official PDF",
+    "filename": "CSE355_Syllabus_SP25.pdf",
+    "chunk_id": "CSE355_Syllabus_SP25.pdf__chunk4",
+    "text": "Participation:\n• Answering questions in class!\n\n• Contributing to both on-line and in-class discussions\u0016\nThis should be an activity throughout the semester\u0016\n• Helping others figure out fallacies in their line of thought when attempting to solve a problem\u0016\n• Giving hints to your classmates, but not the complete answer\u0016\n6.\n\nSchedule:\nWeek 1 – Introduction and Finite Automata\nWeek 2 – Deterministic Finite Automata\nWeek 3 – Non-determerministic Finite Automata\nWeek 4 – Regular Expressions\nWeek 5 – Non-regular Languages and Context Free Grammars\nWeek 6 – Pushdown Automata\nWeek 7 – Midterm and CFL\nWeek 8 – Pumping Lemma\nWeek 9 – Turing Machines 1\nWeek 10 – Turing Machines 2\nWeek 11 – Decidability\nWeek 12 – Reducibility\nWeek 13 – Midterm and Refresher\nWeek 14 – Complexity Theory\nWeek 15 – P and NP\nWeek 16 – Non-traditional Computing Paradigms\n7."
+  },
+  {
+    "source": "CSE355_Syllabus_SP25.pdf",
+    "url": "",
+    "course": "",
+    "type": "Official PDF",
+    "filename": "CSE355_Syllabus_SP25.pdf",
+    "chunk_id": "CSE355_Syllabus_SP25.pdf__chunk5",
+    "text": "Grading Policies:\nClassroom attendance is mandatory in this course\u0016 Overall, the grade will be calculated according to the\nfollowing schema:\n(cid:32) (cid:13)-(cid:28)(cid:30)3(cid:18)3(cid:27)-(cid:30)3(cid:26)(cid:25) 3(cid:25) (cid:18)(cid:23)-::(cid:28)(cid:26)(cid:26)(cid:24) (cid:4) (cid:7)(cid:6)(cid:1)\n● Homeworks and assignments - 20%\n● Two Midterms: 40%\n● Final Exam: 30%\n● Additional points via an optional project\nGrading table:\nA+ >99% B- [75-80)%\nA [95-100]% C+ [70-75)%\nA- [90-95)% C [65-70)%\nB+ [85-90)% D [55-65)%\nB [80-85)% F < 55%\n2 of 3\n\n8."
+  },
+  {
+    "source": "CSE355_Syllabus_SP25.pdf",
+    "url": "",
+    "course": "",
+    "type": "Official PDF",
+    "filename": "CSE355_Syllabus_SP25.pdf",
+    "chunk_id": "CSE355_Syllabus_SP25.pdf__chunk6",
+    "text": "8.\n\nAbsence & Make-Up Policies\nClassroom attendance is mandatory in both the class, as well as the recitations\u0016 Accommodations will\nbe made for religious observances provided that students notify the instructor at the beginning of the\nsemester concerning those dates\u0016 Students who expect to miss class due to officially university-\nsanctioned activities should inform the instructor early in the semester\u0016 Alternative arrangements will\ngenerally be made for any examinations and other graded in-class work affected by such absences\u0016 The\npreceding policies are based on ACD 304–04, “Accommodation for Religious Practices” and ACD\n304–02, “Missed Classes Due to University-Sanctioned Activities\u0016”\n9."
+  },
+  {
+    "source": "CSE355_Syllabus_SP25.pdf",
+    "url": "",
+    "course": "",
+    "type": "Official PDF",
+    "filename": "CSE355_Syllabus_SP25.pdf",
+    "chunk_id": "CSE355_Syllabus_SP25.pdf__chunk7",
+    "text": "Classroom Behavior\nCell phones and pagers (must be/or state alternative rule) turned off during class to avoid causing\ndistractions\u0016 The use of recording devices is not permitted during class\u0016 Any violent or threatening\nconduct by an ASU student in this class will be reported to the ASU Police Department and the Office\nof the Dean of Students\u0016\nDisability Accommodations\nSuitable accommodations will be made for students having disabilities and students should notify the\ninstructor as early as possible if they will require same\u0016 Such students must be registered with the\nDisability Resource Center and provide documentation to that effect\u0016\n10.\n\nAcademic Integrity:\nAny kind of plagiarism or cheating attempt will be severely dealt with\u0016 This includes attempts\nat reusing text from uncited sources, as well as rephrasing existing text\u0016 Please try to make\nsure that you express your ideas and thoughts using your own words!"
+  },
+  {
+    "source": "CSE355_Syllabus_SP25.pdf",
+    "url": "",
+    "course": "",
+    "type": "Official PDF",
+    "filename": "CSE355_Syllabus_SP25.pdf",
+    "chunk_id": "CSE355_Syllabus_SP25.pdf__chunk8",
+    "text": "Code from third parties\n(including fellow students) can only be used if it is properly labelled\u0016 When using third party\nsoft-ware, please also make sure to specify how exactly it is used in your project and by how\nmuch in contributes to the overall size of the project\u0016 More details on the Academic Integrity\nPolicy can be found under the following link: https://provost\u0016asu\u0016edu/sites/default/files/\nAcademicIntegrityPolicyPDF\u0016pdf\u0016\n11."
+  },
+  {
+    "source": "CSE355_Syllabus_SP25.pdf",
+    "url": "",
+    "course": "",
+    "type": "Official PDF",
+    "filename": "CSE355_Syllabus_SP25.pdf",
+    "chunk_id": "CSE355_Syllabus_SP25.pdf__chunk9",
+    "text": "Sexual Discrimination\nTitle IX is a federal law that provides that no person be excluded on the basis of sex from participation\nin, be denied benefits of, or be subjected to discrimination under any education program or activity\u0016\nBoth Title IX and university policy make clear that sexual violence and harassment based on sex is\nprohibited\u0016 An individual who believes they have been subjected to sexual violence or harassed on the\nbasis of sex can seek support, including counseling and academic support, from the university\u0016 If you or\nsomeone you know has been harassed on the basis of sex or sexually assaulted, you can find\ninformation and resources at https://sexualviolenceprevention\u0016asu\u0016edu/faqs\u0016\nAs a mandated reporter, I am obligated to report any information I become aware of regarding alleged\nacts of sexual discrimination, including sexual violence and dating violence\u0016 ASU Counseling Services,\nhttps://eoss\u0016asu\u0016edu/counseling, is available if you wish discuss any concerns confidentially and\nprivately\u0016\n3 of 3"
+  },
+  {
+    "source": "asu_cs_major_map.pdf",
+    "url": "",
+    "course": "",
+    "type": "Official PDF",
+    "filename": "asu_cs_major_map.pdf",
+    "chunk_id": "asu_cs_major_map.pdf__chunk0",
+    "text": "2024 - 2025 Major Map\nComputer Science, BS\nSchool/College: Ira A.\n\nFulton Schools of Engineering\nESCSEBS\nTerm 1 - A 0 - 6 Credit Hours Hours Minimum Notes\nGrade\nASU 101-CAI: The ASU Experience 1 ASU 101 or college-specific\nequivalent First-Year Seminar\nENG 101 or ENG 102: First-Year Composition OR 3 C required of all first-year students\nENG 105: Advanced First-Year Composition OR and should be taken in the first\nENG 107 or ENG 108: First-Year Composition semester.\n\nIf ENG 105 is taken, a three credit\nhour elective must also be taken\nFSE 100: Introduction to Engineering 2 C\nprior to graduation.\n\nPrep for success using the First-Year\nTerm hours subtotal: 6\nStudent Guide.\n\nJoin a Fulton community.\n\nExplore engineering and technical\nprofessions.\n\nTerm 1 - B 6 - 12 Credit Hours Critical course signified by Hours Minimum Notes\nGrade\nCSE 110: Principles of Programming (QTRS OR CS) 3 C View ASU Online first-year student\nregistration information here."
+  },
+  {
+    "source": "asu_cs_major_map.pdf",
+    "url": "",
+    "course": "",
+    "type": "Official PDF",
+    "filename": "asu_cs_major_map.pdf",
+    "chunk_id": "asu_cs_major_map.pdf__chunk1",
+    "text": "ENG 101 or ENG 102: First-Year Composition OR 3 C\nENG 105: Advanced First-Year Composition OR\nENG 107 or ENG 108: First-Year Composition\nMinimum 2.00 GPA ASU Cumulative.\n\nTerm hours subtotal: 6\nTerm 2 - A 12 - 18 Credit Hours Critical course signified by Hours Minimum Notes\nGrade\nCSE 205: Object-Oriented Programming and Data Structures 3 C Create a Handshake profile.\n\n(QTRS OR CS) Get involved with EPICS, the\nGenerator Labs, and the Fulton\nMAT 265: Calculus for Engineers I (MATH OR MA) 3 C Start-Up Center.\n\nTerm hours subtotal: 6\nTerm 2 - B 18 - 24 Credit Hours Critical course signified by Hours Minimum Notes\nGrade\nEEE 120: Digital Design Fundamentals 3 C\nMAT 266: Calculus for Engineers II (MATH OR MA) 3 C\nComplete ENG 101 OR ENG 105 OR ENG 107 course(s).\n\nComplete MAT 170 OR MAT 171 OR MAT 265 OR MAT 270\ncourse(s)."
+  },
+  {
+    "source": "asu_cs_major_map.pdf",
+    "url": "",
+    "course": "",
+    "type": "Official PDF",
+    "filename": "asu_cs_major_map.pdf",
+    "chunk_id": "asu_cs_major_map.pdf__chunk2",
+    "text": "Complete MAT 170 OR MAT 171 OR MAT 265 OR MAT 270\ncourse(s).\n\nTerm hours subtotal: 6\nTerm 3 - A 24 - 30 Credit Hours Critical course signified by Hours Minimum Notes\nGrade\nCSE 240: Introduction to Programming Languages 3 C Prep for success using the\nSophomore Guide.\n\nMAT 243: Discrete Mathematical Structures 3 C\nTerm hours subtotal: 6\nTerm 3 - B 30 - 36 Credit Hours Critical course signified by Hours Minimum Notes\nGrade\nCSE 230: Computer Organization and Assembly Language 3 C\nProgramming\nMAT 267: Calculus for Engineers III (MATH OR MA) 3 C\nComplete Mathematics (MATH) requirement.\n\nTerm hours subtotal: 6\nTerm 4 - A 36 - 42 Credit Hours Critical course signified by Hours Minimum Notes\nGrade\nCSE 310: Data Structures and Algorithms 3 C CSE 310 and CSE 360 are both\nSession C courses (15 weeks long)."
+  },
+  {
+    "source": "asu_cs_major_map.pdf",
+    "url": "",
+    "course": "",
+    "type": "Official PDF",
+    "filename": "asu_cs_major_map.pdf",
+    "chunk_id": "asu_cs_major_map.pdf__chunk3",
+    "text": "CSE 360: Introduction to Software Engineering 3 C\nTerm hours subtotal: 6\nTerm 4 - B 42 - 48 Credit Hours Critical course signified by Hours Minimum Notes\nGrade\nAdditional Scientific Thinking in Natural Sciences (SCIT) Course 3 Plan for success using the Junior\nGuide.\n\nSustainability (SUST) 3\nComplete MAT 266 OR MAT 271 course(s).\n\nTerm hours subtotal: 6\nTerm 5 - A 48 - 54 Credit Hours Necessary course signified Hours Minimum Notes\nGrade\nby\nCSE 330: Operating Systems 3 C CSE 330 and CSE 355 are both\nSession C courses (15 weeks long).\n\nCSE 355: Introduction to Theoretical Computer Science 3 C\nComplete MAT 267 OR MAT 272 course(s).\n\nTerm hours subtotal: 6\nTerm 5 - B 54 - 61 Credit Hours Hours Minimum Notes\nGrade\n\nCSE 301: Computing Ethics 1 C\nUpper Division Technical Elective 3 C\nSocial and Behavioral Sciences (SOBE) 3\nTerm hours subtotal: 7\nTerm 6 - A 61 - 67 Credit Hours Hours Minimum Notes\nGrade\nCSE 365: Information Assurance 3 C CSE 365 is a Session C course (15\nweeks long)."
+  },
+  {
+    "source": "asu_cs_major_map.pdf",
+    "url": "",
+    "course": "",
+    "type": "Official PDF",
+    "filename": "asu_cs_major_map.pdf",
+    "chunk_id": "asu_cs_major_map.pdf__chunk4",
+    "text": "CSE 412: Database Management OR 3 C CSE 412 / CSE 445 are in Session C\nCSE 445: Distributed Software Development (15 weeks long).\n\nDevelop a professional profile\nonline.\n\nTerm hours subtotal: 6\nTerm 6 - B 67 - 73 Credit Hours Necessary course signified Hours Minimum Notes\nGrade\nby\nCSE 340: Principles of Programming Languages 3 C\nMAT 343: Applied Linear Algebra 3 C\nTerm hours subtotal: 6\nTerm 7 - A 73 - 79 Credit Hours Necessary course signified Hours Minimum Notes\nGrade\nby\nIEE 380: Probability and Statistics for Engineering Problem 3 C IEE 380 and the CSE 4** (400-Level)\nSolving (QTRS OR CS) Elective are both Session C courses\n(15 weeks long)."
+  },
+  {
+    "source": "asu_cs_major_map.pdf",
+    "url": "",
+    "course": "",
+    "type": "Official PDF",
+    "filename": "asu_cs_major_map.pdf",
+    "chunk_id": "asu_cs_major_map.pdf__chunk5",
+    "text": "CSE 4** Elective 3 C\nTerm hours subtotal: 6\nTerm 7 - B 79 - 85 Credit Hours Hours Minimum Notes\nGrade\nAmerican Institutions (AMIT) 3\nGovernance and Civic Engagement (CIVI) 3\nTerm hours subtotal: 6\nTerm 8 - A 85 - 91 Credit Hours Necessary course signified Hours Minimum Notes\nGrade\nby\nCSE 485: Computer Science Capstone Project I (L) 3 C CSE 485 and the CSE 4** (400-\nLevel) Elective are both Session C\nCSE 4** Elective 3 C courses (15 weeks long).\n\nTerm hours subtotal: 6\n\nTerm 8 - B 91 - 98 Credit Hours Hours Minimum Notes\nGrade\nGlobal Communities, Societies and Individuals (GCSI) 3\nScientific Thinking in Natural Sciences (SCIT) 4\nTerm hours subtotal: 7\nTerm 9 - A 98 - 104 Credit Hours Necessary course signified Hours Minimum Notes\nGrade\nby\nCSE 486: Computer Science Capstone Project II (L) 3 C CSE 486 and the CSE 4** (400-\nLevel) Elective are both Session C\nCSE 4** Elective 3 C courses (15 weeks long)."
+  },
+  {
+    "source": "asu_cs_major_map.pdf",
+    "url": "",
+    "course": "",
+    "type": "Official PDF",
+    "filename": "asu_cs_major_map.pdf",
+    "chunk_id": "asu_cs_major_map.pdf__chunk6",
+    "text": "Term hours subtotal: 6\nTerm 9 - B 104 - 111 Credit Hours Hours Minimum Notes\nGrade\nHumanities, Arts and Design (HUAD) 3\nScientific Thinking in Natural Sciences (SCIT) 4\nTerm hours subtotal: 7\nTerm 10 - A 111 - 117 Credit Hours Necessary course Hours Minimum Notes\nGrade\nsignified by\nCSE 4** Elective 3 C The CSE 4** (400-Level) Elective is a\nSession C course (15 weeks long).\n\nUpper Division Technical Elective 3 C\nTerm hours subtotal: 6\nTerm 10 - B 117 - 120 Credit Hours Hours Minimum Notes\nGrade\nHumanities, Arts and Design (HUAD) 3\nTerm hours subtotal: 3\nMaximum three hours of FSE 301 or FSE 404 can be applied towards major requirements.\n\nMaximum six hours of CSE 484, CSE 492, CSE 493, CSE 499, FSE 301, and FSE 404 can be applied towards major\nrequirements.\n\nCSE 475 or DAT 402 can be applied towards major requirements but not both.\n\nTechnical Electives may require additional prerequisites."
+  },
+  {
+    "source": "asu_cs_major_map.pdf",
+    "url": "",
+    "course": "",
+    "type": "Official PDF",
+    "filename": "asu_cs_major_map.pdf",
+    "chunk_id": "asu_cs_major_map.pdf__chunk7",
+    "text": "CSE 475 or DAT 402 can be applied towards major requirements but not both.\n\nTechnical Electives may require additional prerequisites.\n\nFor additional information on major curriculum, please visit the Computer Science Degree Requirements website.\n\nHide Course List(s)/Track Group(s)\nTechnical Electives Technical Electives continued"
+  },
+  {
+    "source": "asu_cs_major_map.pdf",
+    "url": "",
+    "course": "",
+    "type": "Official PDF",
+    "filename": "asu_cs_major_map.pdf",
+    "chunk_id": "asu_cs_major_map.pdf__chunk8",
+    "text": "For additional information on major curriculum, please visit the Computer Science Degree Requirements website.\n\nHide Course List(s)/Track Group(s)\nTechnical Electives Technical Electives continued\n\nBCH 361: Advanced Principles of EEE 360: Energy Systems and Power\nBiochemistry Electronics\nBCH 461: General Biochemistry EEE 407: Digital Signal Processing\nBCH 462: General Biochemistry EEE 425: Digital Systems and Circuits\nBIO 340: General Genetics EEE 433: Analog Integrated Circuits\nBIO 345: Evolution EEE 434: Quantum Mechanics for\nEngineers\nCIS 415: Big Data Analytics in Business\nEEE 435: Fundamentals of CMOS and\nCSE 4** Elective\nMEMS\nDAT 300: Mathematical Tools for Data EEE 436: Fundamentals of Solid-State\nScience\nDevices\nDAT 301: Exploring Data in R and Python\nEEE 439: Semiconductor Facilities and\nCleanroom Practices\nDAT 401: Statistical Modeling and\nInference for Data Science\nEEE 445: Microwaves\nDAT 402: Machine Learning for Data\nEEE 448: Fiber Optics\nScience\nEEE 459: Communication Networks\nEEE 304: Signals and Systems II\nEEE 460: Nuclear Power Engineering\nEEE 333: Hardware Design Languages\nand Programmable Logic EEE 463: Electrical Power Plants\nEEE 335: Analog and Digital Circuits EEE 470: Electric Power Devices\nEEE 350: Random Signal Analysis EEE 471: Power System Analysis\nEEE 481: Computer-Controlled Systems\nFSE 301: Entrepreneurship and Value\nCreation\nIEE 376: Operations Research\nDeterministic Techniques/Applications\nIEE 381: Lean Six Sigma Methodology\nIEE 385: Engineering Statistics: Probability\nIEE 412: Introduction to Financial\nEngineering\nIEE 431: Engineering Administration (L)\nIEE 456: Introduction to Systems\nEngineering\nIEE 458: Project Management\nIEE 461: Production Control\nIEE 470: Stochastic Operations Research\nIEE 474: Quality Control\nMAE 417: System Dynamics and Control\nII\nPHY 302: Mathematical Methods in\nPhysics II\nPHY 361: Introductory Modern Physics\nSER 421: Web-Based Applications\nSER 423: Mobile Systems\nTotal Hours: 120"
+  },
+  {
+    "source": "asu_cs_major_map.pdf",
+    "url": "",
+    "course": "",
+    "type": "Official PDF",
+    "filename": "asu_cs_major_map.pdf",
+    "chunk_id": "asu_cs_major_map.pdf__chunk9",
+    "text": "Upper Division Hours: 45 minimum\nUniversity Undergraduate Graduation Requirements\nNotes:\nMathematics Placement Assessment score determines placement in first mathematics course.\nGeneral Studies designations listed next to courses on the major map were valid for the 2024 - 2025 academic year. Please\nrefer to the course catalog for current General Studies designations at time of class registration. General Studies credit is\napplied according to the designation the course carries at the time the class is taken."
+  },
+  {
+    "source": "Reddit r/ASU — Review of different CS professors",
+    "url": "https://www.reddit.com/r/ASU/comments/1ixpih7/review_of_different_cs_professors/",
+    "course": "General ASU CS",
+    "type": "Student professor review thread",
+    "filename": "cs_teachers_review.txt",
+    "chunk_id": "cs_teachers_review.txt__chunk0",
+    "text": "Post:\nHi guys, I'm a junior year CS student, and I'm reviewing different SCAI professors to help other people decide whether or not to take them since class enrollment is coming up (and many of them get their bad reviews removed from RateMyProfessor).\n\n1.\n\nCSE 205 (Farideh Navabi): Back in my day (lol) this class used to be in person, not on Zybooks.\n\nI think Navabi still teaches it so you don't have an option cause there are no other sections.\n\nPersonally, I didn't think she was the best because she was more obsessed with catching cheaters than actually teaching.\n\nHer class policies were alright though and there were/are a lot of TAs.\n\nMy rating for her: B.\n\n2.\n\nCSE/EEE 120 (Bahaa Osman): Apparently taught again last fall so I thought I should include him.\n\nHe's a part time instructor who works a full time job at a different company.\n\nHis class was (and still probably is) \"hybrid\" but he teaches it like an iCourse, i.e.\n\nall the assignments and quizzes are online but the final is in-person."
+  },
+  {
+    "source": "Reddit r/ASU — Review of different CS professors",
+    "url": "https://www.reddit.com/r/ASU/comments/1ixpih7/review_of_different_cs_professors/",
+    "course": "General ASU CS",
+    "type": "Student professor review thread",
+    "filename": "cs_teachers_review.txt",
+    "chunk_id": "cs_teachers_review.txt__chunk1",
+    "text": "His class was (and still probably is) \"hybrid\" but he teaches it like an iCourse, i.e.\n\nall the assignments and quizzes are online but the final is in-person.\n\nThere are no benefits to taking him over Millman at all (unless you don't want to go to class) because the class material is all Millman's.\n\nMy rating for him: B+.\n\n3.\n\nCSE 240 (David Claveau): Alright, now we're getting into the good ones.\n\nHe is an excellent professor and hilarious as well.\n\nHe walks around the room while teaching and helping out, so he's actually involved in teaching.\n\nI took his class when it was his first semester teaching and the assignments were pretty easy.\n\nHe was much better than the other options at the time (Chen, Trickel, Selgrad, Gordon).\n\nThe only downside is that he doesn't respond to e-mails, so you're better off talking to him in-person.\n\nMy rating for him: A.\n\n4.\n\nCSE 259 (Steven Osburn): He isn't teaching this class in the fall and hasn't since the semester I took him."
+  },
+  {
+    "source": "Reddit r/ASU — Review of different CS professors",
+    "url": "https://www.reddit.com/r/ASU/comments/1ixpih7/review_of_different_cs_professors/",
+    "course": "General ASU CS",
+    "type": "Student professor review thread",
+    "filename": "cs_teachers_review.txt",
+    "chunk_id": "cs_teachers_review.txt__chunk2",
+    "text": "My rating for him: A.\n\n4.\n\nCSE 259 (Steven Osburn): He isn't teaching this class in the fall and hasn't since the semester I took him.\n\nHe is somewhat knowledgeable but really disorganized and just not really a good instructor.\n\nHe gave us no instruction on Prolog which the class was based on, and we had to create a whole game of chess in one of the projects, with little to no help.\n\nRecitations were online too, which blows.\n\nAlthough Claveau has taught this class ever since, I wouldn't recommend taking Osburn for any other class unless you have no other option.\n\nMy rating for him: C+.\n\n5.\n\nMAT 243 (Dongrin Kim): This was an iCourse with Dr.\n\nRochus Boerner's videos, exams, policies, and reviews so I'm not sure why they assigned Kim to it in the first place.\n\nGrading isn't forgiving, and you're forced to do huge exam reviews before exams.\n\nThe exams themselves aren't the worst though.\n\nWhat is the worst is the amount of work you have to do- written homework, quizzes, exams, videos."
+  },
+  {
+    "source": "Reddit r/ASU — Review of different CS professors",
+    "url": "https://www.reddit.com/r/ASU/comments/1ixpih7/review_of_different_cs_professors/",
+    "course": "General ASU CS",
+    "type": "Student professor review thread",
+    "filename": "cs_teachers_review.txt",
+    "chunk_id": "cs_teachers_review.txt__chunk3",
+    "text": "The exams themselves aren't the worst though.\n\nWhat is the worst is the amount of work you have to do- written homework, quizzes, exams, videos.\n\nI would strongly recommend a different class unless you're a masochist.\n\nMy rating for him: D.\n\n6.\n\nCSE 230 (Soumya Indela, Muhilan Ramamoorthy): Indela is an alright instructor who is really knowledgeable about the content, and is pretty nice as well.\n\nThe class uses Zybooks.\n\nShe dropped one Zylab and 6 in-class challenges.\n\nThere are in-class challenges during every class so you have to go to class (and mine was at 9 am in winter so rip).\n\nThe latter half (after MIPS) was taught by Ramamoorthy and made no sense at all.\n\nHe has a strong accent which can be rectified by just talking slower (which likely won't happen) and I stopped going to class since he started teaching because there was no point.\n\nHowever, now the class is hybrid so it's probably not that bad.\n\nMy rating for them: B+ (Indela), C (Ramamoorthy).\n\n7."
+  },
+  {
+    "source": "Reddit r/ASU — Review of different CS professors",
+    "url": "https://www.reddit.com/r/ASU/comments/1ixpih7/review_of_different_cs_professors/",
+    "course": "General ASU CS",
+    "type": "Student professor review thread",
+    "filename": "cs_teachers_review.txt",
+    "chunk_id": "cs_teachers_review.txt__chunk4",
+    "text": "However, now the class is hybrid so it's probably not that bad.\n\nMy rating for them: B+ (Indela), C (Ramamoorthy).\n\n7.\n\nCSE 310 (Yiran Luo): We really should have more millennial instructors.\n\nHe is really funny and likes anime as well.\n\nHe had some great policies, such as curving the exam when the average was under 75.\n\nHis assignments and projects (individual or a group of 2) were intuitive and helped you actually understand the content, but weren't overly hard.\n\nI would strongly recommend you to take him for this class if you get the chance.\n\nMy rating: A+.\n\n8.\n\nCSE 355 (Jamison Weber): Nothing particularly interesting about him except that he's named after a brand of whisky.\n\nAlso, he doesn't teach at ASU anymore so there isn't really a point writing about him.\n\nJust a mid instructor all around.\n\nMy rating: B- (The same grade he gave me when I missed the cutoff for B by 0.4%).\n\n9.\n\nCSE 330 (Ming Zhao): He is a lazy instructor."
+  },
+  {
+    "source": "Reddit r/ASU — Review of different CS professors",
+    "url": "https://www.reddit.com/r/ASU/comments/1ixpih7/review_of_different_cs_professors/",
+    "course": "General ASU CS",
+    "type": "Student professor review thread",
+    "filename": "cs_teachers_review.txt",
+    "chunk_id": "cs_teachers_review.txt__chunk5",
+    "text": "Just a mid instructor all around.\n\nMy rating: B- (The same grade he gave me when I missed the cutoff for B by 0.4%).\n\n9.\n\nCSE 330 (Ming Zhao): He is a lazy instructor.\n\nThere are no slides or study material provided and your only option is go to every class and decipher his handwriting from the whiteboard to take notes.\n\nAlso, he uses Google Groups which made me the hateful and bitter person I am today.\n\nHowever, there was a lot of extra credit and I would still urge you to take him if your only other option is Gordon.\n\nAlthough, even if you don't take him he'll find a way to shoehorn his syllabus in other sections anyway.\n\nThere are 6 individual projects (but one is bonus), no homework, and 2 in-person exams (midterm was ok, final was hard).\n\nMy rating: B.\n\n10.\n\nCSE 360 (Zahra Sadri): She was a good instructor but it was her first semester teaching so there were a few hurdles (especially with the final, where a TA leaked a few of the questions)."
+  },
+  {
+    "source": "Reddit r/ASU — Review of different CS professors",
+    "url": "https://www.reddit.com/r/ASU/comments/1ixpih7/review_of_different_cs_professors/",
+    "course": "General ASU CS",
+    "type": "Student professor review thread",
+    "filename": "cs_teachers_review.txt",
+    "chunk_id": "cs_teachers_review.txt__chunk6",
+    "text": "10.\n\nCSE 360 (Zahra Sadri): She was a good instructor but it was her first semester teaching so there were a few hurdles (especially with the final, where a TA leaked a few of the questions).\n\nShe is much better than Carter and actually seems to care about the students in her class.\n\nShe spent a long time with me helping me to get my eclipse running in office hours and after them too.\n\nShe can be a bit stubborn at times, but she is helpful and nice overall.\n\nRecommended over Carter.\n\nMy rating: A.\n\n11.\n\nIEE 380 (Michael Clough): I didn't get a good enough grade because I didn't study well.\n\nYou will have to study A LOT because the exams are 70% of the class grade.\n\nHowever, he is funny and cares whether or not you understand the content.\n\nIf you want the exams to be a smaller part of the grade, you could take Don Holcomb's class, but if you study well and know how to use your calculator then you'll get an A.\n\nHe doesn't give any +/- or Y grades.\n\nMy rating: A-.\n\nComment:\nThe goat claveau mentioned!"
+  },
+  {
+    "source": "Reddit r/ASU — Review of different CS professors",
+    "url": "https://www.reddit.com/r/ASU/comments/1ixpih7/review_of_different_cs_professors/",
+    "course": "General ASU CS",
+    "type": "Student professor review thread",
+    "filename": "cs_teachers_review.txt",
+    "chunk_id": "cs_teachers_review.txt__chunk7",
+    "text": "He doesn't give any +/- or Y grades.\n\nMy rating: A-.\n\nComment:\nThe goat claveau mentioned!\n\nComment:\nI took Osburn for CSE 259, and while he is a nice and accommodating professor, he's overall an alright professor in terms of teaching and I can agree that he is disorganized. What you said about him is exactly how I felt about his class and I didn't learn much after finishing it (I wished I'd taken MAT 267 instead).\n\nComment:\nI had Ramamoorthy for my first attempt at Statistics, and I have 0 clue if he just was thrust into that class last minute or what, but he never seemed to be showing up prepared for that class. The Slides were as much new material to him as they were to us."
+  },
+  {
+    "source": "Reddit r/ASU — Review of different CS professors",
+    "url": "https://www.reddit.com/r/ASU/comments/1ixpih7/review_of_different_cs_professors/",
+    "course": "General ASU CS",
+    "type": "Student professor review thread",
+    "filename": "cs_teachers_review.txt",
+    "chunk_id": "cs_teachers_review.txt__chunk8",
+    "text": "Comment:\nGOAT YIRAN \"LAWRENCE\" LUO MENTIONED?!?!?!?! He's a great professor and personalizes his lectures. Hope more people follow his level. and when submitting our final project, the TA only gave us a 4/20 so my partner emailed lawrence and he gave us like an 18 which was the difference between him passing and failing the class\n\nComment:\nSurprised about the rating for Sadri. In my 360 class currently, she just parrots what Carter says.\n\nComment:\nCan absolutely agree with Yiran Luo, I had him for CSE 310 last semester and he was easily my favorite professor that I’ve ever had\n\nComment:\nHonestly I agree with you about Sadri, she may not be perfect but she did her best to help, yes she sometimes gets sturburn and gets mad at people even for small things and I think that she was a bit overhated\n\nComment:\nChattin for IEE380 is alright. although i would suggest don holcomb because his is the only class where exams are worth 50% instead of 75%"
+  },
+  {
+    "source": "Reddit r/ASU — CSE 330/340/355 over summer",
+    "url": "https://www.reddit.com/r/ASU/comments/1nv0vsg/cse_330340355_over_summer/",
+    "course": "CSE 330, CSE 340, CSE 355",
+    "type": "Student discussion",
+    "filename": "cse330_cse340_cse355_all_three_in_the_summer.txt",
+    "chunk_id": "cse330_cse340_cse355_all_three_in_the_summer.txt__chunk0",
+    "text": "Post:\nI am a sophomore in CS with enough credits to graduate early however I am bottle necked because of capstone I. If I take these courses over summer I can then take capstone 1 and 2 in my junior year and ultimately graduate early. I wanted some insight on taking these three courses over summer. Let’s say I have the right motivation to grind it out; is it doable? Work ethic aside will those who have taken these courses give input on if I can even meaningfully retain the knowledge from these in that amount of time? Thanks\n\nComment:\nDon't\n\nComment:\nI am taking CSE 330 currently, and it is already kicking my butt. It is alot of projects base and time consuming. And I am a sophomore too. Taking CSE 355 and CSE 340 in Spring 26 if and when I register."
+  },
+  {
+    "source": "Reddit r/ASU — CSE 330/340/355 over summer",
+    "url": "https://www.reddit.com/r/ASU/comments/1nv0vsg/cse_330340355_over_summer/",
+    "course": "CSE 330, CSE 340, CSE 355",
+    "type": "Student discussion",
+    "filename": "cse330_cse340_cse355_all_three_in_the_summer.txt",
+    "chunk_id": "cse330_cse340_cse355_all_three_in_the_summer.txt__chunk1",
+    "text": "Comment:\nIf my memory serves, those are 3/4 of your hard courses... those kick peoples butts in the full 16 week and spread out, and you want to do them in one 8 week go?\nI mean of course anythings possible (assuming none of these are Prereq'd on each other) but it wont be easy nor a fun time either.\n\nComment:\n355 was super challenging for me. Some people have it click right away and it's a breeze, for me this was one of the hardest courses.\n\nComment:\nCSE 340 and 330 over the summer is setting yourself up for failure. I get wanting to graduate early but this isn’t feasible."
+  },
+  {
+    "source": "Reddit r/ASU — CS majors taking the trifecta this summer",
+    "url": "https://www.reddit.com/r/ASU/comments/1kldo1z/cs_majors_taking_the_trifecta_this_summer/",
+    "course": "CSE 330, CSE 340, CSE 355",
+    "type": "Student discussion",
+    "filename": "cse330_cse340_cse355_summer.txt",
+    "chunk_id": "cse330_cse340_cse355_summer.txt__chunk0",
+    "text": "Post:\nAny tips? Which one is the heaviest course load? Which one has the hardest concepts to understand? Any and every single piece of advice or info is appreciated.\n\nComment:\n355 and 340 have a lot of overlap early on so pay extra attention in 355. 340 and 330 are project heavy with the latter having more difficult projects imo. 355 will be the most difficult to understand conceptually but easy theory videos on YouTube + your professor should be enough. Overall I’d say the difficulty is 355 > 340 > 330. I had a good trio of professors for this, HBA/Claveau/Gordon, so your experience may be radically different than mine. Good luck\n\nComment:\nTbh it was 340 for me.\n\nI had gordon for 340 and 330 but personally felt like 340 was more work.\n\nThe projects can be extremely difficult.\n\nI believe all projects for 340 and 330 are the same throughout all the courses as they’re trying to get them to align with other professors."
+  },
+  {
+    "source": "Reddit r/ASU — CS majors taking the trifecta this summer",
+    "url": "https://www.reddit.com/r/ASU/comments/1kldo1z/cs_majors_taking_the_trifecta_this_summer/",
+    "course": "CSE 330, CSE 340, CSE 355",
+    "type": "Student discussion",
+    "filename": "cse330_cse340_cse355_summer.txt",
+    "chunk_id": "cse330_cse340_cse355_summer.txt__chunk1",
+    "text": "The projects can be extremely difficult.\n\nI believe all projects for 340 and 330 are the same throughout all the courses as they’re trying to get them to align with other professors.\n\nAnd Professor Gordon does not really teach the same level as Bazzi who is the professor that creates the projects and such.\n\nTips for each class is mainly to start early.\n\nTons of students failed the first project mainly because they started late.\n\nAnd by early I mean start minimum 2 weeks early.\n\nBesides that the concepts from 340 are not entirely difficult unless you haven’t taken it 355 but even then the concepts aren’t that difficult.\n\nIt’s just the projects that are tedious.\n\nBut I personally feel that project 2 and 3 get easier.\n\nI thought 355 was pretty easy in terms of workload and some of the concepts.\n\nSome of them can be a bit more difficult but the class itself was not that bad."
+  },
+  {
+    "source": "Reddit r/ASU — CS majors taking the trifecta this summer",
+    "url": "https://www.reddit.com/r/ASU/comments/1kldo1z/cs_majors_taking_the_trifecta_this_summer/",
+    "course": "CSE 330, CSE 340, CSE 355",
+    "type": "Student discussion",
+    "filename": "cse330_cse340_cse355_summer.txt",
+    "chunk_id": "cse330_cse340_cse355_summer.txt__chunk2",
+    "text": "I thought 355 was pretty easy in terms of workload and some of the concepts.\n\nSome of them can be a bit more difficult but the class itself was not that bad.\n\nFor 330 also not that bad but keep in mind that this class has a bonus project for extra credit and this class has been curved so a 60% is passing.\n\nUnless they change it over summer.\n\nComment:\nJust finished these 3 courses this semester, took gordon for 330/340 and Lee for 355 so ill give advice on them.\n\nThe hardest imo was 340, I definitely agree with everyone here you need to start early.\n\nI got a 64/100 on the first project bc i didn’t take Gordon’s warnings seriously and started the day before.\n\nNext 2 projects I started a week early on and it was fine.\n\nConcepts were easy to understand just projects that were difficult.\n\n330 was easy-ish for me but i know some people did struggle, the projects can be a bit confusing but they kinda build off of each other and there are documents to walk you through it."
+  },
+  {
+    "source": "Reddit r/ASU — CS majors taking the trifecta this summer",
+    "url": "https://www.reddit.com/r/ASU/comments/1kldo1z/cs_majors_taking_the_trifecta_this_summer/",
+    "course": "CSE 330, CSE 340, CSE 355",
+    "type": "Student discussion",
+    "filename": "cse330_cse340_cse355_summer.txt",
+    "chunk_id": "cse330_cse340_cse355_summer.txt__chunk3",
+    "text": "330 was easy-ish for me but i know some people did struggle, the projects can be a bit confusing but they kinda build off of each other and there are documents to walk you through it.\n\nAlso is plenty of bonus credit, bunch of students finished with more than a 100% in the class.\n\n355 was more theory and the tests were most difficult in this class with averages of 30ish, but they were heavily curved.\n\nSo a 30 was usually a B since that was the average.\n\nThe concepts were arguably easy but truly understanding the concepts was tough.\n\nA LOT of proof writing in this class and honestly that’s my weak suit but i still got through it.\n\nJust understand the stuff from the first few chapters and read the textbook since everything builds off of the first chapters.\n\nJust be locked in and you’ll be good, take gordon and take advantage of all the bonus credit.\n\nHe posts lectures and guides from other professors anyway who dont have that extra credit."
+  },
+  {
+    "source": "Reddit r/ASU — CS majors taking the trifecta this summer",
+    "url": "https://www.reddit.com/r/ASU/comments/1kldo1z/cs_majors_taking_the_trifecta_this_summer/",
+    "course": "CSE 330, CSE 340, CSE 355",
+    "type": "Student discussion",
+    "filename": "cse330_cse340_cse355_summer.txt",
+    "chunk_id": "cse330_cse340_cse355_summer.txt__chunk4",
+    "text": "Just be locked in and you’ll be good, take gordon and take advantage of all the bonus credit.\n\nHe posts lectures and guides from other professors anyway who dont have that extra credit.\n\nLee is also a great lecturer and he tells you everything you need to succeed.\n\nComment:\nThanks, I really appreciate everything here. I’m glad i’m talking to someone who took them all at once too. Seems like the general consensus is 355 > 340 > 330 in terms of difficulty. Will definitely start both 330 and 340 projects early.\n\nComment:\n\n330 easy. I think 355 is easy now cuz Colburn retired. He was a great professor but had very difficult exams and pretty hard homework. Take 340 w Bazzi because you’ll actually learn"
+  },
+  {
+    "source": "Reddit r/ASU — CSE 330 and 355 profs",
+    "url": "https://www.reddit.com/r/ASU/comments/178cksm/cse_330_and_355_profs/",
+    "course": "CSE 330, CSE 355",
+    "type": "Student professor recommendation thread",
+    "filename": "cse330_cse355_teachers.txt",
+    "chunk_id": "cse330_cse355_teachers.txt__chunk0",
+    "text": "Post:\nI am taking CSE 330 and CSE 355 next semester. I am picking courses and am trying to figure out who to pick for CSE 355: Xuerong Feng or Heewook Lee. Also, has anyone heard of Adil Ahmad, and is he good for CSE 330? The only other option is Gordon.\n\nComment:\nbannerjee, if he’s still teaching, for 330 and colburn for 355. for 355, the textbook is worth it’s weight in gold. 355 is much more of a grind but hunker down with the textbook and you’ll be set.\n\nComment:\nI had Lee for 355, great prof and loved his class, u get plenty of time to do hw and exams are tough but curved hard, I ended his class with an A- with not too much effort\n\nComment:\nIf you want an easy A, take Gordon. But you won't be learning much from him."
+  },
+  {
+    "source": "Reddit r/ASU — CSE 330 and 355 profs",
+    "url": "https://www.reddit.com/r/ASU/comments/178cksm/cse_330_and_355_profs/",
+    "course": "CSE 330, CSE 355",
+    "type": "Student professor recommendation thread",
+    "filename": "cse330_cse355_teachers.txt",
+    "chunk_id": "cse330_cse355_teachers.txt__chunk1",
+    "text": "Comment:\nIf you want an easy A, take Gordon. But you won't be learning much from him.\n\nComment:\nfor 355 I would 100% take feng. she goes pretty fast, but she goes over everything. (unless you have issues with auditory processing/accents, in which case choose a different prof). her tests are straightforward and pretty much from a combination of the homework/recitations/in class examples. if you take notes and put the pumping lemma formula on your note sheets you'll be golden. Gordon's 330 has easy tests but the lectures will make you feel like you're actively losing braincells and the projects are rough. if you get stuck, go to the TA's office hours because Gordon will not be able to help you.\n\nComment:\nI think Lee is a great choice for 355"
+  },
+  {
+    "source": "Reddit r/ASU — CSE 340",
+    "url": "https://www.reddit.com/r/ASU/comments/1pnnsmk/cse_340/",
+    "course": "CSE 340",
+    "type": "Student discussion",
+    "filename": "cse340_advice.txt",
+    "chunk_id": "cse340_advice.txt__chunk0",
+    "text": "Post:\nAnyone has any advice so that I can prepare for the class? Any notes, review mid term and final would be appreciated! any books etc. I am taking with Prof Bazzi. The mid term and final for CSE 330 was kicking my butt this semester so wanna start early! Thank you\n\nComment:\nPractice C++. Build mini projects. Be able to code random stuff on the fly. Practice leetcode using c++. Bazzi releases all his notes and exams for you to study, so if you budget your time and study well, it’s not really the exams that are hard. The real hard things are his projects. He said they take 20 hours. They took me about 30-40-hours each. I got good grades, but settling for a 75% vs going all out for a 100% is what will take the extra 20 plus hrs on top of the original 20.\n\nComment:\ni feel like if you remember stuff from 355 then you should be fine. I didn’t take Bazzi, but my projects were basically Bazzi’s projects and it required us to understand some stuff from 355."
+  },
+  {
+    "source": "Reddit r/ASU — CSE 340",
+    "url": "https://www.reddit.com/r/ASU/comments/1pnnsmk/cse_340/",
+    "course": "CSE 340",
+    "type": "Student discussion",
+    "filename": "cse340_advice.txt",
+    "chunk_id": "cse340_advice.txt__chunk1",
+    "text": "Comment:\ni feel like if you remember stuff from 355 then you should be fine. I didn’t take Bazzi, but my projects were basically Bazzi’s projects and it required us to understand some stuff from 355.\n\nComment:\nI took Bazzi and 355 at the same time. I got behind in 355 though which really hurt cause we started learning cfg stuff just before the first 340 exam. So learn how Context Free Grammar works.\nOther than CFGs. Put a lot of effort into how pointers, maps, vectors, and linkedlists work in C++. Your choice of data structures will matter A LOT in those projects. And research how parsers work and how they are built.\nThat’s probably the only necessary prep. Just start the projects asap and utilize his office hours and TA hours. Also get ready to spend a lot of time dissecting his notes. And practice the topics A LOT for exams.\nIf you want to learn more of the content early, look at his previous syllabi. And Adam Doupe recorded his lectures from like a decade ago and put it on youtube and they are helpful."
+  },
+  {
+    "source": "Reddit r/ASU — CSE 340",
+    "url": "https://www.reddit.com/r/ASU/comments/1pnnsmk/cse_340/",
+    "course": "CSE 340",
+    "type": "Student discussion",
+    "filename": "cse340_advice.txt",
+    "chunk_id": "cse340_advice.txt__chunk2",
+    "text": "Comment:\nDid Bazzi’s 340 along 355. Both subjects, imo, go hand in hand for the first half. The rest diverges. Best advice is to be very meticulous on how you implement the projects. The smallest details make or break 8 hours of effort on one part."
+  },
+  {
+    "source": "Reddit r/ASU — CSE 340",
+    "url": "https://www.reddit.com/r/ASU/comments/1pnnsmk/cse_340/",
+    "course": "CSE 340",
+    "type": "Student discussion",
+    "filename": "cse340_advice.txt",
+    "chunk_id": "cse340_advice.txt__chunk3",
+    "text": "Comment:\nBazzi is a great professor, the notes he gives are excellent and cover the material very thoroughly. The projects are fairly hard, make sure to start those early. I usually started with about a week to go which worked fine but for one project I was scrambling at the deadline and didn’t get the last few test cases, but the other 2 were 100%. The “catch” with his projects is he doesn’t provide most of the test cases publicly, so the real challenge is passing all the extra (and extremely thorough) test cases on gradescope. Start early so you can go to office hours and ask for the output bc Gradescope won’t show you anything, just pass or fail. If you go in person he’ll usually tell you if it’s throwing an error, incorrect output, etc. It’s a very doable class, I got an A, don’t get too stressed out by what people are saying. Just make sure to take the class seriously."
+  },
+  {
+    "source": "Reddit r/ASU — CSE 340",
+    "url": "https://www.reddit.com/r/ASU/comments/1pnnsmk/cse_340/",
+    "course": "CSE 340",
+    "type": "Student discussion",
+    "filename": "cse340_advice.txt",
+    "chunk_id": "cse340_advice.txt__chunk4",
+    "text": "Comment:\nA tip others may not give here is how to handle his tests, he was absolutely neurotic about student placement this semester and academic integrity.\nHe will have you enter on one side of the lecture hall and seemingly at random tell you to go down a specific row and sit directly next to someone, think packed in like sardines.\nWhen he distributes the tests do not touch them until the test starts for nearly any reason, in our first test a student attempted to split a test thinking it was two tests to give back to Bazzi. Bazzi proceeded to yell at him for several minutes about academic integrity and then kicked him out.\nAlso don’t cheat, don’t try to use gpt, or copy someone’s answers, the projects the might seem near impossible at points, but he will catch you. He got 19 people on one assignment at one point, and now they will almost definitely never graduate from any college. It’s not worth it.\nGood luck you’ll need it"
+  },
+  {
+    "source": "Reddit r/ASU — How difficult is CSE 340?",
+    "url": "https://www.reddit.com/r/ASU/comments/1knq3au/how_difficult_is_cse_340/",
+    "course": "CSE 340",
+    "type": "Student discussion",
+    "filename": "cse340_difficulty.txt",
+    "chunk_id": "cse340_difficulty.txt__chunk0",
+    "text": "Post:\nHi guys I’m taking CSE 340 next semester and I have heard many rumors that this course is actually the most difficult course for CS students as it is one of the trifecta courses and some people even fail this course. Plus I have seen many people spend hours and hours on working the assignment in tutoring center. Can anyone please advise me how do I prepare myself for CSE 340?\n\nComment:\nI've taken it 3 times and passed this semester, when they say start early on projects they really mean it, that's the only real challenging part is the projects, everything else is relatively easy, which is why they make up 60% of your grade. just do those and get all the extra credit possible and you should be ok\n\nComment:\nYO START EARLY ON THOSE PROJECTS\nLook at them the day you get them\nI’m serious\n\nComment:\nI had Gordon and while he didn’t teach his class was extremely easy to get an A+.\n\nHe gave a ton of extra credit.\n\nBut he just doesn’t teach.\n\nSo projects are a lot tougher."
+  },
+  {
+    "source": "Reddit r/ASU — How difficult is CSE 340?",
+    "url": "https://www.reddit.com/r/ASU/comments/1knq3au/how_difficult_is_cse_340/",
+    "course": "CSE 340",
+    "type": "Student discussion",
+    "filename": "cse340_difficulty.txt",
+    "chunk_id": "cse340_difficulty.txt__chunk1",
+    "text": "Comment:\nI had Gordon and while he didn’t teach his class was extremely easy to get an A+.\n\nHe gave a ton of extra credit.\n\nBut he just doesn’t teach.\n\nSo projects are a lot tougher.\n\nBut he does give the exact same resources that Bazzi gives on projects.\n\nAnd if you start early and get help from the tutors you should be able to finish and also even get like full points.\n\nI had a friend who got like a 35% on project 1 and managed to end with a B-B+ I believe.\n\nBut that’s bc she ended up getting hundreds on the last two projects and did well on the midterm and did the extra credits.\n\nIf you have Bazzi, I believe his exams are a bit tougher and he moved ahead more.\n\nBut he actually teaches so you’d prob be able to understand the projects a bit more.\n\nI know that Bazzi is trying to sync all 340 classes so same projects and etc.\n\nI’m not sure if this will apply to hw and exams next semester as Gordon had his own homework and exams compared to Bazzi."
+  },
+  {
+    "source": "Reddit r/ASU — How difficult is CSE 340?",
+    "url": "https://www.reddit.com/r/ASU/comments/1knq3au/how_difficult_is_cse_340/",
+    "course": "CSE 340",
+    "type": "Student discussion",
+    "filename": "cse340_difficulty.txt",
+    "chunk_id": "cse340_difficulty.txt__chunk2",
+    "text": "I know that Bazzi is trying to sync all 340 classes so same projects and etc.\n\nI’m not sure if this will apply to hw and exams next semester as Gordon had his own homework and exams compared to Bazzi.\n\nThis is just my experience from Gordon this last spring semester.\n\nThis could change for example the amount of ec he gave and etc depending on how much Bazzi is trying to sync together with the other professors.\n\nMy biggest advice is just start early.\n\nThe first project got a lot of people, tbh it was the hardest out of all three for a lot of people.\n\nThe remaining two did not take as long and were a lot easier.\n\nA lot of the material is from cse 355 but just understanding how to code it.\n\nIf you understand the algorithm itself then it shouldn’t be too bad."
+  },
+  {
+    "source": "Reddit r/ASU — How difficult is CSE 340?",
+    "url": "https://www.reddit.com/r/ASU/comments/1knq3au/how_difficult_is_cse_340/",
+    "course": "CSE 340",
+    "type": "Student discussion",
+    "filename": "cse340_difficulty.txt",
+    "chunk_id": "cse340_difficulty.txt__chunk3",
+    "text": "A lot of the material is from cse 355 but just understanding how to code it.\n\nIf you understand the algorithm itself then it shouldn’t be too bad.\n\nComment:\nAll I’m saying is if you love yourself and don’t want to feel miserable don’t take baazi. I know people who had to retake the class because he figured out that they gave class attendance once when they weren’t present in the class. GAVE THEM AN ENTIRE AIV BECAUSE OF A CLASS ATTENDANCE. His exams are extremely hard and even tho he teaches well it’s not worth it taking it with him. Take the class with Gordon and you can ask ur friends in Baazis class to send the excel sheet where baazi stores all class notes and class recordings if u really want to learn from baazi. This was u also get a good grade and learn but don’t u dare think that taking baazi is a good idea. He will make you suffer"
+  },
+  {
+    "source": "Reddit r/ASU — CSE 340 with Bazzi during the summer",
+    "url": "https://www.reddit.com/r/ASU/comments/1rr8aya/cse340_with_bazzi_during_the_summer/",
+    "course": "CSE 340",
+    "type": "Student professor/course discussion",
+    "filename": "cse340_teacher_bazzi.txt",
+    "chunk_id": "cse340_teacher_bazzi.txt__chunk0",
+    "text": "Post:\nCan someone tell me more about Bazzi. I am taking him over the summer and is not like I have much of a choice, his Fall classes does not fit my schedule at all. How is he as professor? I hear he is very strict when it comes to cheating is that because people shared codes or because of AI? How should I prepare mainly for summer (what outside resources)? I don't want to screw myself over and regret taking him but CSE 330 and 340 and 355 are the last classes I need to start my Capstone. I know Parupudi is also an option but everyone tells me Bazzi is a priority for CSE340."
+  },
+  {
+    "source": "Reddit r/ASU — CSE 340 with Bazzi during the summer",
+    "url": "https://www.reddit.com/r/ASU/comments/1rr8aya/cse340_with_bazzi_during_the_summer/",
+    "course": "CSE 340",
+    "type": "Student professor/course discussion",
+    "filename": "cse340_teacher_bazzi.txt",
+    "chunk_id": "cse340_teacher_bazzi.txt__chunk1",
+    "text": "Comment:\nBazzi's cool, he's definitely strict but he knows what he's talking about\n100% do not cheat in his class, he's strict on that too but the material in his courses should be enough. Big on AIVs. He gives a good bit of practises for every exam (old homeworks, exams, and the like) so if you study well and do well on the projects, you should be solid.\nIf you're a C's get degrees type, one of my mates got 40s on both of his exams, did everything else well enough and still ended out with a low 70 something\n\nComment:\nBazzi is hands down one of the best CS professors.\n\nI took him last semester on top of the other trifecta classes.\n\nHis notes are extremely thorough with examples.\n\nThe tutoring and office hours are useful as well.\n\nThe only thing are the projects.\n\nAbsolutely start early on them and ask questions early as well.\n\nThat’s what got me was the projects, I would start late and just turn in what I had to avoid late penalties."
+  },
+  {
+    "source": "Reddit r/ASU — CSE 340 with Bazzi during the summer",
+    "url": "https://www.reddit.com/r/ASU/comments/1rr8aya/cse340_with_bazzi_during_the_summer/",
+    "course": "CSE 340",
+    "type": "Student professor/course discussion",
+    "filename": "cse340_teacher_bazzi.txt",
+    "chunk_id": "cse340_teacher_bazzi.txt__chunk2",
+    "text": "Absolutely start early on them and ask questions early as well.\n\nThat’s what got me was the projects, I would start late and just turn in what I had to avoid late penalties.\n\nThe topics overall are a little confusing but definitely focus on studying and repetition.\n\nAs far as cheating goes, don’t even think about it.\n\nIf you take CS seriously he’s one of the better professors you’re gonna get and tbh using AI on his projects and whatnot doesn’t get you very far regardless.\n\nOn testing days he’ll take away people’s tests and tell them to leave if you’re talking/cheating or if you flip over your test early which makes for a little bit of a nerve wracking environment but if you do what you’re told then you’re fine.\n\nHe’s overall chill and a lil funny even tho the content is a little rough.\n\nOutside materials there’s an old CSE340 professor who uploaded some things to YouTube: Adam Doupé."
+  },
+  {
+    "source": "Reddit r/ASU — CSE 340 with Bazzi during the summer",
+    "url": "https://www.reddit.com/r/ASU/comments/1rr8aya/cse340_with_bazzi_during_the_summer/",
+    "course": "CSE 340",
+    "type": "Student professor/course discussion",
+    "filename": "cse340_teacher_bazzi.txt",
+    "chunk_id": "cse340_teacher_bazzi.txt__chunk3",
+    "text": "He’s overall chill and a lil funny even tho the content is a little rough.\n\nOutside materials there’s an old CSE340 professor who uploaded some things to YouTube: Adam Doupé.\n\nThe course has changed quite a bit since then but if you need a topic explained another way then I found him to be useful on some things.\n\nOtherwise Bazzi’s notes and TA recitations/office hours are gonna be the best resource.\n\nHomework’s aren’t horrible imo and the tests are rough but he curves pretty well as he doesn’t do “half” points or anything like that.\n\nComment:\nBazzi 100%. One of the very few good CS professors. Don’t cheat, show up and take notes, start homework EARLY, and you’ll be fine.\n\nComment:\nJust take Parupudi."
+  },
+  {
+    "source": "Reddit r/ASU — Which is most challenging: CSE 355, CSE 360, or CSE ___?",
+    "url": "https://www.reddit.com/r/ASU/comments/1crjzby/which_is_most_challenging_cse_355_cse_360_or_cse/",
+    "course": "CSE 355",
+    "type": "Student discussion",
+    "filename": "cse355_cse360_cse365_most_challenging.txt",
+    "chunk_id": "cse355_cse360_cse365_most_challenging.txt__chunk0",
+    "text": "Post:\nI'm taking all three next semester and want to get a jump on whichever one is going to be the most challenging. If anyone has resources that could help me prepare for any of the classes would be awesome as well.\n\nComment:\nFor me, it was 365 because it was a look it up-figure it out sort of class without too much structure (which can be either very convenient or very difficult), but with the cheating scandal I’d imagine some things will change. I think they might have some videos on the pwncollege YouTube channel. 355 can definitely be challenging in terms of concepts, I think most people used Easy Theory on YouTube. 360 is the least complicated imo, mostly a big group project and brute memorization/cheat sheets\n\nComment:\nIt really and truly depends on how your brain functions to be honest\n355 - it can be a lot because it’s a jump in proof difficulty from 243, which most people aren’t used to."
+  },
+  {
+    "source": "Reddit r/ASU — Which is most challenging: CSE 355, CSE 360, or CSE ___?",
+    "url": "https://www.reddit.com/r/ASU/comments/1crjzby/which_is_most_challenging_cse_355_cse_360_or_cse/",
+    "course": "CSE 355",
+    "type": "Student discussion",
+    "filename": "cse355_cse360_cse365_most_challenging.txt",
+    "chunk_id": "cse355_cse360_cse365_most_challenging.txt__chunk1",
+    "text": "Comment:\nIt really and truly depends on how your brain functions to be honest\n355 - it can be a lot because it’s a jump in proof difficulty from 243, which most people aren’t used to.\n\nIf you’ve taken 340 then it should make more sense since 340 is just applied 355, or if you’ve taken any more proofs classes than 243 it should be a bit easier.\n\nI enjoyed it a lot, but that’s because I’d taken a lot of proofs classes before that one so it was relatively easy mode for me.\n\n360 - for me this was probably the toughest of the 3 just because the professor I had sucked (Balasooriya), we never touched JavaFX previously and our big project was all in JavaFX, and overall it’s probably much easier if you’re familiar with software engineering practices through previous experience or internships.\n\n365 - with how pwn.college is structured you can start now and your progress should almost certainly start on it now and I would highly recommend it."
+  },
+  {
+    "source": "Reddit r/ASU — Which is most challenging: CSE 355, CSE 360, or CSE ___?",
+    "url": "https://www.reddit.com/r/ASU/comments/1crjzby/which_is_most_challenging_cse_355_cse_360_or_cse/",
+    "course": "CSE 355",
+    "type": "Student discussion",
+    "filename": "cse355_cse360_cse365_most_challenging.txt",
+    "chunk_id": "cse355_cse360_cse365_most_challenging.txt__chunk2",
+    "text": "365 - with how pwn.college is structured you can start now and your progress should almost certainly start on it now and I would highly recommend it.\n\nI haven’t touched the site much in a year, and I only did the advanced version (466), but from what I saw of the early iterations of 365, material didn’t change much per semester, and they almost always carry the progress over.\n\nSo if you solve the challenges now, you’ll have them complete when you start the course.\n\nThe only criteria for the grades is “is the challenge solved before the due date”, so if you get them done now then that’ll count.\n\nId confirm this in their discord just to confirm if you end up doing this just to be sure though.\n\nLook for Doupé’s lectures and Connor’s lectures, IMO they were the most helpful for me when I completed the 365 material on my own time this last year."
+  },
+  {
+    "source": "Reddit r/ASU — Which is most challenging: CSE 355, CSE 360, or CSE ___?",
+    "url": "https://www.reddit.com/r/ASU/comments/1crjzby/which_is_most_challenging_cse_355_cse_360_or_cse/",
+    "course": "CSE 355",
+    "type": "Student discussion",
+    "filename": "cse355_cse360_cse365_most_challenging.txt",
+    "chunk_id": "cse355_cse360_cse365_most_challenging.txt__chunk3",
+    "text": "Look for Doupé’s lectures and Connor’s lectures, IMO they were the most helpful for me when I completed the 365 material on my own time this last year.\n\nIn terms of how the class is structured, I personally loved it being CTF styled, but that’s because I’m a cybersecurity person at heart, and many people aren’t a big fan of that style, so YMMV.\n\nComment:\nI took this course twice, and since I wasn't part of the 2/3, the solves carried into the future. It was a huge help because that class was a massive time sink both times. There were some changes, new challenges added, and some previous challenges not included, but my previous effort made a huge difference regardless.\n\nComment:\n355 all the way. 360 and 365 had their moments but 355 was one of those classes where you’re on edge the entire time"
+  },
+  {
+    "source": "Reddit r/ASU — Opinions on hardest CS major classes and future",
+    "url": "https://www.reddit.com/r/ASU/comments/14b4dsh/opinions_on_hardest_cs_major_classes_and_future/",
+    "course": "General ASU CS / CSE 330, CSE 340, CSE 355",
+    "type": "Student discussion",
+    "filename": "cse_hardest_class_reviews.txt",
+    "chunk_id": "cse_hardest_class_reviews.txt__chunk0",
+    "text": "Post:\nI am in my \"junior\" year, although I have struggled on and failed some classes, so my major map is not on the same track as it should be.\n\nI am currently taking CSE 340 over the summer, and not doing great on the coding aspects.\n\nIn fact, I have been struggling a lot on the coding aspects of a lot of the classes in exchange for knowing the theory and book learning portions.\n\nI fell like I become a worse and worse programmer the further I go.\n\nThat being said, I still would really like to finish what I have started and get a career in the field.\n\nI am hoping that once I am actually in a job, I can relearn the actually real world use of all of my learning.\n\nI would like to know, what everyone is struggling with the most, and hopefully feel not so alone and downtrodden."
+  },
+  {
+    "source": "Reddit r/ASU — Opinions on hardest CS major classes and future",
+    "url": "https://www.reddit.com/r/ASU/comments/14b4dsh/opinions_on_hardest_cs_major_classes_and_future/",
+    "course": "General ASU CS / CSE 330, CSE 340, CSE 355",
+    "type": "Student discussion",
+    "filename": "cse_hardest_class_reviews.txt",
+    "chunk_id": "cse_hardest_class_reviews.txt__chunk1",
+    "text": "I would like to know, what everyone is struggling with the most, and hopefully feel not so alone and downtrodden.\n\nI am not looking to land a job at the highest level or anything, I am fine with being a grunt, I am just getting very worried that I will not be able to finish school with the down trend in performance that I am currently experiencing.\n\nI knew it was going to be a hard major, but I feel I am at the point where I cannot both learn, and get assignments done within the time frames.\n\nIt is one or the other.\n\nAny help/tips/advice for school and career with brutal honesty would be very much appreciated.\n\nI am at a sad breaking point.\n\nThank you.\n\nComment:\nThe hardest classes in the CS major are widely agreed upon by the ASU CS community as: CSE 330, CSE 340, CSE 355. Also lovingly called the trifecta or devil’s threesome"
+  },
+  {
+    "source": "Reddit r/ASU — Opinions on hardest CS major classes and future",
+    "url": "https://www.reddit.com/r/ASU/comments/14b4dsh/opinions_on_hardest_cs_major_classes_and_future/",
+    "course": "General ASU CS / CSE 330, CSE 340, CSE 355",
+    "type": "Student discussion",
+    "filename": "cse_hardest_class_reviews.txt",
+    "chunk_id": "cse_hardest_class_reviews.txt__chunk2",
+    "text": "Thank you.\n\nComment:\nThe hardest classes in the CS major are widely agreed upon by the ASU CS community as: CSE 330, CSE 340, CSE 355. Also lovingly called the trifecta or devil’s threesome\n\nComment:\nI also struggled with that block of classes. It gets easier, I failed 3 classes in one semester and came back stronger, graduated with a 3.0ish. It's normal to feel shitty at programming. I got a business analyst job because it was easier lol. But companies love a CS degree no matter what you do, so it's worth it even if you feel incompetent\n\nComment:\nMy friend, my hardest CS class was 110.\n\nNo joke, I couldn't remember how to initialize an array, got in trouble because I had similar code to another's since I didn't know what to do and asked a classmate and I was just completely lost on how to code.\n\nI was 22 and have only seen code from some weird python project in my applied math REU and seen simple designs in MATLAB (I was a physics major then switched to CSE)."
+  },
+  {
+    "source": "Reddit r/ASU — Opinions on hardest CS major classes and future",
+    "url": "https://www.reddit.com/r/ASU/comments/14b4dsh/opinions_on_hardest_cs_major_classes_and_future/",
+    "course": "General ASU CS / CSE 330, CSE 340, CSE 355",
+    "type": "Student discussion",
+    "filename": "cse_hardest_class_reviews.txt",
+    "chunk_id": "cse_hardest_class_reviews.txt__chunk3",
+    "text": "I was 22 and have only seen code from some weird python project in my applied math REU and seen simple designs in MATLAB (I was a physics major then switched to CSE).\n\nI was absolutely not cut out for coding, i thought i was gonna fail.\n\nDon't stop, don't quit my friend.\n\nYou will succeed.\n\nYou will do great, you are doing awesome don't beat yourself up.\n\nI graduated last year after 3 years of catching up to my CSE major, got a sweet job, got a glowing performance review, trained an intern and couple new hires, been able to hold my own talking to stakeholders and yes, I can initialize an array.\n\nDon't doubt yourself any more than you need to, push yourself but remember that your pace doesn't have to be like everyone else.\n\nNo comparisons to others, just drive yourself to the finish line and remember how hard you worked for it.\n\nI believe in you.\n\nComment:\nI had to take stats 3 times, got mostly Cs in my classes I got a job right out of college (doing stats lol). Just pass your classes and do ur best."
+  },
+  {
+    "source": "Reddit r/ASU — Opinions on hardest CS major classes and future",
+    "url": "https://www.reddit.com/r/ASU/comments/14b4dsh/opinions_on_hardest_cs_major_classes_and_future/",
+    "course": "General ASU CS / CSE 330, CSE 340, CSE 355",
+    "type": "Student discussion",
+    "filename": "cse_hardest_class_reviews.txt",
+    "chunk_id": "cse_hardest_class_reviews.txt__chunk4",
+    "text": "I believe in you.\n\nComment:\nI had to take stats 3 times, got mostly Cs in my classes I got a job right out of college (doing stats lol). Just pass your classes and do ur best.\n\nComment:\nSame here and struggling on the coding aspect. Taking CSE 240 right now and thought it would be okay until C++ and Linux were introduced all at once. I never had a CS background either (did undergrad in biochem) but wanted to study up some CS to get a Master's. Studying for CS is no joke though, I will admit that. Right now, it sounds like you have the motivation but lack the focus. Keep pushing through though because you're almost there. Better to finish the race than stop half way and ponder for the rest of your life if you could've finished."
+  },
+  {
+    "source": "Reddit r/ASU — What is the hardest class for CS majors? Why?",
+    "url": "https://www.reddit.com/r/ASU/comments/1i8h9ss/what_is_the_hardest_class_for_cs_majors_why_do/",
+    "course": "General ASU CS / CSE 330, CSE 340, CSE 355",
+    "type": "Student discussion",
+    "filename": "cse_hardest_classes_class_reviews.txt",
+    "chunk_id": "cse_hardest_classes_class_reviews.txt__chunk0",
+    "text": "Post:\nWhat is the hardest class for CS majors? Why do you think it is the hardest?\n\nComment:\nCSE 340 or 355. 355 is conceptually more difficult and 340 takes lots of effort to code\n\nComment:\ncse 365, information assurance. hated the structure of the class and felt like i was just paying to teach myself the content. lectures were pretty useless and workload is heavy.\n\nComment:\nthey gotta change trifecta to quadfecta bc of 365 this class is so hard for no reason, I've had a way easier time through 310 330 and 355 and probably will with 340 too\n\nComment:\nAgree with all the comments here. Took 365 in Spring '24 and TA'd for it last semester. The course just keeps getting more challenging.\nFor trifecta classes, you can probably take an easier prof to have an easier time.\n\nComment:\nAssembly helped me realize i was not cut out to be in computer science"
+  },
+  {
+    "source": "Reddit r/ASU — What is the hardest class for CS majors? Why?",
+    "url": "https://www.reddit.com/r/ASU/comments/1i8h9ss/what_is_the_hardest_class_for_cs_majors_why_do/",
+    "course": "General ASU CS / CSE 330, CSE 340, CSE 355",
+    "type": "Student discussion",
+    "filename": "cse_hardest_classes_class_reviews.txt",
+    "chunk_id": "cse_hardest_classes_class_reviews.txt__chunk1",
+    "text": "Comment:\nAssembly helped me realize i was not cut out to be in computer science\n\nComment:\nCSE 365 and CSE 340. Both are coding intensive and NOT easy at all and require a large time commitment. 340 is actually a fun class tho, where 365 is just straight suffering the entire time.\n\nComment:\nSo sad to see so many people disliking CSE365 :( Took it in, I think, Spring 2020 with Adam Doupe and it was a blast. Do the new profs not do any of the hands on practicums/games? Did you use pwn college when you took it? Because if not, then that explains why.\n\nComment:\nCSE 365 post cheating scandal. That’s worse than a full time job at this point. I personally learned more from HackTheBox and TryHackMe than the course offered at ASU\n\nComment:\n\nCSE 356. You need to dedicate hours of your time to solve a single problem out of 16-40 other problems.\n\nComment:\nMy roommates absolutely hated the math classes after calc 3. But I think this was removed from the major map.\n\nComment:\nTheoretical CS"
+  },
+  {
+    "source": "Reddit r/ASU — What is the hardest class for CS majors? Why?",
+    "url": "https://www.reddit.com/r/ASU/comments/1i8h9ss/what_is_the_hardest_class_for_cs_majors_why_do/",
+    "course": "General ASU CS / CSE 330, CSE 340, CSE 355",
+    "type": "Student discussion",
+    "filename": "cse_hardest_classes_class_reviews.txt",
+    "chunk_id": "cse_hardest_classes_class_reviews.txt__chunk2",
+    "text": "Comment:\nMy roommates absolutely hated the math classes after calc 3. But I think this was removed from the major map.\n\nComment:\nTheoretical CS\n\nComment:\ncurrently finishing the trifects 340 and 330. But currently I would say 365. Hated that class it was horrible. Not sure how they changed the way they taught but that class was a pain and had very little guidance. There were videos but I feel like the videos were barely helpful. The discord is pretty nice for that class but still I spent more time in that class than any other class. CSE 355 was fairly hard, but I spent a lot less time in that class, To be fair i also had a pretty lenient teacher who was great at teaching and his assignments were worth more than the actual exams. We were also allowed to work on non “coding” assignments with a group so it helped. Not sure how it is for others but cse 365 is by far the worst. I think it’s due to the whole cheating scandal a couple semesters ago.\n\nComment"
+  }
+]

@@ -1,0 +1,22 @@
+Source: Reddit r/ASU — Which is most challenging: CSE 355, CSE 360, or CSE ___?
+URL: https://www.reddit.com/r/ASU/comments/1crjzby/which_is_most_challenging_cse_355_cse_360_or_cse/
+Course: CSE 355
+Type: Student discussion
+
+Post:
+I'm taking all three next semester and want to get a jump on whichever one is going to be the most challenging. If anyone has resources that could help me prepare for any of the classes would be awesome as well.
+
+Comment:
+For me, it was 365 because it was a look it up-figure it out sort of class without too much structure (which can be either very convenient or very difficult), but with the cheating scandal I’d imagine some things will change. I think they might have some videos on the pwncollege YouTube channel. 355 can definitely be challenging in terms of concepts, I think most people used Easy Theory on YouTube. 360 is the least complicated imo, mostly a big group project and brute memorization/cheat sheets
+
+Comment:
+It really and truly depends on how your brain functions to be honest
+355 - it can be a lot because it’s a jump in proof difficulty from 243, which most people aren’t used to. If you’ve taken 340 then it should make more sense since 340 is just applied 355, or if you’ve taken any more proofs classes than 243 it should be a bit easier. I enjoyed it a lot, but that’s because I’d taken a lot of proofs classes before that one so it was relatively easy mode for me.
+360 - for me this was probably the toughest of the 3 just because the professor I had sucked (Balasooriya), we never touched JavaFX previously and our big project was all in JavaFX, and overall it’s probably much easier if you’re familiar with software engineering practices through previous experience or internships.
+365 - with how pwn.college is structured you can start now and your progress should almost certainly start on it now and I would highly recommend it. I haven’t touched the site much in a year, and I only did the advanced version (466), but from what I saw of the early iterations of 365, material didn’t change much per semester, and they almost always carry the progress over. So if you solve the challenges now, you’ll have them complete when you start the course. The only criteria for the grades is “is the challenge solved before the due date”, so if you get them done now then that’ll count. Id confirm this in their discord just to confirm if you end up doing this just to be sure though. Look for Doupé’s lectures and Connor’s lectures, IMO they were the most helpful for me when I completed the 365 material on my own time this last year. In terms of how the class is structured, I personally loved it being CTF styled, but that’s because I’m a cybersecurity person at heart, and many people aren’t a big fan of that style, so YMMV.
+
+Comment:
+I took this course twice, and since I wasn't part of the 2/3, the solves carried into the future. It was a huge help because that class was a massive time sink both times. There were some changes, new challenges added, and some previous challenges not included, but my previous effort made a huge difference regardless.
+
+Comment:
+355 all the way. 360 and 365 had their moments but 355 was one of those classes where you’re on edge the entire time

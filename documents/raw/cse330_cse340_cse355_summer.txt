@@ -1,0 +1,30 @@
+Source: Reddit r/ASU — CS majors taking the trifecta this summer
+URL: https://www.reddit.com/r/ASU/comments/1kldo1z/cs_majors_taking_the_trifecta_this_summer/
+Course: CSE 330, CSE 340, CSE 355
+Type: Student discussion
+
+Post:
+Any tips? Which one is the heaviest course load? Which one has the hardest concepts to understand? Any and every single piece of advice or info is appreciated.
+
+Comment:
+355 and 340 have a lot of overlap early on so pay extra attention in 355. 340 and 330 are project heavy with the latter having more difficult projects imo. 355 will be the most difficult to understand conceptually but easy theory videos on YouTube + your professor should be enough. Overall I’d say the difficulty is 355 > 340 > 330. I had a good trio of professors for this, HBA/Claveau/Gordon, so your experience may be radically different than mine. Good luck 
+
+Comment:
+Tbh it was 340 for me. I had gordon for 340 and 330 but personally felt like 340 was more work. The projects can be extremely difficult. I believe all projects for 340 and 330 are the same throughout all the courses as they’re trying to get them to align with other professors. And Professor Gordon does not really teach the same level as Bazzi who is the professor that creates the projects and such.
+Tips for each class is mainly to start early. Tons of students failed the first project mainly because they started late. And by early I mean start minimum 2 weeks early. Besides that the concepts from 340 are not entirely difficult unless you haven’t taken it 355 but even then the concepts aren’t that difficult. It’s just the projects that are tedious. But I personally feel that project 2 and 3 get easier.
+I thought 355 was pretty easy in terms of workload and some of the concepts. Some of them can be a bit more difficult but the class itself was not that bad.
+For 330 also not that bad but keep in mind that this class has a bonus project for extra credit and this class has been curved so a 60% is passing. Unless they change it over summer.
+
+Comment:
+Just finished these 3 courses this semester, took gordon for 330/340 and Lee for 355 so ill give advice on them.
+The hardest imo was 340, I definitely agree with everyone here you need to start early. I got a 64/100 on the first project bc i didn’t take Gordon’s warnings seriously and started the day before. Next 2 projects I started a week early on and it was fine. Concepts were easy to understand just projects that were difficult.
+330 was easy-ish for me but i know some people did struggle, the projects can be a bit confusing but they kinda build off of each other and there are documents to walk you through it. Also is plenty of bonus credit, bunch of students finished with more than a 100% in the class.
+355 was more theory and the tests were most difficult in this class with averages of 30ish, but they were heavily curved. So a 30 was usually a B since that was the average. The concepts were arguably easy but truly understanding the concepts was tough. A LOT of proof writing in this class and honestly that’s my weak suit but i still got through it. Just understand the stuff from the first few chapters and read the textbook since everything builds off of the first chapters.
+Just be locked in and you’ll be good, take gordon and take advantage of all the bonus credit. He posts lectures and guides from other professors anyway who dont have that extra credit. Lee is also a great lecturer and he tells you everything you need to succeed.
+
+Comment:
+Thanks, I really appreciate everything here. I’m glad i’m talking to someone who took them all at once too. Seems like the general consensus is 355 > 340 > 330 in terms of difficulty. Will definitely start both 330 and 340 projects early.
+
+Comment:
+
+330 easy. I think 355 is easy now cuz Colburn retired. He was a great professor but had very difficult exams and pretty hard homework. Take 340 w Bazzi because you’ll actually learn

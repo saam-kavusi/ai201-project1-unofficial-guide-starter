@@ -1,0 +1,24 @@
+Source: Reddit r/ASU — CSE 330/340/355 over summer
+URL: https://www.reddit.com/r/ASU/comments/1nv0vsg/cse_330340355_over_summer/
+Course: CSE 330, CSE 340, CSE 355
+Type: Student discussion
+
+Post:
+I am a sophomore in CS with enough credits to graduate early however I am bottle necked because of capstone I. If I take these courses over summer I can then take capstone 1 and 2 in my junior year and ultimately graduate early. I wanted some insight on taking these three courses over summer. Let’s say I have the right motivation to grind it out; is it doable? Work ethic aside will those who have taken these courses give input on if I can even meaningfully retain the knowledge from these in that amount of time? Thanks
+
+Comment:
+Don't
+
+Comment:
+I am taking CSE 330 currently, and it is already kicking my butt. It is alot of projects base and time consuming. And I am a sophomore  too. Taking CSE 355 and CSE 340 in Spring 26 if and when I register. 
+
+
+Comment:
+If my memory serves, those are 3/4 of your hard courses... those kick peoples butts in the full 16 week and spread out, and you want to do them in one 8 week go?
+I mean of course anythings possible (assuming none of these are Prereq'd on each other) but it wont be easy nor a fun time either.
+
+Comment:
+355 was super challenging for me. Some people have it click right away and it's a breeze, for me this was one of the hardest courses.
+
+Comment:
+CSE 340 and 330 over the summer is setting yourself up for failure. I get wanting to graduate early but this isn’t feasible.

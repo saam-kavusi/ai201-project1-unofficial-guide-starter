@@ -1,0 +1,42 @@
+Source: Reddit r/ASU — Review of different CS professors
+URL: https://www.reddit.com/r/ASU/comments/1ixpih7/review_of_different_cs_professors/
+Course: General ASU CS
+Type: Student professor review thread
+
+Post:
+Hi guys, I'm a junior year CS student, and I'm reviewing different SCAI professors to help other people decide whether or not to take them since class enrollment is coming up (and many of them get their bad reviews removed from RateMyProfessor).
+1. CSE 205 (Farideh Navabi): Back in my day (lol) this class used to be in person, not on Zybooks. I think Navabi still teaches it so you don't have an option cause there are no other sections. Personally, I didn't think she was the best because she was more obsessed with catching cheaters than actually teaching. Her class policies were alright though and there were/are a lot of TAs. My rating for her: B.
+2. CSE/EEE 120 (Bahaa Osman): Apparently taught again last fall so I thought I should include him. He's a part time instructor who works a full time job at a different company. His class was (and still probably is) "hybrid" but he teaches it like an iCourse, i.e. all the assignments and quizzes are online but the final is in-person. There are no benefits to taking him over Millman at all (unless you don't want to go to class) because the class material is all Millman's. My rating for him: B+.
+3. CSE 240 (David Claveau): Alright, now we're getting into the good ones. He is an excellent professor and hilarious as well. He walks around the room while teaching and helping out, so he's actually involved in teaching. I took his class when it was his first semester teaching and the assignments were pretty easy. He was much better than the other options at the time (Chen, Trickel, Selgrad, Gordon). The only downside is that he doesn't respond to e-mails, so you're better off talking to him in-person. My rating for him: A.
+4. CSE 259 (Steven Osburn): He isn't teaching this class in the fall and hasn't since the semester I took him. He is somewhat knowledgeable but really disorganized and just not really a good instructor. He gave us no instruction on Prolog which the class was based on, and we had to create a whole game of chess in one of the projects, with little to no help. Recitations were online too, which blows. Although Claveau has taught this class ever since, I wouldn't recommend taking Osburn for any other class unless you have no other option. My rating for him: C+.
+5. MAT 243 (Dongrin Kim): This was an iCourse with Dr. Rochus Boerner's videos, exams, policies, and reviews so I'm not sure why they assigned Kim to it in the first place. Grading isn't forgiving, and you're forced to do huge exam reviews before exams. The exams themselves aren't the worst though. What is the worst is the amount of work you have to do- written homework, quizzes, exams, videos. I would strongly recommend a different class unless you're a masochist. My rating for him: D.
+6. CSE 230 (Soumya Indela, Muhilan Ramamoorthy): Indela is an alright instructor who is really knowledgeable about the content, and is pretty nice as well. The class uses Zybooks. She dropped one Zylab and 6 in-class challenges. There are in-class challenges during every class so you have to go to class (and mine was at 9 am in winter so rip). The latter half (after MIPS) was taught by Ramamoorthy and made no sense at all. He has a strong accent which can be rectified by just talking slower (which likely won't happen) and I stopped going to class since he started teaching because there was no point. However, now the class is hybrid so it's probably not that bad. My rating for them: B+ (Indela), C (Ramamoorthy).
+7. CSE 310 (Yiran Luo): We really should have more millennial instructors. He is really funny and likes anime as well. He had some great policies, such as curving the exam when the average was under 75. His assignments and projects (individual or a group of 2) were intuitive and helped you actually understand the content, but weren't overly hard. I would strongly recommend you to take him for this class if you get the chance. My rating: A+.
+8. CSE 355 (Jamison Weber): Nothing particularly interesting about him except that he's named after a brand of whisky. Also, he doesn't teach at ASU anymore so there isn't really a point writing about him. Just a mid instructor all around. My rating: B- (The same grade he gave me when I missed the cutoff for B by 0.4%).
+9. CSE 330 (Ming Zhao): He is a lazy instructor. There are no slides or study material provided and your only option is go to every class and decipher his handwriting from the whiteboard to take notes. Also, he uses Google Groups which made me the hateful and bitter person I am today. However, there was a lot of extra credit and I would still urge you to take him if your only other option is Gordon. Although, even if you don't take him he'll find a way to shoehorn his syllabus in other sections anyway. There are 6 individual projects (but one is bonus), no homework, and 2 in-person exams (midterm was ok, final was hard). My rating: B.
+10. CSE 360 (Zahra Sadri): She was a good instructor but it was her first semester teaching so there were a few hurdles (especially with the final, where a TA leaked a few of the questions). She is much better than Carter and actually seems to care about the students in her class. She spent a long time with me helping me to get my eclipse running in office hours and after them too. She can be a bit stubborn at times, but she is helpful and nice overall. Recommended over Carter. My rating: A.
+11. IEE 380 (Michael Clough): I didn't get a good enough grade because I didn't study well. You will have to study A LOT because the exams are 70% of the class grade. However, he is funny and cares whether or not you understand the content. If you want the exams to be a smaller part of the grade, you could take Don Holcomb's class, but if you study well and know how to use your calculator then you'll get an A. He doesn't give any +/- or Y grades. My rating: A-.
+
+Comment:
+The goat claveau mentioned!
+
+Comment:
+I took Osburn for CSE 259, and while he is a nice and accommodating professor, he's overall an alright professor in terms of teaching and I can agree that he is disorganized. What you said about him is exactly how I felt about his class and I didn't learn much after finishing it (I wished I'd taken MAT 267 instead).
+
+Comment:
+I had Ramamoorthy for my first attempt at Statistics, and I have 0 clue if he just was thrust into that class last minute or what, but he never seemed to be showing up prepared for that class. The Slides were as much new material to him as they were to us.
+
+Comment:
+GOAT YIRAN "LAWRENCE" LUO MENTIONED?!?!?!?! He's a great professor and personalizes his lectures. Hope more people follow his level. and when submitting our final project, the TA only gave us a 4/20 so my partner emailed lawrence and he gave us like an 18 which was the difference between him passing and failing the class
+
+Comment:
+Surprised about the rating for Sadri. In my 360 class currently, she just parrots what Carter says.
+
+Comment:
+Can absolutely agree with Yiran Luo, I had him for CSE 310 last semester and he was easily my favorite professor that I’ve ever had
+
+Comment:
+Honestly I agree with you about Sadri, she may not be perfect but she did her best to help, yes she sometimes gets sturburn and gets mad at people even for small things and I think that she was a bit overhated
+
+Comment:
+Chattin for IEE380 is alright. although i would suggest don holcomb because his is the only class where exams are worth 50% instead of 75%

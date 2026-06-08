@@ -1,0 +1,47 @@
+Source: Reddit r/ASU — What is the hardest class for CS majors? Why?
+URL: https://www.reddit.com/r/ASU/comments/1i8h9ss/what_is_the_hardest_class_for_cs_majors_why_do/
+Course: General ASU CS / CSE 330, CSE 340, CSE 355
+Type: Student discussion
+
+Post:
+What is the hardest class for CS majors? Why do you think it is the hardest?
+
+Comment:
+CSE 340 or 355. 355 is conceptually more difficult and 340 takes lots of effort to code
+
+Comment:
+cse 365, information assurance. hated the structure of the class and felt like i was just paying to teach myself the content. lectures were pretty useless and workload is heavy.
+
+Comment:
+they gotta change trifecta to quadfecta bc of 365 this class is so hard for no reason, I've had a way easier time through 310 330 and 355 and probably will with 340 too
+
+Comment:
+Agree with all the comments here. Took 365 in Spring '24 and TA'd for it last semester. The course just keeps getting more challenging. 
+For trifecta classes, you can probably take an easier prof to have an easier time.
+
+Comment:
+Assembly helped me realize i was not cut out to be in computer science
+
+Comment:
+CSE 365 and CSE 340. Both are coding intensive and NOT easy at all and require a large time commitment. 340 is actually a fun class tho, where 365 is just straight suffering the entire time. 
+
+Comment:
+So sad to see so many people disliking CSE365 :( Took it in, I think, Spring 2020 with Adam Doupe and it was a blast. Do the new profs not do any of the hands on practicums/games? Did you use pwn college when you took it? Because if not, then that explains why.
+
+Comment:
+CSE 365 post cheating scandal. That’s worse than a full time job at this point. I personally learned more from HackTheBox and TryHackMe than the course offered at ASU
+
+Comment:
+
+CSE 356. You need to dedicate hours of your time to solve a single problem out of 16-40 other problems.
+
+Comment:
+My roommates absolutely hated the math classes after calc 3. But I think this was removed from the major map.
+
+Comment:
+Theoretical CS
+
+Comment:
+currently finishing the trifects 340 and 330. But currently I would say 365. Hated that class it was horrible. Not sure how they changed the way they taught but that class was a pain and had very little guidance. There were videos but I feel like the videos were barely helpful. The discord is pretty nice for that class but still I spent more time in that class than any other class. CSE 355 was fairly hard, but I spent a lot less time in that class, To be fair i also had a pretty lenient teacher who was great at teaching and his assignments were worth more than the actual exams. We were also allowed to work on non “coding” assignments with a group so it helped. Not sure how it is for others but cse 365 is by far the worst. I think it’s due to the whole cheating scandal a couple semesters ago.
+
+Comment

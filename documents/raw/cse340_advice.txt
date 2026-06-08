@@ -1,0 +1,32 @@
+Source: Reddit r/ASU — CSE 340
+URL: https://www.reddit.com/r/ASU/comments/1pnnsmk/cse_340/
+Course: CSE 340
+Type: Student discussion
+
+Post:
+Anyone has any advice so that I can prepare for the class? Any notes, review mid term and final would be appreciated! any books etc. I am taking with Prof Bazzi. The mid term and final for CSE 330 was kicking my butt this semester so wanna start early! Thank you
+
+Comment:
+Practice C++. Build mini projects. Be able to code random stuff on the fly. Practice leetcode using c++. Bazzi releases all his notes and exams for you to study, so if you budget your time and study well, it’s not really the exams that are hard. The real hard things are his projects. He said they take 20 hours. They took me about 30-40-hours each. I got good grades, but settling for a 75% vs going all out for a 100% is what will take the extra 20 plus hrs on top of the original 20. 
+
+Comment:
+i feel like if you remember stuff from 355 then you should be fine. I didn’t take Bazzi, but my projects were basically Bazzi’s projects and it required us to understand some stuff from 355.
+
+Comment:
+I took Bazzi and 355 at the same time. I got behind in 355 though which really hurt cause we started learning cfg stuff just before the first 340 exam. So learn how Context Free Grammar works.
+Other than CFGs. Put a lot of effort into how pointers, maps, vectors, and linkedlists work in C++. Your choice of data structures will matter A LOT in those projects. And research how parsers work and how they are built.
+That’s probably the only necessary prep. Just start the projects asap and utilize his office hours and TA hours. Also get ready to spend a lot of time dissecting his notes. And practice the topics A LOT for exams.
+If you want to learn more of the content early, look at his previous syllabi. And Adam Doupe recorded his lectures from like a decade ago and put it on youtube and they are helpful.
+
+Comment:
+Did Bazzi’s 340 along 355. Both subjects, imo, go hand in hand for the first half. The rest diverges. Best advice is to be very meticulous on how you implement the projects. The smallest details make or break 8 hours of effort on one part.
+
+Comment:
+Bazzi is a great professor, the notes he gives are excellent and cover the material very thoroughly. The projects are fairly hard, make sure to start those early. I usually started with about a week to go which worked fine but for one project I was scrambling at the deadline and didn’t get the last few test cases, but the other 2 were 100%. The “catch” with his projects is he doesn’t provide most of the test cases publicly, so the real challenge is passing all the extra (and extremely thorough) test cases on gradescope. Start early so you can go to office hours and ask for the output bc Gradescope won’t show you anything, just pass or fail. If you go in person he’ll usually tell you if it’s throwing an error, incorrect output, etc. It’s a very doable class, I got an A, don’t get too stressed out by what people are saying. Just make sure to take the class seriously.
+
+Comment:
+A tip others may not give here is how to handle his tests, he was absolutely neurotic about student placement this semester and academic integrity.
+He will have you enter on one side of the lecture hall and seemingly at random tell you to go down a specific row and sit directly next to someone, think packed in like sardines.
+When he distributes the tests do not touch them until the test starts for nearly any reason, in our first test a student attempted to split a test thinking it was two tests to give back to Bazzi. Bazzi proceeded to yell at him for several minutes about academic integrity and then kicked him out.
+Also don’t cheat, don’t try to use gpt, or copy someone’s answers, the projects the might seem near impossible at points, but he will catch you. He got 19 people on one assignment at one point, and now they will almost definitely never graduate from any college. It’s not worth it.
+Good luck you’ll need it

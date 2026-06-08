@@ -1,0 +1,23 @@
+Source: Reddit r/ASU — CSE 330 and 355 profs
+URL: https://www.reddit.com/r/ASU/comments/178cksm/cse_330_and_355_profs/
+Course: CSE 330, CSE 355
+Type: Student professor recommendation thread
+
+
+Post: 
+I am taking CSE 330 and CSE 355 next semester. I am picking courses and am trying to figure out who to pick for CSE 355: Xuerong Feng or Heewook Lee. Also, has anyone heard of Adil Ahmad, and is he good for CSE 330? The only other option is Gordon.
+
+Comment:
+bannerjee, if he’s still teaching, for 330 and colburn for 355. for 355, the textbook is worth it’s weight in gold. 355 is much more of a grind but hunker down with the textbook and you’ll be set.
+
+Comment:
+I had Lee for 355, great prof and loved his class, u get plenty of time to do hw and exams are tough but curved hard, I ended his class with an A- with not too much effort
+
+Comment:
+If you want an easy A, take Gordon. But you won't be learning much from him.
+
+Comment:
+for 355 I would 100% take feng. she goes pretty fast, but she goes over everything. (unless you have issues with auditory processing/accents, in which case choose a different prof). her tests are straightforward and pretty much from a combination of the homework/recitations/in class examples. if you take notes and put the pumping lemma formula on your note sheets you'll be golden. Gordon's 330 has easy tests but the lectures will make you feel like you're actively losing braincells and the projects are rough. if you get stuck, go to the TA's office hours because Gordon will not be able to help you.
+
+Comment:
+I think Lee is a great choice for 355
