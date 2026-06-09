@@ -19,12 +19,17 @@ import os
 from dotenv import load_dotenv
 from groq import Groq
 
-from vector_store import retrieve_chunks
+from vector_store import retrieve_chunks, retrieve_chunks_hybrid
 
 load_dotenv()
 
 MODEL = "llama-3.3-70b-versatile"
 TOP_K = 5
+
+# Retrieval strategies selectable from ask()/the UI. "Hybrid" fuses semantic and
+# BM25 keyword search; "Semantic" is the original vector-only path.
+RETRIEVAL_MODES = ("Hybrid", "Semantic")
+DEFAULT_RETRIEVAL_MODE = "Hybrid"
 
 # The exact sentence the model must use when the context is insufficient.
 INSUFFICIENT_INFO = (
@@ -155,6 +160,7 @@ def ask(
     course_filter: str | None = None,
     type_filter: str | None = None,
     filename_filter: str | None = None,
+    retrieval_mode: str = DEFAULT_RETRIEVAL_MODE,
 ) -> dict:
     """Answer a question, grounded only in retrieved chunks.
 
@@ -162,20 +168,34 @@ def ask(
     through to retrieval; leaving them as None retrieves over all chunks, so
     ask(question) behaves exactly as before.
 
+    `retrieval_mode` selects the retriever: "Hybrid" (default) fuses semantic
+    and BM25 keyword search; "Semantic" uses vector search only. Anything other
+    than "Hybrid" falls back to the semantic path, so the original behavior is
+    always one argument away.
+
     Returns a dict:
         {
           "answer": str,             # grounded natural-language answer
           "sources": list[dict],     # deduplicated source metadata
-          "retrieved_chunks": list[dict],  # raw chunks w/ distance scores
+          "retrieved_chunks": list[dict],  # raw chunks w/ score/distance
         }
     """
-    retrieved_chunks = retrieve_chunks(
-        question,
-        top_k=top_k,
-        course_filter=course_filter,
-        type_filter=type_filter,
-        filename_filter=filename_filter,
-    )
+    if retrieval_mode == "Hybrid":
+        retrieved_chunks = retrieve_chunks_hybrid(
+            question,
+            top_k=top_k,
+            course_filter=course_filter,
+            type_filter=type_filter,
+            filename_filter=filename_filter,
+        )
+    else:
+        retrieved_chunks = retrieve_chunks(
+            question,
+            top_k=top_k,
+            course_filter=course_filter,
+            type_filter=type_filter,
+            filename_filter=filename_filter,
+        )
 
     # No retrieval => nothing to ground on; refuse without calling the LLM.
     if not retrieved_chunks:

@@ -10,8 +10,10 @@ store and retrieves chunks.
 """
 
 import json
+import re
 
 import chromadb
+from rank_bm25 import BM25Okapi
 from sentence_transformers import SentenceTransformer
 
 CHUNKS_FILE = "data/chunks.json"
@@ -23,8 +25,16 @@ MODEL_NAME = "all-MiniLM-L6-v2"
 # which is stored as the document body).
 METADATA_FIELDS = ("source", "url", "course", "type", "filename", "chunk_id")
 
+# Reciprocal Rank Fusion constant. The standard value (60) dampens the influence
+# of any single high rank so neither the semantic nor the keyword list dominates.
+RRF_K = 60
+
 # Loaded once and reused — loading the model is the slow part.
 _model: SentenceTransformer | None = None
+
+# BM25 index + its backing chunks, built once on first hybrid query.
+_bm25: BM25Okapi | None = None
+_bm25_chunks: list[dict] | None = None
 
 
 # ---------------------------------------------------------------------------
@@ -197,6 +207,181 @@ def retrieve_chunks(
 
 
 # ---------------------------------------------------------------------------
+# Keyword (BM25) retrieval
+# ---------------------------------------------------------------------------
+
+_TOKEN_RE = re.compile(r"[a-z0-9]+")
+
+
+def _tokenize(text: str) -> list[str]:
+    """Lowercase word/number tokenizer.
+
+    Splitting on non-alphanumerics keeps course codes and names intact as
+    separate tokens — "CSE 340" -> ["cse", "340"], "Bazzi" -> ["bazzi"] — which
+    is exactly what we want BM25 to match on for exact-name/course queries.
+    """
+    return _TOKEN_RE.findall(text.lower())
+
+
+def _get_bm25() -> tuple[BM25Okapi, list[dict]]:
+    """Return the shared BM25 index over data/chunks.json, building it once.
+
+    The index and its backing chunk list stay parallel (same order), so a score
+    at position i belongs to chunk i.
+    """
+    global _bm25, _bm25_chunks
+    if _bm25 is None:
+        _bm25_chunks = load_chunks()
+        tokenized = [_tokenize(chunk["text"]) for chunk in _bm25_chunks]
+        _bm25 = BM25Okapi(tokenized)
+    return _bm25, _bm25_chunks
+
+
+def _chunk_matches(
+    chunk: dict,
+    course_filter: str | None,
+    type_filter: str | None,
+    filename_filter: str | None,
+) -> bool:
+    """Apply the same exact-match metadata filters used on the semantic path."""
+    if course_filter and chunk.get("course") != course_filter:
+        return False
+    if type_filter and chunk.get("type") != type_filter:
+        return False
+    if filename_filter and chunk.get("filename") != filename_filter:
+        return False
+    return True
+
+
+def keyword_retrieve(
+    query: str,
+    top_k: int = 5,
+    course_filter: str | None = None,
+    type_filter: str | None = None,
+    filename_filter: str | None = None,
+) -> list[dict]:
+    """Return the top_k chunks for `query` ranked by BM25 keyword relevance.
+
+    Metadata filters are applied in Python (mirroring the ChromaDB `where`
+    filter on the semantic path). Results carry a `bm25_score` instead of a
+    cosine `distance`, plus the same metadata fields as retrieve_chunks.
+    """
+    bm25, chunks = _get_bm25()
+    scores = bm25.get_scores(_tokenize(query))
+
+    scored = [
+        (score, chunk)
+        for chunk, score in zip(chunks, scores)
+        if _chunk_matches(chunk, course_filter, type_filter, filename_filter)
+    ]
+    scored.sort(key=lambda pair: pair[0], reverse=True)
+
+    results = []
+    for score, chunk in scored[:top_k]:
+        results.append({
+            "text": chunk["text"],
+            "bm25_score": float(score),
+            "source": chunk.get("source", ""),
+            "url": chunk.get("url", ""),
+            "course": chunk.get("course", ""),
+            "type": chunk.get("type", ""),
+            "filename": chunk.get("filename", ""),
+            "chunk_id": chunk.get("chunk_id", ""),
+        })
+    return results
+
+
+# ---------------------------------------------------------------------------
+# Hybrid retrieval (semantic + keyword via Reciprocal Rank Fusion)
+# ---------------------------------------------------------------------------
+
+def retrieve_chunks_hybrid(
+    query: str,
+    top_k: int = 5,
+    course_filter: str | None = None,
+    type_filter: str | None = None,
+    filename_filter: str | None = None,
+    semantic_k: int = 10,
+    keyword_k: int = 10,
+) -> list[dict]:
+    """Combine semantic and keyword retrieval into one ranked list.
+
+    Pulls `semantic_k` chunks from Chroma and `keyword_k` from BM25 (both with
+    the same metadata filters applied), merges and deduplicates them by
+    chunk_id, and re-ranks with Reciprocal Rank Fusion (RRF). RRF is rank-based,
+    so it sidesteps the problem that cosine distances and BM25 scores live on
+    incomparable scales.
+
+    Each result has the same shape as retrieve_chunks (text + source/url/course/
+    type/filename/chunk_id) plus:
+        score        : the fused RRF score (higher = better; results are sorted
+                       by this, descending)
+        distance     : the cosine distance if the chunk surfaced semantically,
+                       else None
+        bm25_score   : the BM25 score if the chunk surfaced via keywords, else
+                       None
+    """
+    semantic = retrieve_chunks(
+        query,
+        top_k=semantic_k,
+        course_filter=course_filter,
+        type_filter=type_filter,
+        filename_filter=filename_filter,
+    )
+    keyword = keyword_retrieve(
+        query,
+        top_k=keyword_k,
+        course_filter=course_filter,
+        type_filter=type_filter,
+        filename_filter=filename_filter,
+    )
+
+    merged: dict[str, dict] = {}
+    fused: dict[str, float] = {}
+
+    def _fuse(chunk_id: str, rank: int) -> None:
+        fused[chunk_id] = fused.get(chunk_id, 0.0) + 1.0 / (RRF_K + rank)
+
+    for rank, chunk in enumerate(semantic, 1):
+        cid = chunk["chunk_id"]
+        entry = merged.setdefault(cid, {
+            "text": chunk["text"],
+            "distance": chunk.get("distance"),
+            "bm25_score": None,
+            "source": chunk.get("source", ""),
+            "url": chunk.get("url", ""),
+            "course": chunk.get("course", ""),
+            "type": chunk.get("type", ""),
+            "filename": chunk.get("filename", ""),
+            "chunk_id": cid,
+        })
+        entry["distance"] = chunk.get("distance")
+        _fuse(cid, rank)
+
+    for rank, chunk in enumerate(keyword, 1):
+        cid = chunk["chunk_id"]
+        entry = merged.setdefault(cid, {
+            "text": chunk["text"],
+            "distance": None,
+            "bm25_score": None,
+            "source": chunk.get("source", ""),
+            "url": chunk.get("url", ""),
+            "course": chunk.get("course", ""),
+            "type": chunk.get("type", ""),
+            "filename": chunk.get("filename", ""),
+            "chunk_id": cid,
+        })
+        entry["bm25_score"] = chunk.get("bm25_score")
+        _fuse(cid, rank)
+
+    for cid, entry in merged.items():
+        entry["score"] = fused[cid]
+
+    ranked = sorted(merged.values(), key=lambda c: c["score"], reverse=True)
+    return ranked[:top_k]
+
+
+# ---------------------------------------------------------------------------
 # Test block
 # ---------------------------------------------------------------------------
 
@@ -226,6 +411,64 @@ def main():
             print(f"    chunk_id : {chunk['chunk_id']}")
             preview = chunk["text"][:300].replace("\n", " ")
             print(f"    text     : {preview}{'...' if len(chunk['text']) > 300 else ''}")
+
+
+def _metric(chunk: dict) -> str:
+    """One-line relevance summary spanning both retrieval modes."""
+    bits = []
+    if chunk.get("score") is not None:
+        bits.append(f"score={chunk['score']:.4f}")
+    if chunk.get("distance") is not None:
+        bits.append(f"d={chunk['distance']:.4f}")
+    if chunk.get("bm25_score") is not None:
+        bits.append(f"bm25={chunk['bm25_score']:.2f}")
+    return " ".join(bits) or "n/a"
+
+
+def compare(question: str, top_k: int = 5, course_filter: str | None = None) -> None:
+    """Print Semantic vs Hybrid top_k side by side for one question."""
+    note = f"  (course_filter={course_filter})" if course_filter else ""
+    print("\n" + "=" * 80)
+    print(f"[Compare] {question}{note}")
+    print("=" * 80)
+
+    print("\n  --- Semantic ---")
+    for rank, c in enumerate(retrieve_chunks(question, top_k, course_filter=course_filter), 1):
+        print(f"    {rank}. {c['chunk_id']:42s} [{c['course']}]  {_metric(c)}")
+
+    print("\n  --- Hybrid ---")
+    for rank, c in enumerate(retrieve_chunks_hybrid(question, top_k, course_filter=course_filter), 1):
+        print(f"    {rank}. {c['chunk_id']:42s} [{c['course']}]  {_metric(c)}")
+
+
+def main():
+    # Build (or reuse) the store once, up front.
+    build_vector_store()
+
+    for q_num, question in enumerate(EVAL_QUESTIONS, 1):
+        print("\n" + "=" * 80)
+        print(f"[Query {q_num}] {question}")
+        print("=" * 80)
+        results = retrieve_chunks(question, top_k=5)
+        for rank, chunk in enumerate(results, 1):
+            print(f"\n  Result {rank}  (distance: {chunk['distance']:.4f})")
+            print(f"    source   : {chunk['source']}")
+            print(f"    url      : {chunk['url']}")
+            print(f"    course   : {chunk['course']}")
+            print(f"    type     : {chunk['type']}")
+            print(f"    filename : {chunk['filename']}")
+            print(f"    chunk_id : {chunk['chunk_id']}")
+            preview = chunk["text"][:300].replace("\n", " ")
+            print(f"    text     : {preview}{'...' if len(chunk['text']) > 300 else ''}")
+
+    # Semantic vs Hybrid comparison (Hybrid stretch feature).
+    print("\n\n" + "#" * 80)
+    print("# SEMANTIC vs HYBRID retrieval comparison")
+    print("#" * 80)
+    compare("Is CSE 340 good in summer with Bazzi?")
+    compare("Who should I take for CSE 330 or CSE 355?")
+    compare("Which one is harder: CSE 340 or CSE 355?")
+    compare("Is CSE 340 good in summer with Bazzi?", course_filter="CSE 340")
 
 
 if __name__ == "__main__":
