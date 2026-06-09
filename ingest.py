@@ -167,18 +167,26 @@ def _split_into_paragraphs(text: str) -> list[str]:
     return [p.strip() for p in re.split(r"\n\s*\n", text) if p.strip()]
 
 
-def chunk_text(text: str) -> list[str]:
+def chunk_text(
+    text: str,
+    target_chars: int = TARGET_CHARS,
+    overlap_chars: int = OVERLAP_CHARS,
+) -> list[str]:
     """
-    Build chunks of ~TARGET_CHARS with ~OVERLAP_CHARS overlap.
+    Build chunks of ~target_chars with ~overlap_chars overlap.
     Paragraphs are kept together when they fit; oversized paragraphs are
     split at sentence boundaries.
+
+    The sizing arguments default to the module's production constants, so
+    existing callers (build_chunks/main) are unaffected. The chunking-strategy
+    comparison script passes different sizes to evaluate the trade-offs.
     """
     paragraphs = _split_into_paragraphs(text)
 
     # Expand oversized paragraphs into sentence-sized pieces
     pieces: list[str] = []
     for para in paragraphs:
-        if len(para) <= TARGET_CHARS:
+        if len(para) <= target_chars:
             pieces.append(para)
         else:
             sentences = re.split(r"(?<=[.!?])\s+", para)
@@ -190,13 +198,13 @@ def chunk_text(text: str) -> list[str]:
 
     for piece in pieces:
         piece_len = len(piece)
-        if current_len + piece_len > TARGET_CHARS and current:
+        if current_len + piece_len > target_chars and current:
             chunks.append("\n\n".join(current))
             # Retain the overlap tail from the previous chunk
             overlap_parts: list[str] = []
             overlap_len = 0
             for part in reversed(current):
-                if overlap_len + len(part) <= OVERLAP_CHARS:
+                if overlap_len + len(part) <= overlap_chars:
                     overlap_parts.insert(0, part)
                     overlap_len += len(part)
                 else:
