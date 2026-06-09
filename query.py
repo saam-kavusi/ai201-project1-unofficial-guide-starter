@@ -149,8 +149,18 @@ def generate_answer(question: str, context: str) -> str:
     return response.choices[0].message.content.strip()
 
 
-def ask(question: str, top_k: int = TOP_K) -> dict:
+def ask(
+    question: str,
+    top_k: int = TOP_K,
+    course_filter: str | None = None,
+    type_filter: str | None = None,
+    filename_filter: str | None = None,
+) -> dict:
     """Answer a question, grounded only in retrieved chunks.
+
+    Optional metadata filters (course, type, filename) are passed straight
+    through to retrieval; leaving them as None retrieves over all chunks, so
+    ask(question) behaves exactly as before.
 
     Returns a dict:
         {
@@ -159,7 +169,13 @@ def ask(question: str, top_k: int = TOP_K) -> dict:
           "retrieved_chunks": list[dict],  # raw chunks w/ distance scores
         }
     """
-    retrieved_chunks = retrieve_chunks(question, top_k=top_k)
+    retrieved_chunks = retrieve_chunks(
+        question,
+        top_k=top_k,
+        course_filter=course_filter,
+        type_filter=type_filter,
+        filename_filter=filename_filter,
+    )
 
     # No retrieval => nothing to ground on; refuse without calling the LLM.
     if not retrieved_chunks:

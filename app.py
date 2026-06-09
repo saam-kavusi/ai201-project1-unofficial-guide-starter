@@ -12,6 +12,20 @@ import gradio as gr
 
 from query import ask
 
+# Optional metadata filters. "All" means "do not apply this filter" and maps to
+# None before reaching retrieval. The non-"All" values are exact matches against
+# the `course` / `type` metadata stored on each chunk.
+ALL = "All"
+COURSE_CHOICES = [ALL, "CSE 330", "CSE 340", "CSE 355", "General ASU CS"]
+TYPE_CHOICES = [
+    ALL,
+    "Official PDF",
+    "Official syllabus",
+    "Student discussion",
+    "Student professor/course discussion",
+    "Student professor recommendation thread",
+]
+
 
 def format_sources(sources: list[dict]) -> str:
     """Render the programmatic source list as readable Markdown."""
@@ -47,13 +61,20 @@ def format_debug(chunks: list[dict]) -> str:
     return "\n\n---\n\n".join(lines)
 
 
-def respond(question: str):
-    """Run the RAG pipeline and return (answer, sources_md, debug_md)."""
+def respond(question: str, course: str = ALL, source_type: str = ALL):
+    """Run the RAG pipeline and return (answer, sources_md, debug_md).
+
+    `course` / `source_type` come from the optional dropdowns; the "All"
+    sentinel means no filter and is converted to None before retrieval.
+    """
     question = (question or "").strip()
     if not question:
         return "Please enter a question.", "", ""
 
-    result = ask(question)
+    course_filter = None if course == ALL else course
+    type_filter = None if source_type == ALL else source_type
+
+    result = ask(question, course_filter=course_filter, type_filter=type_filter)
     answer = result["answer"]
     sources_md = format_sources(result["sources"])
     debug_md = format_debug(result["retrieved_chunks"])
@@ -73,6 +94,19 @@ with gr.Blocks(title="The Unofficial Guide — ASU CS") as demo:
         placeholder="e.g. Is it a good idea to take CSE 340 in the summer with Bazzi?",
         lines=2,
     )
+
+    with gr.Row():
+        course_dd = gr.Dropdown(
+            choices=COURSE_CHOICES,
+            value=ALL,
+            label="Course (optional filter)",
+        )
+        type_dd = gr.Dropdown(
+            choices=TYPE_CHOICES,
+            value=ALL,
+            label="Source type (optional filter)",
+        )
+
     ask_btn = gr.Button("Ask", variant="primary")
 
     answer_box = gr.Markdown(label="Answer")
@@ -82,9 +116,10 @@ with gr.Blocks(title="The Unofficial Guide — ASU CS") as demo:
         debug_box = gr.Markdown()
 
     # Button click and Enter key both submit.
+    inputs = [question_box, course_dd, type_dd]
     outputs = [answer_box, sources_box, debug_box]
-    ask_btn.click(fn=respond, inputs=question_box, outputs=outputs)
-    question_box.submit(fn=respond, inputs=question_box, outputs=outputs)
+    ask_btn.click(fn=respond, inputs=inputs, outputs=outputs)
+    question_box.submit(fn=respond, inputs=inputs, outputs=outputs)
 
 
 if __name__ == "__main__":

@@ -116,8 +116,45 @@ def _get_collection_if_exists(client) -> "chromadb.Collection | None":
 # Retrieval
 # ---------------------------------------------------------------------------
 
-def retrieve_chunks(query: str, top_k: int = 5) -> list[dict]:
+def _build_where(
+    course_filter: str | None = None,
+    type_filter: str | None = None,
+    filename_filter: str | None = None,
+) -> dict | None:
+    """Build a ChromaDB `where` filter from optional metadata constraints.
+
+    Returns None when no filters are given (so retrieval is unconstrained),
+    a single-field clause when exactly one is given, or an $and of all the
+    given clauses. Each clause is an exact metadata match ($eq), so filtering
+    by e.g. course="CSE 340" matches only chunks tagged exactly "CSE 340".
+    """
+    conditions = []
+    if course_filter:
+        conditions.append({"course": course_filter})
+    if type_filter:
+        conditions.append({"type": type_filter})
+    if filename_filter:
+        conditions.append({"filename": filename_filter})
+
+    if not conditions:
+        return None
+    if len(conditions) == 1:
+        return conditions[0]
+    return {"$and": conditions}
+
+
+def retrieve_chunks(
+    query: str,
+    top_k: int = 5,
+    course_filter: str | None = None,
+    type_filter: str | None = None,
+    filename_filter: str | None = None,
+) -> list[dict]:
     """Return the top_k most relevant chunks for `query`.
+
+    Optional metadata filters (course, type, filename) restrict the search to
+    matching chunks via a ChromaDB `where` filter. When all filters are None
+    this behaves exactly like the original interface — an unconstrained search.
 
     Each result is a dict with the chunk text, its cosine distance score, and
     all stored metadata (source, url, course, type, filename, chunk_id).
@@ -129,10 +166,15 @@ def retrieve_chunks(query: str, top_k: int = 5) -> list[dict]:
         collection = build_vector_store()
 
     query_embedding = embed_texts([query])[0]
-    results = collection.query(
-        query_embeddings=[query_embedding],
-        n_results=top_k,
-    )
+    query_kwargs: dict = {
+        "query_embeddings": [query_embedding],
+        "n_results": top_k,
+    }
+    where = _build_where(course_filter, type_filter, filename_filter)
+    if where is not None:
+        query_kwargs["where"] = where
+
+    results = collection.query(**query_kwargs)
 
     # query() returns parallel lists nested one level per query; we sent one.
     documents = results["documents"][0]
