@@ -9,14 +9,11 @@
 
 ## Domain
 
-General CS info & Surviving the Trifecta at ASU (CSE 330, 340, 355) 
+Unofficial ASU CS Info & Surviving the Trifecta: CSE 330, CSE 340, and CSE 355
 
 ---
 
 ## Documents
-
-<!-- List your specific sources: URLs, subreddit names, forum threads, or file descriptions.
-     Aim for at least 10 sources that together cover different subtopics or perspectives within your domain. -->
 
 | # | Source | Type | Description | URL or location |
 |---|--------|------|-------------|-----------------|
@@ -52,11 +49,6 @@ My documents are a mix of short Reddit discussions and longer official ASU PDFs/
 
 ## Retrieval Approach
 
-<!-- Which embedding model are you using (e.g., all-MiniLM-L6-v2 via sentence-transformers)?
-     How many chunks will you retrieve per query (top-k)?
-     If you were deploying this for real users and cost wasn't a constraint, what tradeoffs
-     would you weigh in choosing a different embedding model — context length, multilingual
-     support, accuracy on domain-specific text, latency? -->
 
 **Embedding model:**
 I will use `all-MiniLM-L6-v2` through the `sentence-transformers` library. This model is a good fit for the project because it runs locally, does not require a paid API, and is the recommended embedding model for the starter stack. The embeddings will be stored in ChromaDB for semantic search. :contentReference[oaicite:0]{index=0}
@@ -73,10 +65,6 @@ For production, I would also consider a model with a longer context window if th
 
 ## Evaluation Plan
 
-<!-- List your 5 test questions with their expected correct answers.
-     Questions should be specific enough that you can judge whether the system's response
-     is right or wrong. "What are good dining halls?" is too vague.
-     "What do students say about wait times at [dining hall name] during lunch?" is testable. -->
 
 ## Evaluation Plan
 
@@ -92,9 +80,6 @@ For production, I would also consider a model with a longer context window if th
 
 ## Anticipated Challenges
 
-<!-- What could go wrong? Name at least two specific risks with reasoning.
-     Consider: noisy or inconsistent documents, missing source attribution, off-topic
-     retrieval, chunks that split key information across boundaries. -->
 
 1. Some of my sources may be noisy or inconsistent because Reddit comments are informal and opinion-based. Different students may disagree about whether a class or professor is difficult, so the system needs to summarize patterns in the retrieved sources instead of treating one comment as the final answer.
 
@@ -106,11 +91,6 @@ For production, I would also consider a model with a longer context window if th
 
 ## Architecture
 
-<!-- Draw a diagram of your pipeline showing the five stages:
-     Document Ingestion → Chunking → Embedding + Vector Store → Retrieval → Generation
-     Label each stage with the tool or library you're using.
-     You can use ASCII art, a Mermaid diagram, or embed a sketch as an image.
-     You'll use this diagram as context when prompting AI tools to implement each stage. -->
 
 ```mermaid
 flowchart LR
@@ -128,15 +108,6 @@ flowchart LR
 
 ## AI Tool Plan
 
-<!-- For each part of the pipeline below, describe:
-     - Which AI tool you plan to use (Claude, Copilot, ChatGPT, etc.)
-     - What you'll give it as input (which sections of this planning.md, which requirements)
-     - What you expect it to produce
-     - How you'll verify the output matches your spec
-
-     "I'll use AI to help me code" is not a plan.
-     "I'll give Claude my Chunking Strategy section and ask it to implement chunk_text()
-     with my specified chunk size and overlap" is a plan. -->
 
 **Milestone 3 — Ingestion and chunking:**  
 I plan to use Claude inside VS Code to help implement the document ingestion and chunking code. I will give Claude my Documents section, Chunking Strategy section, and Architecture diagram. I will ask it to create functions that load my Reddit text files and ASU PDF syllabi, clean unnecessary text, preserve source metadata, and split the documents into paragraph/comment-aware chunks of about 200–300 tokens with 40–60 tokens of overlap. I expect it to produce Python functions such as `load_documents()`, `clean_text()`, and `chunk_text()`. I will verify the output by running the code locally, printing at least 5 random chunks, and checking that they are readable, self-contained, not empty, and still include the correct source title/URL metadata.
