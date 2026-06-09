@@ -69,6 +69,38 @@ yourself."""
 
 
 # ---------------------------------------------------------------------------
+# Conversational memory (stretch feature)
+# ---------------------------------------------------------------------------
+# Memory is used ONLY to interpret follow-up questions. It shapes the *retrieval
+# query* so that a terse follow-up like "What about CSE 355?" pulls back the
+# right chunks. It is never fed to the LLM as fact and never becomes a source —
+# grounding still comes entirely from the retrieved chunks (see ask()).
+
+def build_contextual_query(question: str, history: list[dict] | None) -> str:
+    """Combine the previous question with the current one into a retrieval query.
+
+    `history` is a list of prior turns, each a dict with a "question" key
+    (and typically an "answer"). We use only the most recent question so a
+    follow-up carries enough context to retrieve relevant chunks.
+
+    With no usable history this returns the question unchanged, so the
+    single-turn behavior is preserved exactly.
+
+        >>> build_contextual_query(
+        ...     "What about CSE 355?",
+        ...     [{"question": "Who should I take for CSE 330 or CSE 355?"}],
+        ... )
+        'Previous question: Who should I take for CSE 330 or CSE 355? Follow-up question: What about CSE 355?'
+    """
+    if not history:
+        return question
+    prev_question = (history[-1].get("question") or "").strip()
+    if not prev_question:
+        return question
+    return f"Previous question: {prev_question} Follow-up question: {question}"
+
+
+# ---------------------------------------------------------------------------
 # Context + source formatting
 # ---------------------------------------------------------------------------
 
@@ -161,6 +193,7 @@ def ask(
     type_filter: str | None = None,
     filename_filter: str | None = None,
     retrieval_mode: str = DEFAULT_RETRIEVAL_MODE,
+    retrieval_query: str | None = None,
 ) -> dict:
     """Answer a question, grounded only in retrieved chunks.
 
@@ -173,6 +206,13 @@ def ask(
     than "Hybrid" falls back to the semantic path, so the original behavior is
     always one argument away.
 
+    `retrieval_query` lets a caller retrieve with text that differs from the
+    user's literal question — used by conversational memory to inject the
+    previous question into a terse follow-up (see build_contextual_query). It
+    affects ONLY what chunks come back; the LLM still answers the original
+    `question` against those chunks, and sources are still built from chunk
+    metadata. Defaults to `question`, preserving single-turn behavior.
+
     Returns a dict:
         {
           "answer": str,             # grounded natural-language answer
@@ -180,9 +220,11 @@ def ask(
           "retrieved_chunks": list[dict],  # raw chunks w/ score/distance
         }
     """
+    retrieval_query = retrieval_query or question
+
     if retrieval_mode == "Hybrid":
         retrieved_chunks = retrieve_chunks_hybrid(
-            question,
+            retrieval_query,
             top_k=top_k,
             course_filter=course_filter,
             type_filter=type_filter,
@@ -190,7 +232,7 @@ def ask(
         )
     else:
         retrieved_chunks = retrieve_chunks(
-            question,
+            retrieval_query,
             top_k=top_k,
             course_filter=course_filter,
             type_filter=type_filter,
@@ -246,10 +288,21 @@ def main():
         else:
             print("  (none)")
 
-        print("\nRETRIEVED CHUNKS (distance scores):")
+        print("\nRETRIEVED CHUNKS (relevance scores):")
         for rank, chunk in enumerate(result["retrieved_chunks"], 1):
             preview = chunk["text"][:120].replace("\n", " ")
-            print(f"  {rank}. d={chunk['distance']:.4f}  {chunk['source']}  | {preview}...")
+            # Hybrid chunks carry a fused `score` and may have distance/bm25 None
+            # (a chunk surfaced only via BM25 has no cosine distance, and vice
+            # versa), so format defensively rather than assuming a float.
+            bits = []
+            if chunk.get("score") is not None:
+                bits.append(f"score={chunk['score']:.4f}")
+            if chunk.get("distance") is not None:
+                bits.append(f"d={chunk['distance']:.4f}")
+            if chunk.get("bm25_score") is not None:
+                bits.append(f"bm25={chunk['bm25_score']:.2f}")
+            metric = " ".join(bits) or "n/a"
+            print(f"  {rank}. {metric}  {chunk['source']}  | {preview}...")
 
 
 if __name__ == "__main__":

@@ -29,6 +29,13 @@ METADATA_FIELDS = ("source", "url", "course", "type", "filename", "chunk_id")
 # of any single high rank so neither the semantic nor the keyword list dominates.
 RRF_K = 60
 
+# Course filtering is post-filtered in Python (course tags can be compound and
+# Chroma `where` has no substring match). To avoid the filter starving the
+# result set, we over-fetch a candidate pool from Chroma and slice to top_k
+# AFTER filtering. This multiplier (and floor) size that pool.
+COURSE_FILTER_POOL_MULTIPLIER = 10
+COURSE_FILTER_POOL_MIN = 50
+
 # Loaded once and reused — loading the model is the slow part.
 _model: SentenceTransformer | None = None
 
@@ -126,21 +133,39 @@ def _get_collection_if_exists(client) -> "chromadb.Collection | None":
 # Retrieval
 # ---------------------------------------------------------------------------
 
+def _course_matches(chunk_course: str | None, course_filter: str | None) -> bool:
+    """True if `course_filter` appears in a chunk's (possibly compound) course tag.
+
+    Course metadata is not always a single course. Some chunks are tagged with
+    compound values like "CSE 330, CSE 355" or
+    "General ASU CS / CSE 330, CSE 340, CSE 355". An exact-equality filter would
+    exclude those when the user filters by a single course (e.g. "CSE 355"),
+    even though they are exactly the cross-listed threads we want. A substring
+    ("contains") test keeps them. The course filter values come from a fixed
+    dropdown (e.g. "CSE 355"), so substring matching is unambiguous here.
+
+    An empty/None filter matches everything, preserving unconstrained behavior.
+    """
+    if not course_filter:
+        return True
+    return course_filter in (chunk_course or "")
+
+
 def _build_where(
-    course_filter: str | None = None,
     type_filter: str | None = None,
     filename_filter: str | None = None,
 ) -> dict | None:
-    """Build a ChromaDB `where` filter from optional metadata constraints.
+    """Build a ChromaDB `where` filter from the exact-match metadata constraints.
+
+    Only `type` and `filename` are expressed here, as exact matches ($eq).
+    Course filtering is intentionally NOT included: course tags can be compound
+    (e.g. "CSE 330, CSE 355") and Chroma `where` has no substring operator, so
+    course is post-filtered in Python via _course_matches() instead.
 
     Returns None when no filters are given (so retrieval is unconstrained),
-    a single-field clause when exactly one is given, or an $and of all the
-    given clauses. Each clause is an exact metadata match ($eq), so filtering
-    by e.g. course="CSE 340" matches only chunks tagged exactly "CSE 340".
+    a single-field clause when exactly one is given, or an $and of both.
     """
     conditions = []
-    if course_filter:
-        conditions.append({"course": course_filter})
     if type_filter:
         conditions.append({"type": type_filter})
     if filename_filter:
@@ -162,9 +187,12 @@ def retrieve_chunks(
 ) -> list[dict]:
     """Return the top_k most relevant chunks for `query`.
 
-    Optional metadata filters (course, type, filename) restrict the search to
-    matching chunks via a ChromaDB `where` filter. When all filters are None
-    this behaves exactly like the original interface — an unconstrained search.
+    Optional metadata filters restrict the search to matching chunks. `type` and
+    `filename` are exact matches applied as a ChromaDB `where` filter. `course`
+    is matched inclusively (substring/"contains") and post-filtered in Python,
+    so a single-course filter like "CSE 355" also matches compound tags such as
+    "CSE 330, CSE 355" (see _course_matches). When all filters are None this
+    behaves exactly like the original interface — an unconstrained search.
 
     Each result is a dict with the chunk text, its cosine distance score, and
     all stored metadata (source, url, course, type, filename, chunk_id).
@@ -176,11 +204,20 @@ def retrieve_chunks(
         collection = build_vector_store()
 
     query_embedding = embed_texts([query])[0]
+
+    # When post-filtering by course, over-fetch so the top_k survivors after
+    # filtering are still the most relevant matching chunks. Without a course
+    # filter we fetch exactly top_k, preserving the original behavior.
+    n_results = top_k
+    if course_filter:
+        pool = max(top_k * COURSE_FILTER_POOL_MULTIPLIER, COURSE_FILTER_POOL_MIN)
+        n_results = min(pool, collection.count())
+
     query_kwargs: dict = {
         "query_embeddings": [query_embedding],
-        "n_results": top_k,
+        "n_results": n_results,
     }
-    where = _build_where(course_filter, type_filter, filename_filter)
+    where = _build_where(type_filter, filename_filter)
     if where is not None:
         query_kwargs["where"] = where
 
@@ -193,6 +230,9 @@ def retrieve_chunks(
 
     chunks = []
     for text, meta, distance in zip(documents, metadatas, distances):
+        # Inclusive course post-filter (compound tags like "CSE 330, CSE 355").
+        if not _course_matches(meta.get("course", ""), course_filter):
+            continue
         chunks.append({
             "text": text,
             "distance": distance,
@@ -203,6 +243,8 @@ def retrieve_chunks(
             "filename": meta.get("filename", ""),
             "chunk_id": meta.get("chunk_id", ""),
         })
+        if len(chunks) >= top_k:
+            break
     return chunks
 
 
@@ -243,8 +285,12 @@ def _chunk_matches(
     type_filter: str | None,
     filename_filter: str | None,
 ) -> bool:
-    """Apply the same exact-match metadata filters used on the semantic path."""
-    if course_filter and chunk.get("course") != course_filter:
+    """Apply the same metadata filters used on the semantic path.
+
+    `course` is matched inclusively (substring) so compound tags survive;
+    `type` and `filename` stay exact. Mirrors retrieve_chunks exactly.
+    """
+    if not _course_matches(chunk.get("course"), course_filter):
         return False
     if type_filter and chunk.get("type") != type_filter:
         return False
